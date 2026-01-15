@@ -1,4 +1,4 @@
-import heroVisual from "@/assets/hero-visual.png";
+import heroVisual from "@/assets/hero-visual-updated.png";
 
 export const HeroSection = () => {
   return (
