@@ -11,30 +11,28 @@ export const HeroSection = () => {
         className="w-full h-full object-cover absolute inset-0"
       />
       
-      {/* Overlay gradient for better text readability */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+      {/* Subtle overlay for text readability */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
       
       {/* Content */}
-      <div className="relative z-10 w-full p-8 md:p-12 lg:p-16 pb-16 md:pb-20 lg:pb-24">
-        <div className="max-w-4xl">
-          {/* Glass card */}
-          <div className="backdrop-blur-xl bg-white/10 border border-white/20 rounded-[2rem] p-8 md:p-12 shadow-2xl">
+      <div className="relative z-10 w-full p-6 md:p-10 lg:p-12 pb-12 md:pb-16 lg:pb-20">
+        <div className="max-w-xl">
+          {/* Glass card - more subtle */}
+          <div className="backdrop-blur-md bg-white/5 border border-white/10 rounded-2xl p-6 md:p-8">
             {/* Title */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-white mb-6 tracking-tight">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-light text-white mb-4 tracking-tight">
               Сколковский
             </h1>
             
             {/* Subtitle */}
-            <p className="text-lg md:text-xl lg:text-2xl text-white/90 font-light leading-relaxed mb-8 max-w-2xl">
+            <p className="text-base md:text-lg text-white/80 font-light leading-relaxed mb-6">
               Зрелый девелоперский актив в Сколково: участок с разработанной архитектурно-градостроительной концепцией
             </p>
             
             {/* Location */}
-            <div className="flex items-center gap-3 text-white/80">
-              <div className="w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center border border-white/20">
-                <MapPin className="w-5 h-5" />
-              </div>
-              <span className="text-base md:text-lg font-light">
+            <div className="flex items-center gap-2.5 text-white/70">
+              <MapPin className="w-4 h-4" />
+              <span className="text-sm md:text-base font-light">
                 Московская область, г. Одинцово
               </span>
             </div>
