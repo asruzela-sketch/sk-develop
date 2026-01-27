@@ -4,7 +4,7 @@ import locationMap from "@/assets/location-map.jpg";
 
 export const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center">
+    <section className="relative min-h-screen flex items-start pt-28 md:pt-32 lg:pt-36">
       {/* Full Background Visual */}
       <img
         src={heroVisual}
@@ -20,10 +20,13 @@ export const HeroSection = () => {
         <div className="max-w-md">
           {/* Glass frame - narrow and tall */}
           <div className="backdrop-blur-md bg-white/5 border border-white/15 rounded-2xl p-8 md:p-10">
-            {/* Small label */}
-            <div className="inline-block px-3 py-1 bg-white/10 rounded-full mb-6">
-              <span className="text-xs uppercase tracking-[0.2em] text-white/80 font-medium">
-                Инвестиционный проект
+            {/* Team label */}
+            <div className="flex items-center gap-2 mb-6">
+              <span className="text-xs uppercase tracking-[0.15em] text-white/50 font-light">
+                Проект команды
+              </span>
+              <span className="text-xs uppercase tracking-[0.15em] text-[#ffff00] font-medium">
+                144/Capital
               </span>
             </div>
             
@@ -36,13 +39,8 @@ export const HeroSection = () => {
             <div className="w-12 h-px bg-[#ffff00]/60 mb-6" />
             
             {/* Main headline */}
-            <p className="text-lg md:text-xl lg:text-2xl font-light text-white leading-relaxed mb-6">
+            <p className="text-lg md:text-xl lg:text-2xl font-light text-white leading-relaxed mb-8">
               Зрелый девелоперский актив с разработанной архитектурно-градостроительной концепцией
-            </p>
-            
-            {/* Supporting text */}
-            <p className="text-sm text-white/60 font-light leading-relaxed mb-8">
-              Не просто земельный участок, а сформированный проект с уже пройденным этапом административного цикла
             </p>
             
             {/* Divider */}
