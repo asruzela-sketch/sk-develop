@@ -24,7 +24,7 @@ export const Header = () => {
   return <header className="fixed top-0 left-0 right-0 z-50">
       <div className="glass-panel">
         <div className="container-wide py-4 flex items-center justify-between">
-          <a href="#" className="text-[hsl(var(--text-light))] text-lg font-medium tracking-wide">144/ДЕВЕЛОПМЕНТ<span className="text-accent">144</span>/Девелопмент
+          <a href="#" className="text-[hsl(var(--text-light))] text-lg font-medium tracking-wide">144/Девелопмент<span className="text-accent">144</span>/Девелопмент
           </a>
 
           {/* Desktop Navigation */}
