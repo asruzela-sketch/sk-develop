@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
-import hotelImage from "@/assets/hotel-render.jpg";
-import retailImage from "@/assets/retail-render.jpg";
 import buildingImage from "@/assets/building-render.jpg";
+import retailImage from "@/assets/retail-render.jpg";
+import parkingImage from "@/assets/parking-render.jpg";
 
 interface ZoneCardProps {
   title: string;
@@ -28,13 +28,13 @@ const ZoneCard = ({
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <div className="bg-[hsl(40_25%_94%)] rounded-2xl overflow-hidden">
+    <div className="bg-[hsl(40_25%_94%)] rounded-2xl overflow-hidden transition-all duration-300 ease-out hover:shadow-xl hover:-translate-y-2 cursor-pointer group">
       {/* Image */}
       <div className="relative h-56 md:h-64 overflow-hidden">
         <img
           src={image}
           alt={title}
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
         />
       </div>
       
@@ -113,7 +113,7 @@ export const ConceptSection = () => {
             title="Гостиничная зона"
             area="23 232,5"
             areaLabel="м²"
-            image={hotelImage}
+            image={buildingImage}
             description="Гостиничный блок с номерным фондом, ориентированным на деловой и транзитный спрос."
             details={
               <ul className="space-y-2">
@@ -178,7 +178,7 @@ export const ConceptSection = () => {
             areaLabel="м/м"
             secondaryArea="3 839"
             secondaryLabel="м²"
-            image={buildingImage}
+            image={parkingImage}
             description="Инфраструктурный элемент, обеспечивающий транспортную доступность комплекса."
             details={
               <ul className="space-y-2">
