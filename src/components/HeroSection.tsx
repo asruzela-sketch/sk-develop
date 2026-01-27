@@ -4,7 +4,7 @@ import locationMap from "@/assets/location-map.jpg";
 
 export const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-start pt-28 md:pt-32 lg:pt-36">
+    <section className="relative min-h-screen flex items-center justify-start">
       {/* Full Background Visual */}
       <img
         src={heroVisual}
