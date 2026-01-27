@@ -28,8 +28,8 @@
     --muted: 40 10% 90%;
     --muted-foreground: 220 10% 45%;
 
-    /* Accent - Muted gold/yellow (used sparingly) */
-    --accent: 45 85% 55%;
+    /* Accent - Bright yellow */
+    --accent: 60 100% 50%;
     --accent-foreground: 220 15% 10%;
 
     --destructive: 0 84% 60%;
@@ -73,7 +73,7 @@
     --secondary-foreground: 40 20% 90%;
     --muted: 220 15% 20%;
     --muted-foreground: 40 10% 60%;
-    --accent: 45 85% 55%;
+    --accent: 60 100% 50%;
     --accent-foreground: 220 15% 10%;
     --border: 220 15% 20%;
     --input: 220 15% 20%;

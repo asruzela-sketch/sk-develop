@@ -28,9 +28,9 @@ const ZoneCard = ({
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <div className="bg-[hsl(40_25%_94%)] rounded-2xl overflow-hidden transition-all duration-300 ease-out hover:shadow-xl hover:-translate-y-2 cursor-pointer group">
+    <div className="bg-[hsl(40_25%_94%)] rounded-2xl overflow-hidden transition-all duration-300 ease-out hover:shadow-xl hover:-translate-y-2 cursor-pointer group h-full flex flex-col">
       {/* Image */}
-      <div className="relative h-56 md:h-64 overflow-hidden">
+      <div className="relative h-56 md:h-64 overflow-hidden flex-shrink-0">
         <img
           src={image}
           alt={title}
@@ -39,7 +39,7 @@ const ZoneCard = ({
       </div>
       
       {/* Content */}
-      <div className="p-6 md:p-8">
+      <div className="p-6 md:p-8 flex flex-col flex-grow">
         <h3 className="text-lg md:text-xl font-medium text-foreground mb-3">
           {title}
         </h3>
@@ -59,31 +59,34 @@ const ZoneCard = ({
           )}
         </div>
 
-        <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+        <p className="text-sm text-muted-foreground leading-relaxed flex-grow">
           {description}
         </p>
 
+        {/* Spacer to push button to bottom */}
+        <div className="mt-auto pt-4">
         {/* Expandable details */}
-        <div 
-          className={`overflow-hidden transition-all duration-300 ease-out ${
-            isExpanded ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
-          }`}
-        >
-          <div className="pt-4 border-t border-[hsl(40_15%_85%)]">
-            {details}
+          <div 
+            className={`overflow-hidden transition-all duration-300 ease-out ${
+              isExpanded ? "max-h-[500px] opacity-100 mb-4" : "max-h-0 opacity-0"
+            }`}
+          >
+            <div className="pt-4 border-t border-[hsl(40_15%_85%)]">
+              {details}
+            </div>
           </div>
-        </div>
 
-        {/* Toggle button */}
-        <button
-          onClick={() => setIsExpanded(!isExpanded)}
-          className="mt-4 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-foreground text-background text-sm font-medium transition-all hover:bg-foreground/90"
-        >
-          {isExpanded ? "Свернуть" : "Подробнее"}
-          <ChevronDown 
-            className={`w-4 h-4 transition-transform duration-300 ${isExpanded ? "rotate-180" : ""}`} 
-          />
-        </button>
+          {/* Toggle button */}
+          <button
+            onClick={() => setIsExpanded(!isExpanded)}
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-foreground text-background text-sm font-medium transition-all hover:bg-foreground/90"
+          >
+            {isExpanded ? "Свернуть" : "Подробнее"}
+            <ChevronDown 
+              className={`w-4 h-4 transition-transform duration-300 ${isExpanded ? "rotate-180" : ""}`} 
+            />
+          </button>
+        </div>
       </div>
     </div>
   );
