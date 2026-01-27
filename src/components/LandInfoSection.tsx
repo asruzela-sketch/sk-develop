@@ -4,13 +4,20 @@ interface InfoCardProps {
   icon: React.ReactNode;
   label: string;
   value: string;
+  delay?: string;
 }
 
-const InfoCard = ({ icon, label, value }: InfoCardProps) => (
-  <div className="bg-white rounded-2xl p-6 md:p-8 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+const InfoCard = ({ icon, label, value, delay = "0s" }: InfoCardProps) => (
+  <div 
+    className="bg-white rounded-2xl p-6 md:p-8 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2 opacity-0 animate-fade-in"
+    style={{ animationDelay: delay, animationFillMode: "forwards" }}
+  >
     <div className="flex items-start gap-4">
-      <div className="flex-shrink-0 w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center">
-        {icon}
+      {/* 3D Icon Container */}
+      <div className="flex-shrink-0 w-14 h-14 rounded-xl bg-gradient-to-br from-foreground to-foreground/80 flex items-center justify-center shadow-lg transform rotate-3 hover:rotate-0 transition-transform duration-300">
+        <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-accent to-amber-400 flex items-center justify-center shadow-inner">
+          {icon}
+        </div>
       </div>
       <div className="flex-1 min-w-0">
         <p className="text-xs uppercase tracking-wider text-muted-foreground mb-2">
@@ -30,19 +37,22 @@ export const LandInfoSection = () => {
       <div className="container-wide">
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
           <InfoCard
-            icon={<Maximize2 className="w-5 h-5 text-accent" />}
+            icon={<Maximize2 className="w-6 h-6 text-foreground" />}
             label="Площадь участка"
             value="6 000 м²"
+            delay="0s"
           />
           <InfoCard
-            icon={<MapPin className="w-5 h-5 text-accent" />}
+            icon={<MapPin className="w-6 h-6 text-foreground" />}
             label="Адрес"
             value="Московская область, Одинцовский район, г. Одинцово, ул. Чистяковой"
+            delay="0.15s"
           />
           <InfoCard
-            icon={<Building2 className="w-5 h-5 text-accent" />}
+            icon={<Building2 className="w-6 h-6 text-foreground" />}
             label="Форма собственности"
             value="ООО «СНК»"
+            delay="0.3s"
           />
         </div>
       </div>
