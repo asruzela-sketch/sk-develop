@@ -11,11 +11,8 @@ export const ProjectSection = () => {
         backgroundPosition: "center",
       }}
     >
-      {/* Dark overlay for text readability */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[hsl(220_15%_10%_/_0.85)] via-[hsl(220_15%_10%_/_0.6)] to-transparent" />
-
       <div className="container-wide relative z-10 py-16 md:py-24">
-        <div className="max-w-lg">
+        <div className="max-w-lg bg-[hsl(220_15%_10%_/_0.75)] backdrop-blur-md p-8 md:p-10 rounded-sm">
           <p className="label-small text-accent mb-4">О ПРОЕКТЕ</p>
 
           <div className="accent-line mb-8" />
