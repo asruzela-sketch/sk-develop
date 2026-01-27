@@ -1,38 +1,27 @@
+import { MapPin } from "lucide-react";
 import locationMap from "@/assets/location-map.jpg";
 
 export const ProjectSection = () => {
   return (
     <section
       id="project"
-      className="relative min-h-[500px] md:min-h-[600px] flex items-center"
+      className="relative min-h-[500px] md:min-h-[600px] flex items-end justify-start"
       style={{
         backgroundImage: `url(${locationMap})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
     >
-      <div className="container-wide relative z-10 py-16 md:py-24">
-        <div className="max-w-lg bg-[hsl(220_15%_10%_/_0.75)] backdrop-blur-md p-8 md:p-10 rounded-sm">
-          <p className="label-small text-accent mb-4">О ПРОЕКТЕ</p>
-
-          <div className="accent-line mb-8" />
-          <div className="space-y-4">
-            <p className="body-large text-white">
-              <span className="font-medium">Площадь участка:</span>{" "}
-              <span className="text-white/80">6 000 м²</span>
-            </p>
-            <p className="body-large text-white">
-              <span className="font-medium">Адрес:</span>{" "}
-              <span className="text-white/80">
-                Московская область, Одинцовский район, г. Одинцово, ул. Чистяковой
-              </span>
-            </p>
-            <p className="body-large text-white">
-              <span className="font-medium">Форма собственности:</span>{" "}
-              <span className="text-white/80">у компании ООО «СНК»</span>
-            </p>
-          </div>
-        </div>
+      <div className="container-wide relative z-10 py-8 md:py-12">
+        <a
+          href="https://yandex.ru/maps/-/CLxnaU2Z"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-3 px-6 py-4 bg-foreground text-background rounded-full font-medium text-sm md:text-base transition-all duration-300 hover:bg-foreground/90 hover:scale-105 shadow-xl hover:shadow-2xl"
+        >
+          <MapPin className="w-5 h-5" />
+          Открыть на Яндекс Картах
+        </a>
       </div>
     </section>
   );
