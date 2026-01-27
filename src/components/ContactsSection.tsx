@@ -1,38 +1,82 @@
-import { Phone, Send } from "lucide-react";
+import { Phone, Send, ArrowUpRight } from "lucide-react";
+import contactVisual from "@/assets/contact-visual.jpg";
+
 export const ContactsSection = () => {
-  return <section id="contacts" className="section-light py-24 md:py-32">
+  return (
+    <section id="contacts" className="py-16 md:py-24 bg-muted/30">
       <div className="container-wide">
-        <div className="max-w-2xl mx-auto text-center">
-          <p className="label-small mb-4 text-secondary-foreground">Контакты</p>
-          <h2 className="heading-section mb-4">Получить больше информации 
-об участке и проекте</h2>
-          
-
-          <div className="space-y-6">
-            <div className="flex items-center justify-center gap-4">
-              <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center">
-                <Phone className="w-5 h-5 text-accent" />
-              </div>
-              <a href="tel:+74951234567" className="text-lg hover:text-accent transition-colors">+7 915 038 9088</a>
-            </div>
-
-            <div className="flex items-center justify-center gap-4">
+        {/* Premium Card Container */}
+        <div className="relative bg-background rounded-[2rem] shadow-2xl overflow-hidden border border-border/50">
+          <div className="grid lg:grid-cols-2 min-h-[500px]">
+            
+            {/* Left: Contact Info Card */}
+            <div className="flex flex-col justify-center p-10 md:p-16 lg:p-20">
+              <p className="label-small mb-4 text-accent">Контакты</p>
+              <h2 className="heading-section mb-8">
+                Получить больше информации
+              </h2>
               
-              
+              <div className="space-y-6 mb-10">
+                {/* Phone */}
+                <a 
+                  href="tel:+79150389088" 
+                  className="group flex items-center gap-4 p-4 rounded-2xl bg-muted/50 hover:bg-muted transition-all duration-300"
+                >
+                  <div className="w-12 h-12 rounded-full bg-foreground flex items-center justify-center">
+                    <Phone className="w-5 h-5 text-background" strokeWidth={1.5} />
+                  </div>
+                  <div className="flex-1">
+                    <p className="text-sm text-muted-foreground mb-1">Телефон</p>
+                    <p className="text-lg font-medium group-hover:text-accent transition-colors">+7 915 038 9088</p>
+                  </div>
+                  <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:text-accent group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300" />
+                </a>
+
+                {/* Telegram */}
+                <a 
+                  href="https://t.me/info_144capital" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="group flex items-center gap-4 p-4 rounded-2xl bg-muted/50 hover:bg-muted transition-all duration-300"
+                >
+                  <div className="w-12 h-12 rounded-full bg-foreground flex items-center justify-center">
+                    <Send className="w-5 h-5 text-background" strokeWidth={1.5} />
+                  </div>
+                  <div className="flex-1">
+                    <p className="text-sm text-muted-foreground mb-1">Telegram</p>
+                    <p className="text-lg font-medium group-hover:text-accent transition-colors">@info_144capital</p>
+                  </div>
+                  <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:text-accent group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300" />
+                </a>
+              </div>
+
+              <p className="text-sm text-muted-foreground">
+                Свяжитесь с нами для получения подробной информации о проекте
+              </p>
             </div>
 
-            <div className="flex items-center justify-center gap-4">
-              <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center">
-                <Send className="w-5 h-5 text-accent" />
+            {/* Right: Visual */}
+            <div className="relative hidden lg:block">
+              <div className="absolute inset-4 rounded-[1.5rem] overflow-hidden shadow-xl">
+                <img
+                  src={contactVisual}
+                  alt="Архитектурная визуализация проекта"
+                  className="w-full h-full object-cover"
+                />
+                {/* Decorative overlay badges */}
+                <div className="absolute top-8 left-8 px-4 py-2 bg-background/80 backdrop-blur-md rounded-full text-sm font-medium shadow-lg">
+                  <span className="text-accent">144</span> Capital
+                </div>
+                <div className="absolute bottom-8 right-8 px-4 py-3 bg-background/80 backdrop-blur-md rounded-2xl shadow-lg">
+                  <p className="text-xs text-muted-foreground mb-1">Проект</p>
+                  <p className="text-sm font-medium">Сколковский</p>
+                </div>
               </div>
-              <a href="https://t.me/developer144" target="_blank" rel="noopener noreferrer" className="text-lg hover:text-accent transition-colors">@info_144capital</a>
             </div>
+
           </div>
-
-          <p className="mt-12 text-sm text-muted-foreground">
-            Свяжитесь с нами для получения подробной информации о проекте
-          </p>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
