@@ -41,10 +41,10 @@ const locationPoints: LocationPoint[] = [
 
 // Marker positions on the map (percentage-based) - aligned with original map markers
 const markerPositions = [
-  { top: "46%", left: "28%" },  // 1
-  { top: "38%", left: "48%" },  // 2
-  { top: "52%", left: "58%" },  // 3
-  { top: "74%", left: "38%" },  // 4
+  { top: "52%", left: "28%" },  // 1
+  { top: "44%", left: "48%" },  // 2
+  { top: "58%", left: "58%" },  // 3
+  { top: "80%", left: "38%" },  // 4
 ];
 
 export const EnvironmentSection = () => {
