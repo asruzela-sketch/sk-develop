@@ -4,7 +4,7 @@ import locationMap from "@/assets/location-map.jpg";
 
 export const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex flex-col justify-between">
+    <section className="relative min-h-screen flex items-center">
       {/* Full Background Visual */}
       <img
         src={heroVisual}
@@ -13,66 +13,80 @@ export const HeroSection = () => {
       />
       
       {/* Subtle overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/20 via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-black/10 to-transparent" />
       
-      {/* Top Content with Glass Frame */}
-      <div className="relative z-10 p-6 md:p-10 lg:p-16 pt-24 md:pt-28 lg:pt-32">
-        <div className="max-w-2xl">
-          {/* Glass frame - just border, minimal bg */}
-          <div className="backdrop-blur-sm bg-white/5 border border-white/20 rounded-2xl p-6 md:p-8 lg:p-10">
-            {/* Small title */}
-            <p className="text-sm md:text-base text-white/90 font-normal mb-4 md:mb-6 tracking-wide">
-              Сколковский
-            </p>
+      {/* Content */}
+      <div className="relative z-10 w-full p-6 md:p-10 lg:p-16">
+        <div className="max-w-md">
+          {/* Glass frame - narrow and tall */}
+          <div className="backdrop-blur-md bg-white/5 border border-white/15 rounded-2xl p-8 md:p-10">
+            {/* Small label */}
+            <div className="inline-block px-3 py-1 bg-white/10 rounded-full mb-6">
+              <span className="text-xs uppercase tracking-[0.2em] text-white/80 font-medium">
+                Инвестиционный проект
+              </span>
+            </div>
             
-            {/* Main headline */}
-            <h1 className="text-2xl md:text-3xl lg:text-4xl font-light text-white leading-tight mb-6 md:mb-8">
-              Зрелый девелоперский актив<br className="hidden md:block" /> 
-              с разработанной архитектурно-<br className="hidden md:block" />
-              градостроительной концепцией
+            {/* Title */}
+            <h1 className="text-xl md:text-2xl font-extralight text-white mb-6 tracking-wide uppercase">
+              Сколковский
             </h1>
             
-            {/* Supporting text */}
-            <p className="text-sm md:text-base text-white/70 font-light leading-relaxed max-w-lg">
-              Не просто земельный участок, а сформированный<br className="hidden md:block" />
-              проект с уже пройденным этапом административного цикла
+            {/* Divider */}
+            <div className="w-12 h-px bg-[#ffff00]/60 mb-6" />
+            
+            {/* Main headline */}
+            <p className="text-lg md:text-xl lg:text-2xl font-light text-white leading-relaxed mb-6">
+              Зрелый девелоперский актив с разработанной архитектурно-градостроительной концепцией
             </p>
-          </div>
-        </div>
-      </div>
-      
-      {/* Bottom Content */}
-      <div className="relative z-10 p-6 md:p-10 lg:p-16 pb-8 md:pb-12 lg:pb-16 flex justify-between items-end">
-        {/* Location */}
-        <div className="flex items-center gap-2.5 text-white/90">
-          <MapPin className="w-5 h-5 text-[#ffff00]" />
-          <span className="text-sm md:text-base font-light">
-            Московская область, г. Одинцово
-          </span>
-        </div>
-        
-        {/* Map preview card */}
-        <a 
-          href="https://yandex.ru/maps/-/CLxnaU2Z"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hidden md:block relative group"
-        >
-          <div className="w-40 lg:w-48 h-28 lg:h-32 rounded-xl overflow-hidden border border-white/20 shadow-xl transition-transform duration-300 group-hover:scale-105">
-            <img 
-              src={locationMap} 
-              alt="Карта расположения"
-              className="w-full h-full object-cover"
-            />
-            {/* Yellow pin overlay */}
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-8 h-8 bg-[#ffff00] rounded-full flex items-center justify-center shadow-lg">
+            
+            {/* Supporting text */}
+            <p className="text-sm text-white/60 font-light leading-relaxed mb-8">
+              Не просто земельный участок, а сформированный проект с уже пройденным этапом административного цикла
+            </p>
+            
+            {/* Divider */}
+            <div className="w-full h-px bg-white/10 mb-6" />
+            
+            {/* Location inside card */}
+            <div className="flex items-center gap-3">
+              <div className="w-8 h-8 rounded-full bg-[#ffff00] flex items-center justify-center">
                 <MapPin className="w-4 h-4 text-black" />
+              </div>
+              <div>
+                <span className="text-xs uppercase tracking-widest text-white/50 block mb-0.5">
+                  Локация
+                </span>
+                <span className="text-sm text-white font-light">
+                  Московская область, г. Одинцово
+                </span>
               </div>
             </div>
           </div>
-        </a>
+        </div>
       </div>
+      
+      {/* Map preview card */}
+      <a 
+        href="https://yandex.ru/maps/-/CLxnaU2Z"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hidden lg:block absolute bottom-12 right-12 group"
+      >
+        <div className="w-44 h-32 rounded-xl overflow-hidden border border-white/20 shadow-2xl transition-all duration-300 group-hover:scale-105 group-hover:border-white/30">
+          <img 
+            src={locationMap} 
+            alt="Карта расположения"
+            className="w-full h-full object-cover"
+          />
+          {/* Yellow pin overlay */}
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="w-8 h-8 bg-[#ffff00] rounded-full flex items-center justify-center shadow-lg">
+              <MapPin className="w-4 h-4 text-black" />
+            </div>
+          </div>
+        </div>
+      </a>
     </section>
   );
 };
