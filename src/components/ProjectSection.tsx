@@ -1,4 +1,4 @@
-import masterplanImage from "@/assets/masterplan.jpg";
+import locationMap from "@/assets/location-map.jpg";
 
 export const ProjectSection = () => {
   return (
@@ -21,8 +21,8 @@ export const ProjectSection = () => {
 
           <div className="relative">
             <img
-              src={masterplanImage}
-              alt="Генеральный план многофункционального комплекса Сколковский"
+              src={locationMap}
+              alt="Расположение проекта на карте Москвы"
               className="w-full h-auto rounded-sm shadow-lg"
             />
             <div className="absolute -bottom-4 -left-4 w-24 h-24 border-l-2 border-b-2 border-accent opacity-50" />
