@@ -41,10 +41,10 @@ const locationPoints: LocationPoint[] = [
 
 // Marker positions on the map (percentage-based) - aligned with original map markers
 const markerPositions = [
-  { top: "47%", left: "29%" },  // 1
-  { top: "40%", left: "50%" },  // 2
-  { top: "54%", left: "60%" },  // 3
-  { top: "76%", left: "40%" },  // 4
+  { top: "46%", left: "28%" },  // 1
+  { top: "38%", left: "48%" },  // 2
+  { top: "52%", left: "58%" },  // 3
+  { top: "74%", left: "38%" },  // 4
 ];
 
 export const EnvironmentSection = () => {
@@ -77,14 +77,14 @@ export const EnvironmentSection = () => {
                 className="w-full h-full object-cover"
               />
               
-              {/* Interactive Markers */}
+              {/* Interactive Markers - larger to cover original */}
               {markerPositions.map((pos, index) => (
                 <button
                   key={index}
-                  className={`absolute w-8 h-8 -translate-x-1/2 -translate-y-1/2 rounded-full flex items-center justify-center text-sm font-medium transition-all duration-300 ${
+                  className={`absolute w-12 h-12 -translate-x-1/2 -translate-y-1/2 rounded-full flex items-center justify-center text-base font-semibold transition-all duration-300 ${
                     activePoint === index + 1
-                      ? "bg-accent text-foreground scale-125 shadow-lg"
-                      : "bg-white text-foreground shadow-md hover:bg-accent hover:scale-110"
+                      ? "bg-accent text-foreground scale-110 shadow-lg"
+                      : "bg-white text-foreground shadow-md hover:bg-accent hover:scale-105"
                   }`}
                   style={{ top: pos.top, left: pos.left }}
                   onMouseEnter={() => setActivePoint(index + 1)}
