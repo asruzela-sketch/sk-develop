@@ -11,12 +11,20 @@ export const ProjectSection = () => {
               Многофункциональный комплекс
             </h2>
             <div className="accent-line mb-8" />
-            <p className="body-large text-muted-foreground mb-6">
-              Проект представляет собой многофункциональный комплекс, разработанный с учётом градостроительного контекста, функционального зонирования и потенциала локации.
-            </p>
-            <p className="body-base text-muted-foreground">
-              Концепция проекта сформирована как результат комплексного девелоперского подхода и отражает текущую стадию проработки объекта.
-            </p>
+            <div className="space-y-4">
+              <p className="body-large text-foreground">
+                <span className="font-medium">Площадь участка:</span>{" "}
+                <span className="text-muted-foreground">6 000 м²</span>
+              </p>
+              <p className="body-large text-foreground">
+                <span className="font-medium">Адрес:</span>{" "}
+                <span className="text-muted-foreground">Московская область, Одинцовский район, г. Одинцово, ул. Чистяковой</span>
+              </p>
+              <p className="body-large text-foreground">
+                <span className="font-medium">Форма собственности:</span>{" "}
+                <span className="text-muted-foreground">у компании ООО «СНК»</span>
+              </p>
+            </div>
           </div>
 
           <div className="relative">
