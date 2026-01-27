@@ -42,8 +42,8 @@ const locationPoints: LocationPoint[] = [
 // Marker positions on the map (percentage-based) - aligned with original map markers
 const markerPositions = [
   { top: "52%", left: "28%" },  // 1
-  { top: "44%", left: "48%" },  // 2
-  { top: "58%", left: "58%" },  // 3
+  { top: "36%", left: "52%" },  // 2 - moved up and right
+  { top: "50%", left: "68%" },  // 3 - moved right
   { top: "80%", left: "38%" },  // 4
 ];
 
