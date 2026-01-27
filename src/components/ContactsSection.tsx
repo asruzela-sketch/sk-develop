@@ -1,9 +1,7 @@
 import { Phone, Send, ArrowUpRight } from "lucide-react";
 import contactVisual from "@/assets/contact-visual.jpg";
-
 export const ContactsSection = () => {
-  return (
-    <section id="contacts" className="py-16 md:py-24 bg-muted/30">
+  return <section id="contacts" className="py-16 md:py-24 bg-muted/30">
       <div className="container-wide">
         {/* Premium Card Container */}
         <div className="relative bg-background rounded-[2rem] shadow-2xl overflow-hidden border border-border/50">
@@ -11,17 +9,14 @@ export const ContactsSection = () => {
             
             {/* Left: Contact Info Card */}
             <div className="flex flex-col justify-center p-10 md:p-16 lg:p-20">
-              <p className="label-small mb-4 text-accent">Контакты</p>
+              <p className="label-small mb-4 text-secondary-foreground">Контакты</p>
               <h2 className="heading-section mb-8">
                 Получить больше информации
               </h2>
               
               <div className="space-y-6 mb-10">
                 {/* Phone */}
-                <a 
-                  href="tel:+79150389088" 
-                  className="group flex items-center gap-4 p-4 rounded-2xl bg-muted/50 hover:bg-muted transition-all duration-300"
-                >
+                <a href="tel:+79150389088" className="group flex items-center gap-4 p-4 rounded-2xl bg-muted/50 hover:bg-muted transition-all duration-300">
                   <div className="w-12 h-12 rounded-full bg-foreground flex items-center justify-center">
                     <Phone className="w-5 h-5 text-background" strokeWidth={1.5} />
                   </div>
@@ -33,12 +28,7 @@ export const ContactsSection = () => {
                 </a>
 
                 {/* Telegram */}
-                <a 
-                  href="https://t.me/info_144capital" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="group flex items-center gap-4 p-4 rounded-2xl bg-muted/50 hover:bg-muted transition-all duration-300"
-                >
+                <a href="https://t.me/info_144capital" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-4 p-4 rounded-2xl bg-muted/50 hover:bg-muted transition-all duration-300">
                   <div className="w-12 h-12 rounded-full bg-foreground flex items-center justify-center">
                     <Send className="w-5 h-5 text-background" strokeWidth={1.5} />
                   </div>
@@ -58,14 +48,10 @@ export const ContactsSection = () => {
             {/* Right: Visual */}
             <div className="relative hidden lg:block">
               <div className="absolute inset-4 rounded-[1.5rem] overflow-hidden shadow-xl">
-                <img
-                  src={contactVisual}
-                  alt="Архитектурная визуализация проекта"
-                  className="w-full h-full object-cover"
-                />
+                <img src={contactVisual} alt="Архитектурная визуализация проекта" className="w-full h-full object-cover" />
                 {/* Decorative overlay badges */}
                 <div className="absolute top-8 left-8 px-4 py-2 bg-background/80 backdrop-blur-md rounded-full text-sm font-medium shadow-lg">
-                  <span className="text-accent">144</span> Capital
+                  <span className="text-secondary-foreground">144/</span> Capital
                 </div>
                 <div className="absolute bottom-8 right-8 px-4 py-3 bg-background/80 backdrop-blur-md rounded-2xl shadow-lg">
                   <p className="text-xs text-muted-foreground mb-1">Проект</p>
@@ -77,6 +63,5 @@ export const ContactsSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };

@@ -1,32 +1,23 @@
 import { CheckCircle2, ArrowUpRight } from "lucide-react";
 import buildingImage from "@/assets/building-render.jpg";
-
-const steps = [
-  {
-    title: "Анализ градостроительного потенциала",
-    description: "Исследование участка и его возможностей",
-  },
-  {
-    title: "Формирование функциональной модели",
-    description: "Определение структуры многофункционального комплекса",
-  },
-  {
-    title: "Разработка концепции",
-    description: "Архитектурно-градостроительная концепция МФК",
-  },
-  {
-    title: "Технико-экономические параметры",
-    description: "Определение основных показателей проекта",
-  },
-  {
-    title: "Взаимодействие с органами власти",
-    description: "Прохождение административных процедур",
-  },
-];
-
+const steps = [{
+  title: "Анализ градостроительного потенциала",
+  description: "Исследование участка и его возможностей"
+}, {
+  title: "Формирование функциональной модели",
+  description: "Определение структуры многофункционального комплекса"
+}, {
+  title: "Разработка концепции",
+  description: "Архитектурно-градостроительная концепция МФК"
+}, {
+  title: "Технико-экономические параметры",
+  description: "Определение основных показателей проекта"
+}, {
+  title: "Взаимодействие с органами власти",
+  description: "Прохождение административных процедур"
+}];
 export const JourneySection = () => {
-  return (
-    <section id="journey" className="py-16 md:py-24 bg-muted/30">
+  return <section id="journey" className="py-16 md:py-24 bg-muted/30">
       <div className="container-wide">
         {/* Premium Card Container */}
         <div className="relative bg-background rounded-[2rem] shadow-2xl overflow-hidden border border-border/50">
@@ -35,11 +26,7 @@ export const JourneySection = () => {
             {/* Left: Visual */}
             <div className="relative hidden lg:block order-2 lg:order-1">
               <div className="absolute inset-4 rounded-[1.5rem] overflow-hidden shadow-xl">
-                <img
-                  src={buildingImage}
-                  alt="Архитектурная визуализация проекта"
-                  className="w-full h-full object-cover"
-                />
+                <img src={buildingImage} alt="Архитектурная визуализация проекта" className="w-full h-full object-cover" />
                 {/* Decorative overlay badges */}
                 <div className="absolute top-8 left-8 px-4 py-2 bg-background/80 backdrop-blur-md rounded-full text-sm font-medium shadow-lg">
                   <span className="text-accent">5</span> этапов пройдено
@@ -56,17 +43,13 @@ export const JourneySection = () => {
 
             {/* Right: Steps */}
             <div className="flex flex-col justify-center p-8 md:p-12 lg:p-16 order-1 lg:order-2">
-              <p className="label-small mb-4 text-accent">Пройденный путь</p>
+              <p className="label-small mb-4 text-secondary-foreground">Пройденный путь</p>
               <h2 className="heading-section mb-8">
                 Этап девелоперского цикла
               </h2>
               
               <div className="space-y-4 mb-8">
-                {steps.map((step, index) => (
-                  <div
-                    key={step.title}
-                    className="group flex items-start gap-4 p-4 rounded-2xl bg-muted/50 hover:bg-muted transition-all duration-300"
-                  >
+                {steps.map((step, index) => <div key={step.title} className="group flex items-start gap-4 p-4 rounded-2xl bg-muted/50 hover:bg-muted transition-all duration-300">
                     <div className="flex-shrink-0 w-10 h-10 rounded-full bg-foreground flex items-center justify-center">
                       <CheckCircle2 className="w-5 h-5 text-background" strokeWidth={1.5} />
                     </div>
@@ -77,8 +60,7 @@ export const JourneySection = () => {
                       </h3>
                     </div>
                     <ArrowUpRight className="w-4 h-4 text-muted-foreground group-hover:text-accent group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300 mt-1" />
-                  </div>
-                ))}
+                  </div>)}
               </div>
 
               <p className="text-sm text-muted-foreground">
@@ -89,6 +71,5 @@ export const JourneySection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
