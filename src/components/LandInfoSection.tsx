@@ -62,18 +62,21 @@ export const LandInfoSection = () => {
       <section
         id="project"
         className="relative min-h-[400px] md:min-h-[500px] flex items-end justify-start"
-        style={{
-          backgroundImage: `url(${locationMap})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
       >
-        {/* Top fade from background */}
-        <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-background to-transparent" />
-        {/* Bottom fade to background */}
-        <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-background to-transparent" />
-        {/* Subtle overall overlay */}
-        <div className="absolute inset-0 bg-foreground/10" />
+        {/* Background image with soft edges (no "white overlay" blocks) */}
+        <div
+          aria-hidden="true"
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `url(${locationMap})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            WebkitMaskImage:
+              "linear-gradient(to bottom, transparent 0%, hsl(0 0% 0%) 12%, hsl(0 0% 0%) 88%, transparent 100%)",
+            maskImage:
+              "linear-gradient(to bottom, transparent 0%, hsl(0 0% 0%) 12%, hsl(0 0% 0%) 88%, transparent 100%)",
+          }}
+        />
         
         <div className="container-wide relative z-10 py-8 md:py-12">
           <div className="inline-block opacity-0 animate-fade-in" style={{ animationDelay: "0.3s", animationFillMode: "forwards" }}>
