@@ -29,7 +29,7 @@ export const JourneySection = () => {
                 <img src={buildingImage} alt="Архитектурная визуализация проекта" className="w-full h-full object-cover" />
                 {/* Decorative overlay badges */}
                 <div className="absolute top-8 left-8 px-4 py-2 bg-background/80 backdrop-blur-md rounded-full text-sm font-medium shadow-lg">
-                  <span className="text-accent">5</span> этапов пройдено
+                  <span className="text-foreground">5</span> этапов пройдено
                 </div>
                 <div className="absolute bottom-8 left-8 px-4 py-3 bg-background/80 backdrop-blur-md rounded-2xl shadow-lg">
                   <p className="text-xs text-muted-foreground mb-1">Статус</p>

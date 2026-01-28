@@ -112,7 +112,7 @@ export const ConceptSection = () => {
           {/* Retail Zone */}
           <ZoneCard title="Торгово-общественный блок" area="12 411" areaLabel="м²" image={retailImage} description="Коммерческая инфраструктура, формирующая активную городскую среду и сервисное ядро проекта." details={<div className="space-y-4">
                 <div>
-                  <p className="text-xs uppercase tracking-wider text-accent mb-2">Ритейл — 4 988 м²</p>
+                  <p className="text-xs uppercase tracking-wider text-foreground mb-2">Ритейл — 4 988 м²</p>
                   <ul className="space-y-1 text-xs text-muted-foreground">
                     <li>• Супермаркет — 933 м²</li>
                     <li>• Мелкие арендаторы — 1 761 м²</li>
@@ -120,7 +120,7 @@ export const ConceptSection = () => {
                   </ul>
                 </div>
                 <div>
-                  <p className="text-xs uppercase tracking-wider text-accent mb-2">Общественные функции</p>
+                  <p className="text-xs uppercase tracking-wider text-foreground mb-2">Общественные функции</p>
                   <ul className="space-y-1 text-xs text-muted-foreground">
                     <li>• Досуг — 1 118 м²</li>
                     <li>• Фудкорт (200 мест) — 1 063 м²</li>
@@ -129,7 +129,7 @@ export const ConceptSection = () => {
                   </ul>
                 </div>
                 <div>
-                  <p className="text-xs uppercase tracking-wider text-accent mb-2">Техническая зона</p>
+                  <p className="text-xs uppercase tracking-wider text-foreground mb-2">Техническая зона</p>
                   <p className="text-xs text-muted-foreground">2 135 м²</p>
                 </div>
               </div>} />
