@@ -86,23 +86,23 @@ export const DeveloperSection = () => {
               
               {/* Map CTA */}
               <div className="p-6">
-                <div className="flex items-center gap-3 mb-3">
-                  <p className="text-sm text-white/60">
-                    География проектов
-                  </p>
-                  <div className="px-3 py-1 bg-[#ffff00] rounded-full text-xs font-medium text-foreground">
+                <p className="text-sm text-white/60 mb-3">
+                  География проектов
+                </p>
+                <div className="flex items-center gap-3 flex-wrap">
+                  <a
+                    href={mapUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-5 py-3 bg-[#ffff00] text-foreground rounded-full text-sm font-medium hover:bg-[#ffff00]/90 transition-colors group"
+                  >
+                    Все проекты на карте
+                    <ExternalLink className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                  </a>
+                  <span className="px-4 py-3 bg-white/10 border border-white/20 rounded-full text-sm text-white/80">
                     Москва и МО
-                  </div>
+                  </span>
                 </div>
-                <a
-                  href={mapUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-5 py-3 bg-[#ffff00] text-foreground rounded-full text-sm font-medium hover:bg-[#ffff00]/90 transition-colors group"
-                >
-                  Все проекты на карте
-                  <ExternalLink className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                </a>
               </div>
             </div>
           </div>
