@@ -6,7 +6,7 @@ export const Footer = () => {
       <div className="container-wide">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2 text-sm text-[hsl(var(--text-light)_/_0.5)]">
-            © 2025 <img src={logo144} alt="144/Девелопмент" className="h-5 w-auto inline" />
+            © 2025 <img src={logo144} alt="144/Девелопмент" className="h-8 w-auto inline" />
           </div>
           <p className="text-sm text-[hsl(var(--text-light)_/_0.5)]">
             Сколковский — девелоперский проект

@@ -20,7 +20,7 @@ export const Header = () => {
       <div className="glass-panel">
         <div className="container-wide py-4 flex items-center justify-between">
           <a href="#">
-            <img src={logo144} alt="144/Девелопмент" className="h-8 w-auto" />
+            <img src={logo144} alt="144/Девелопмент" className="h-12 md:h-14 w-auto" />
           </a>
 
           {/* Desktop Navigation */}
