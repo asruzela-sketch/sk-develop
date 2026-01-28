@@ -37,12 +37,14 @@ export const DeveloperSection = () => {
           {/* Left: Content */}
           <div className="flex flex-col">
             <div className="mb-8">
-              <p className="text-xs uppercase tracking-[0.2em] text-white/60 mb-4">Девелопер</p>
-              <img 
-                src={logo144Capital} 
-                alt="144/Capital" 
-                className="h-16 md:h-20 w-auto mb-6"
-              />
+              <div className="flex items-center gap-6 mb-6">
+                <p className="text-xs uppercase tracking-[0.2em] text-white/60">Девелопер</p>
+                <img 
+                  src={logo144Capital} 
+                  alt="144/Capital" 
+                  className="h-28 md:h-36 w-auto"
+                />
+              </div>
               <p className="text-lg text-white/80 leading-relaxed">
                 Реализует объекты коммерческой торговой недвижимости в Москве и Московской области.
               </p>
@@ -79,7 +81,7 @@ export const DeveloperSection = () => {
               {/* Map Preview - stretched */}
               <div className="relative flex-1 min-h-[400px]">
                 <iframe
-                  src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae4704c257d8258f591cadc7b3ec0d7ac32c5eb15bc1369eeb00025f524898d38&amp;source=constructor&amp;z=10&amp;ll=37.6173,55.7558"
+                  src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae4704c257d8258f591cadc7b3ec0d7ac32c5eb15bc1369eeb00025f524898d38&amp;source=constructor&amp;z=9&amp;ll=37.6173,55.7558"
                   width="100%"
                   height="100%"
                   frameBorder="0"
