@@ -49,7 +49,7 @@ export const LandInfoSection = () => {
           <InfoCard
             icon={<Building2 className="w-6 h-6 text-white" strokeWidth={1.5} />}
             label="Форма собственности"
-            value="Владелец — общество с ограниченной ответственностью"
+            value="Владелец: общество с ограниченной ответственностью"
             delay="0.3s"
           />
         </div>
