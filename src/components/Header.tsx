@@ -1,5 +1,6 @@
 import { Menu, X, Send } from "lucide-react";
 import { useState } from "react";
+import logo144 from "@/assets/logo-144capital.png";
 
 const navItems = [{
   label: "Проект",
@@ -18,8 +19,8 @@ export const Header = () => {
   return <header className="fixed top-0 left-0 right-0 z-50">
       <div className="glass-panel">
         <div className="container-wide py-4 flex items-center justify-between">
-          <a href="#" className="text-[hsl(var(--text-light))] text-lg font-medium tracking-wide">
-            <span className="text-[#ffff00]">144</span>/Девелопмент
+          <a href="#">
+            <img src={logo144} alt="144/Девелопмент" className="h-8 w-auto" />
           </a>
 
           {/* Desktop Navigation */}
