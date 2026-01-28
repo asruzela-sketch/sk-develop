@@ -1,5 +1,6 @@
-import { Menu, X } from "lucide-react";
+import { Menu, X, Send } from "lucide-react";
 import { useState } from "react";
+
 const navItems = [{
   label: "Проект",
   href: "#project"
@@ -7,24 +8,18 @@ const navItems = [{
   label: "Концепция",
   href: "#concept"
 }, {
-  label: "Пройденный путь",
-  href: "#journey"
-}, {
-  label: "Инвестору",
-  href: "#investor"
-}, {
   label: "Девелопер",
   href: "#developer"
-}, {
-  label: "Контакты",
-  href: "#contacts"
 }];
+
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  
   return <header className="fixed top-0 left-0 right-0 z-50">
       <div className="glass-panel">
         <div className="container-wide py-4 flex items-center justify-between">
-          <a href="#" className="text-[hsl(var(--text-light))] text-lg font-medium tracking-wide">144/Девелопмент<span className="text-accent">144</span>/Девелопмент
+          <a href="#" className="text-[hsl(var(--text-light))] text-lg font-medium tracking-wide">
+            <span className="text-[#ffff00]">144</span>/Capital
           </a>
 
           {/* Desktop Navigation */}
@@ -32,6 +27,17 @@ export const Header = () => {
             {navItems.map(item => <a key={item.href} href={item.href} className="text-[hsl(var(--text-light)_/_0.8)] hover:text-[hsl(var(--text-light))] text-sm font-light transition-colors">
                 {item.label}
               </a>)}
+            
+            {/* Telegram Button */}
+            <a 
+              href="https://t.me/info_144capital" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-4 py-2 bg-[hsl(var(--text-light))] text-[hsl(var(--dark-bg))] rounded-full text-sm font-medium hover:bg-[hsl(var(--text-light)_/_0.9)] transition-colors"
+            >
+              <Send size={16} />
+              Написать
+            </a>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -46,6 +52,18 @@ export const Header = () => {
               {navItems.map(item => <a key={item.href} href={item.href} className="text-[hsl(var(--text-light)_/_0.8)] hover:text-[hsl(var(--text-light))] text-sm font-light transition-colors" onClick={() => setIsMenuOpen(false)}>
                   {item.label}
                 </a>)}
+              
+              {/* Mobile Telegram Button */}
+              <a 
+                href="https://t.me/info_144capital" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 px-4 py-2 bg-[hsl(var(--text-light))] text-[hsl(var(--dark-bg))] rounded-full text-sm font-medium w-fit"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                <Send size={16} />
+                Написать в Telegram
+              </a>
             </div>
           </nav>}
       </div>
