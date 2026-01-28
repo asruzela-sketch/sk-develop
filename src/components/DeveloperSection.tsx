@@ -41,7 +41,7 @@ export const DeveloperSection = () => {
               <img 
                 src={logo144Capital} 
                 alt="144/Capital" 
-                className="h-10 md:h-12 w-auto mb-6"
+                className="h-16 md:h-20 w-auto mb-6"
               />
               <p className="text-lg text-white/80 leading-relaxed">
                 Реализует объекты коммерческой торговой недвижимости в Москве и Московской области.
@@ -79,7 +79,7 @@ export const DeveloperSection = () => {
               {/* Map Preview - stretched */}
               <div className="relative flex-1 min-h-[400px]">
                 <iframe
-                  src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae4704c257d8258f591cadc7b3ec0d7ac32c5eb15bc1369eeb00025f524898d38&amp;source=constructor&amp;z=9"
+                  src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae4704c257d8258f591cadc7b3ec0d7ac32c5eb15bc1369eeb00025f524898d38&amp;source=constructor&amp;z=10&amp;ll=37.6173,55.7558"
                   width="100%"
                   height="100%"
                   frameBorder="0"
