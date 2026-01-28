@@ -1,5 +1,5 @@
 import founderIgor from "@/assets/founder-igor.jpg";
-import founderVladimir from "@/assets/founder-vladimir.jpg";
+import founderVladimir from "@/assets/founder-vladimir-clean.jpg";
 
 const founders = [
   {
@@ -26,11 +26,8 @@ export const FoundersSection = () => {
       <div className="container-wide">
         {/* Header */}
         <div className="text-center mb-16">
-          <p className="text-sm uppercase tracking-[0.2em] text-white/60 mb-4">
-            Руководство
-          </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-light text-white">
-            В лицах
+            <span className="text-white/60">Руководство</span> в лицах
           </h2>
         </div>
 
