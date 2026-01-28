@@ -36,7 +36,7 @@ export const DeveloperSection = () => {
                 <img 
                   src={logo144Capital} 
                   alt="144/Capital" 
-                  className="h-32 md:h-40 w-auto"
+                  className="h-16 md:h-20 w-auto"
                 />
               </div>
               <p className="text-lg text-white/80 leading-relaxed">
