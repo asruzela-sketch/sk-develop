@@ -1,33 +1,22 @@
-import founderIgor from "@/assets/founder-igor.png";
-import founderVladimir from "@/assets/founder-vladimir.png";
+import founderIgor from "@/assets/founder-igor.jpg";
+import founderVladimir from "@/assets/founder-vladimir.jpg";
 
 const founders = [
   {
     name: "Игорь Чаплинский",
     role: "Сооснователь 144/Capital",
     image: founderIgor,
-    experience: "20+ лет",
-    experienceLabel: "опыт в недвижимости",
-    bio: [
-      "Исполнительный директор и руководитель отдела развития «Детский мир» (2002–2004)",
-      "Консалтинг в Магазин Магазинов, СBRE, Cushman & Wakefield",
-      "Реализовано более 100 проектов торговых центров",
-      "Заключено 1 400 арендных сделок",
-      "Проданы объекты на сумму более $450 млн",
-    ],
+    experience: "22+",
+    experienceLabel: "лет в недвижимости",
+    bio: "Опыт работы в недвижимости и ритейле — более 22 лет. В прошлом — исполнительный директор и руководитель отдела развития федеральной сети «Детский мир» (2002−2004). При его непосредственном участии было открыто 10 магазинов. С 2005 по 2018 года Игорь работал в консалтинге по торговой недвижимости в ведущих российских и международных компаниях: Магазин Магазинов, СBRE, Cushman & Wakefield, а также развивал собственную консалтинговую компанию CRG. В этот период при непосредственном участии было реализовано более 100 проектов торговых центров, заключено 1400 арендных сделок, проданы объекты на сумму более 450 млн. долларов. С 2019 — сооснователь инвестиционно-девелоперской компании 144/Capital.",
   },
   {
     name: "Владимир Бобрук",
     role: "Сооснователь 144/Capital",
     image: founderVladimir,
-    experience: "12+ лет",
-    experienceLabel: "опыт в недвижимости",
-    bio: [
-      "Руководитель отдела развития X5 Retail Group",
-      "Управление портфелем «Перекресток», «Пятерочка», «Карусель»",
-      "Открыто более 100 магазинов в Москве и МО",
-      "Инвестирование и развитие объектов стрит-ритейла",
-    ],
+    experience: "14",
+    experienceLabel: "лет в недвижимости",
+    bio: "Опыт работы в недвижимости — 14 лет. Руководил отделом развития в X5 Retail Group, управляющей портфелем брендов сетевых магазинов «Перекресток», «Пятерочка», «Карусель». Под его руководством было открыто более 100 магазинов в Москве и МО. С 2018 года занимается инвестированием в проекты торговой недвижимости, управлением и развитием объектов стрит-ритейла в Москве и Московской области. С 2019 является сооснователем инвестиционной компании 144/Capital.",
   },
 ];
 
@@ -74,7 +63,7 @@ export const FoundersSection = () => {
                   {/* Photo with gradient mask */}
                   <div className="relative w-64 h-72 md:w-72 md:h-80">
                     <div 
-                      className="absolute inset-0 bg-gradient-to-t from-white/5 via-transparent to-transparent rounded-t-3xl"
+                      className="absolute inset-0 rounded-t-3xl overflow-hidden"
                       style={{
                         maskImage: 'linear-gradient(to bottom, black 70%, transparent 100%)',
                         WebkitMaskImage: 'linear-gradient(to bottom, black 70%, transparent 100%)',
@@ -103,18 +92,10 @@ export const FoundersSection = () => {
                     </p>
                   </div>
 
-                  {/* Bio Points */}
-                  <div className="space-y-3">
-                    {founder.bio.map((point, i) => (
-                      <div 
-                        key={i} 
-                        className="flex items-start gap-3 text-sm text-white/70"
-                      >
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#ffff00]/60 mt-2 flex-shrink-0" />
-                        <span className="leading-relaxed">{point}</span>
-                      </div>
-                    ))}
-                  </div>
+                  {/* Bio Text */}
+                  <p className="text-sm text-white/70 leading-relaxed">
+                    {founder.bio}
+                  </p>
                 </div>
 
                 {/* Decorative corner accent */}
