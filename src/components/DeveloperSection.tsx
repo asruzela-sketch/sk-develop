@@ -23,10 +23,9 @@ export const DeveloperSection = () => {
   const mapUrl = "https://yandex.ru/maps/?um=constructor%3Ae4704c257d8258f591cadc7b3ec0d7ac32c5eb15bc1369eeb00025f524898d38&source=constructorLink";
 
   return (
-    <section id="developer" className="py-16 md:py-24 bg-foreground">
+    <section id="developer" className="py-10 md:py-14 bg-foreground">
       <div className="container-wide">
-        {/* Badge above the block */}
-        <div className="flex justify-end mb-4 lg:pr-4">
+        <div className="flex justify-end mb-3 lg:pr-4">
           <div className="px-4 py-2 bg-[#ffff00] rounded-full text-sm font-medium text-foreground">
             Москва и МО
           </div>
@@ -36,13 +35,13 @@ export const DeveloperSection = () => {
           
           {/* Left: Content */}
           <div className="flex flex-col">
-            <div className="mb-8">
-              <div className="flex items-center gap-6 mb-6">
+            <div className="mb-4">
+              <div className="flex items-center gap-4 mb-3">
                 <p className="text-xs uppercase tracking-[0.2em] text-white/60">Девелопер</p>
                 <img 
                   src={logo144Capital} 
                   alt="144/Capital" 
-                  className="h-28 md:h-36 w-auto"
+                  className="h-24 md:h-28 w-auto"
                 />
               </div>
               <p className="text-lg text-white/80 leading-relaxed">
