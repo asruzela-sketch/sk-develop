@@ -22,24 +22,24 @@ const founders = [
 
 export const FoundersSection = () => {
   return (
-    <section className="py-16 md:py-24 bg-foreground overflow-hidden">
+    <section className="py-12 md:py-16 bg-foreground overflow-hidden">
       <div className="container-wide">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-light text-white">
-            <span className="text-white/60">Руководство</span> в лицах
+        <div className="text-center mb-10">
+          <h2 className="text-sm md:text-base uppercase tracking-[0.2em] text-white/80 font-medium">
+            Руководство в лицах
           </h2>
         </div>
 
         {/* Founders Grid */}
-        <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
+        <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-stretch">
           {founders.map((founder, index) => (
             <div
               key={index}
-              className="group relative"
+              className="group relative flex"
             >
               {/* Card */}
-              <div className="relative bg-white/5 border border-white/10 rounded-3xl overflow-hidden backdrop-blur-sm hover:bg-white/[0.08] transition-all duration-500">
+              <div className="relative bg-white/5 border border-white/10 rounded-3xl overflow-hidden backdrop-blur-sm hover:bg-white/[0.08] transition-all duration-500 flex flex-col w-full">
                 {/* Top Section - Photo + Stats */}
                 <div className="relative flex items-end justify-center pt-8 px-8 pb-0">
                   {/* Decorative elements */}
@@ -78,19 +78,19 @@ export const FoundersSection = () => {
                 </div>
 
                 {/* Bottom Section - Info */}
-                <div className="p-8 pt-4">
+                <div className="p-6 pt-4 flex-1 flex flex-col">
                   {/* Name & Role */}
-                  <div className="mb-6">
-                    <h3 className="text-2xl md:text-3xl font-medium text-white mb-2 group-hover:text-[#ffff00] transition-colors duration-300">
+                  <div className="mb-4">
+                    <h3 className="text-xl md:text-2xl font-medium text-white mb-1 group-hover:text-[#ffff00] transition-colors duration-300">
                       {founder.name}
                     </h3>
-                    <p className="text-white/60 text-sm uppercase tracking-wider">
+                    <p className="text-white/60 text-xs uppercase tracking-wider">
                       {founder.role}
                     </p>
                   </div>
 
                   {/* Bio Text */}
-                  <p className="text-sm text-white/70 leading-relaxed whitespace-pre-line">
+                  <p className="text-sm text-white/70 leading-relaxed whitespace-pre-line flex-1">
                     {founder.bio}
                   </p>
                 </div>
@@ -103,7 +103,7 @@ export const FoundersSection = () => {
         </div>
 
         {/* Bottom decorative line */}
-        <div className="mt-16 flex items-center justify-center gap-4">
+        <div className="mt-10 flex items-center justify-center gap-4">
           <div className="h-px w-16 bg-gradient-to-r from-transparent to-white/20" />
           <div className="w-2 h-2 rounded-full bg-[#ffff00]/40" />
           <div className="h-px w-16 bg-gradient-to-l from-transparent to-white/20" />
