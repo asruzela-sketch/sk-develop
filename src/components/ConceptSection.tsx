@@ -72,7 +72,7 @@ const ZoneCard = ({
     </div>;
 };
 export const ConceptSection = () => {
-  return <section id="concept" className="bg-[hsl(40_30%_96%)] py-24 md:py-32">
+  return <section id="concept" className="bg-[hsl(40_30%_96%)] pt-24 md:pt-32 pb-12 md:pb-16">
       <div className="container-wide">
         {/* Header */}
         <div className="text-center mb-16 max-w-3xl mx-auto">

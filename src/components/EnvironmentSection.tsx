@@ -55,7 +55,7 @@ const markerPositions = [{
 ];
 export const EnvironmentSection = () => {
   const [activePoint, setActivePoint] = useState<number | null>(null);
-  return <section id="environment" className="bg-background py-24 md:py-32">
+  return <section id="environment" className="bg-background pt-12 md:pt-16 pb-12 md:pb-16">
       <div className="container-wide">
         {/* Header */}
         <div className="text-center mb-16 max-w-3xl mx-auto">
