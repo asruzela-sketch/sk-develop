@@ -7,6 +7,7 @@ import { ConceptSection } from "@/components/ConceptSection";
 import { EnvironmentSection } from "@/components/EnvironmentSection";
 import { JourneySection } from "@/components/JourneySection";
 import { DeveloperSection } from "@/components/DeveloperSection";
+import { FoundersSection } from "@/components/FoundersSection";
 import { ContactsSection } from "@/components/ContactsSection";
 import { Footer } from "@/components/Footer";
 
@@ -23,6 +24,7 @@ const Index = () => {
         <EnvironmentSection />
         <JourneySection />
         <DeveloperSection />
+        <FoundersSection />
         <ContactsSection />
       </main>
       <Footer />
