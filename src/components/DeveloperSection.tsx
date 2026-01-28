@@ -23,13 +23,8 @@ export const DeveloperSection = () => {
   const mapUrl = "https://yandex.ru/maps/?um=constructor%3Ae4704c257d8258f591cadc7b3ec0d7ac32c5eb15bc1369eeb00025f524898d38&source=constructorLink";
 
   return (
-    <section id="developer" className="py-10 md:py-14 bg-foreground">
+    <section id="developer" className="py-8 md:py-10 bg-foreground">
       <div className="container-wide">
-        <div className="flex justify-end mb-3 lg:pr-4">
-          <div className="px-4 py-2 bg-[#ffff00] rounded-full text-sm font-medium text-foreground">
-            Москва и МО
-          </div>
-        </div>
 
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-stretch">
           
@@ -37,11 +32,11 @@ export const DeveloperSection = () => {
           <div className="flex flex-col">
             <div className="mb-4">
               <div className="flex items-center gap-4 mb-3">
-                <p className="text-xs uppercase tracking-[0.2em] text-white/60">Девелопер</p>
+                <p className="text-sm uppercase tracking-[0.2em] text-white/60">Девелопер</p>
                 <img 
                   src={logo144Capital} 
                   alt="144/Capital" 
-                  className="h-24 md:h-28 w-auto"
+                  className="h-32 md:h-40 w-auto"
                 />
               </div>
               <p className="text-lg text-white/80 leading-relaxed">
@@ -91,9 +86,14 @@ export const DeveloperSection = () => {
               
               {/* Map CTA */}
               <div className="p-6">
-                <p className="text-sm text-white/60 mb-3">
-                  География проектов
-                </p>
+                <div className="flex items-center gap-3 mb-3">
+                  <p className="text-sm text-white/60">
+                    География проектов
+                  </p>
+                  <div className="px-3 py-1 bg-[#ffff00] rounded-full text-xs font-medium text-foreground">
+                    Москва и МО
+                  </div>
+                </div>
                 <a
                   href={mapUrl}
                   target="_blank"
