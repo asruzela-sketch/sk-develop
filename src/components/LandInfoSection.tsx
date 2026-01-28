@@ -61,9 +61,9 @@ export const LandInfoSection = () => {
       {/* Map Section */}
       <section
         id="project"
-        className="relative min-h-[400px] md:min-h-[500px] flex items-end justify-start"
+        className="relative min-h-[400px] md:min-h-[500px] pb-16 md:pb-20 flex items-end justify-start"
       >
-        {/* Background image with soft edges (no "white overlay" blocks) */}
+        {/* Background image with soft edges */}
         <div
           aria-hidden="true"
           className="absolute inset-0"
@@ -72,13 +72,13 @@ export const LandInfoSection = () => {
             backgroundSize: "cover",
             backgroundPosition: "center",
             WebkitMaskImage:
-              "linear-gradient(to bottom, transparent 0%, hsl(0 0% 0%) 12%, hsl(0 0% 0%) 88%, transparent 100%)",
+              "linear-gradient(to bottom, transparent 0%, black 12%, black 100%)",
             maskImage:
-              "linear-gradient(to bottom, transparent 0%, hsl(0 0% 0%) 12%, hsl(0 0% 0%) 88%, transparent 100%)",
+              "linear-gradient(to bottom, transparent 0%, black 12%, black 100%)",
           }}
         />
         
-        <div className="container-wide relative z-10 py-8 md:py-12">
+        <div className="container-wide relative z-10">
           <div className="inline-block opacity-0 animate-fade-in" style={{ animationDelay: "0.3s", animationFillMode: "forwards" }}>
             <div className="relative group">
               <div className="absolute -inset-1 bg-gradient-to-r from-accent via-amber-300 to-accent rounded-full opacity-70 blur-sm group-hover:opacity-100 group-hover:blur-md transition-all duration-500" />
