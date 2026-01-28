@@ -18,9 +18,9 @@ export const Header = () => {
   
   return <header className="fixed top-0 left-0 right-0 z-50">
       <div className="glass-panel">
-        <div className="container-wide py-3 flex items-center justify-between">
+        <div className="container-wide py-2 flex items-center justify-between">
           <a href="#">
-            <img src={logo144} alt="144/Девелопмент" className="h-16 md:h-20 w-auto" />
+            <img src={logo144} alt="144/Девелопмент" className="h-10 md:h-12 w-auto" />
           </a>
 
           {/* Desktop Navigation */}
