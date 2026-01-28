@@ -68,7 +68,12 @@ export const LandInfoSection = () => {
           backgroundPosition: "center",
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-t from-foreground/30 to-transparent" />
+        {/* Top fade from background */}
+        <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-background to-transparent" />
+        {/* Bottom fade to background */}
+        <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-background to-transparent" />
+        {/* Subtle overall overlay */}
+        <div className="absolute inset-0 bg-foreground/10" />
         
         <div className="container-wide relative z-10 py-8 md:py-12">
           <div className="inline-block opacity-0 animate-fade-in" style={{ animationDelay: "0.3s", animationFillMode: "forwards" }}>
