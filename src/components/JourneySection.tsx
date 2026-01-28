@@ -17,7 +17,7 @@ const steps = [{
   description: "Прохождение административных процедур"
 }];
 export const JourneySection = () => {
-  return <section id="journey" className="py-16 md:py-24 bg-muted/30">
+  return <section id="journey" className="pt-8 md:pt-12 pb-16 md:pb-24 bg-muted/30">
       <div className="container-wide">
         {/* Premium Card Container */}
         <div className="relative bg-background rounded-[2rem] shadow-2xl overflow-hidden border border-border/50">
