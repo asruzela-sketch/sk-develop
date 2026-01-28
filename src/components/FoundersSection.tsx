@@ -1,4 +1,4 @@
-import founderIgor from "@/assets/founder-igor.jpg";
+import founderIgor from "@/assets/founder-igor-clean.jpg";
 import founderVladimir from "@/assets/founder-vladimir-clean.jpg";
 
 const founders = [
@@ -49,12 +49,12 @@ export const FoundersSection = () => {
                   
                   {/* Experience Badge - Top Right */}
                   <div className="absolute top-6 right-6 z-10">
-                    <div className="bg-[#ffff00] text-foreground px-4 py-2 rounded-full">
-                      <p className="text-xl font-bold leading-none">{founder.experience}</p>
+                    <div className="bg-[#ffff00] text-foreground px-4 py-3 rounded-2xl text-center">
+                      <p className="text-2xl font-bold leading-none">{founder.experience}</p>
+                      <p className="text-[10px] text-foreground/70 mt-1 leading-tight">
+                        {founder.experienceLabel}
+                      </p>
                     </div>
-                    <p className="text-xs text-white/60 mt-2 text-right">
-                      {founder.experienceLabel}
-                    </p>
                   </div>
 
                   {/* Photo with gradient mask */}
