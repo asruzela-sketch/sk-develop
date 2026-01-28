@@ -1,6 +1,6 @@
 import { MapPin } from "lucide-react";
 import heroVisual from "@/assets/hero-new.png";
-import locationMap from "@/assets/location-map.jpg";
+
 export const HeroSection = () => {
   return <section className="relative min-h-screen flex items-center justify-start">
       {/* Full Background Visual */}
@@ -56,17 +56,5 @@ export const HeroSection = () => {
         </div>
       </div>
       
-      {/* Map preview card */}
-      <a href="https://yandex.ru/maps/-/CLxnaU2Z" target="_blank" rel="noopener noreferrer" className="hidden lg:block absolute bottom-12 right-12 group">
-        <div className="w-44 h-32 rounded-xl overflow-hidden border border-white/20 shadow-2xl transition-all duration-300 group-hover:scale-105 group-hover:border-white/30">
-          <img src={locationMap} alt="Карта расположения" className="w-full h-full object-cover" />
-          {/* Yellow pin overlay */}
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="w-8 h-8 bg-[#ffff00] rounded-full flex items-center justify-center shadow-lg">
-              <MapPin className="w-4 h-4 text-black" />
-            </div>
-          </div>
-        </div>
-      </a>
     </section>;
 };
