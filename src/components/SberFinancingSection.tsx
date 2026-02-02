@@ -1,23 +1,5 @@
 import { CheckCircle2 } from "lucide-react";
-
-// Sber logo as inline SVG component
-const SberLogo = () => (
-  <svg viewBox="0 0 200 48" className="h-8 md:h-10 w-auto" fill="none" xmlns="http://www.w3.org/2000/svg">
-    {/* Sber icon - simplified green circle with checkmark */}
-    <circle cx="24" cy="24" r="22" fill="url(#sberGradient)" />
-    <path d="M14 24L21 31L34 18" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
-    {/* Sber text */}
-    <text x="56" y="32" fill="#21A038" fontFamily="Arial, sans-serif" fontSize="24" fontWeight="bold">
-      Сбер
-    </text>
-    <defs>
-      <linearGradient id="sberGradient" x1="2" y1="2" x2="46" y2="46" gradientUnits="userSpaceOnUse">
-        <stop stopColor="#21A038" />
-        <stop offset="1" stopColor="#107F28" />
-      </linearGradient>
-    </defs>
-  </svg>
-);
+import sberLogo from "@/assets/sber-logo.png";
 
 export const SberFinancingSection = () => {
   return (
@@ -44,8 +26,8 @@ export const SberFinancingSection = () => {
             
             {/* Right: Sber Logo */}
             <div className="flex-shrink-0">
-              <div className="px-6 py-4 bg-background/80 backdrop-blur-sm rounded-2xl shadow-lg border border-[#21A038]/10">
-                <SberLogo />
+              <div className="p-3 bg-background/80 backdrop-blur-sm rounded-2xl shadow-lg border border-[#21A038]/10">
+                <img src={sberLogo} alt="Сбер" className="h-16 md:h-20 w-auto rounded-xl" />
               </div>
             </div>
           </div>
