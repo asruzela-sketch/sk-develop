@@ -21,8 +21,9 @@ const Index = () => {
         <ConceptSection />
         <EnvironmentSection />
         <JourneySection />
-        <DeveloperSection />
-        <FoundersSection />
+        {/* Временно скрыты - можно вернуть, раскомментировав */}
+        {/* <DeveloperSection /> */}
+        {/* <FoundersSection /> */}
         <ContactsSection />
       </main>
       <Footer />
