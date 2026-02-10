@@ -21,7 +21,7 @@ const InfoCard = ({ icon, label, value, delay = "0s" }: InfoCardProps) => (
         <p className="text-xs uppercase tracking-wider text-muted-foreground mb-1">
           {label}
         </p>
-        <p className="text-sm md:text-base font-medium text-foreground leading-snug">
+        <p className="text-sm md:text-base font-medium text-foreground leading-snug whitespace-pre-line">
           {value}
         </p>
       </div>
@@ -57,7 +57,7 @@ export const LandInfoSection = () => {
             <InfoCard
               icon={<Users className="w-5 h-5 text-white" strokeWidth={1.5} />}
               label="Население"
-              value="187 тыс. жителей, г. Одинцово"
+              value={"187 тыс. жителей\nг. Одинцово"}
               delay="0.45s"
             />
           </div>
