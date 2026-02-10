@@ -65,39 +65,48 @@ export const LandInfoSection = () => {
       </section>
 
       {/* Map Section */}
-      <section id="project" className="bg-background py-12 md:py-20">
+      <section id="project" className="bg-muted/40 py-16 md:py-24">
         <div className="container-wide">
-          <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground tracking-tight mb-8 md:mb-12 opacity-0 animate-fade-in" style={{ animationDelay: "0.1s", animationFillMode: "forwards" }}>
-            ЛОКАЦИЯ
-          </h2>
-          
-          <div className="rounded-2xl overflow-hidden opacity-0 animate-fade-in" style={{ animationDelay: "0.2s", animationFillMode: "forwards" }}>
-            <img
-              src={locationMap}
-              alt="Расположение участка на карте Москвы и Московской области"
-              className="w-full h-auto object-contain"
-            />
-          </div>
+          <div className="grid lg:grid-cols-[1fr_1.5fr] gap-10 md:gap-16 items-center">
+            {/* Left: Text */}
+            <div className="opacity-0 animate-fade-in" style={{ animationDelay: "0.1s", animationFillMode: "forwards" }}>
+              <h2 className="text-5xl md:text-7xl lg:text-8xl font-bold text-foreground tracking-tight leading-[0.9] mb-6">
+                ЛОКАЦИЯ
+              </h2>
+              <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-8 max-w-md">
+                Московская область, Одинцовский район, г.&nbsp;Одинцово, ул.&nbsp;Чистяковой — в непосредственной близости от Сколково
+              </p>
 
-          <div className="mt-8 opacity-0 animate-fade-in" style={{ animationDelay: "0.4s", animationFillMode: "forwards" }}>
-            <div className="relative group inline-block">
-              <div className="absolute -inset-1 bg-gradient-to-r from-accent via-amber-300 to-accent rounded-full opacity-70 blur-sm group-hover:opacity-100 group-hover:blur-md transition-all duration-500" />
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-accent to-amber-400 rounded-full opacity-50 group-hover:opacity-80 transition-opacity duration-300" />
-              
-              <a
-                href="https://yandex.ru/maps/-/CLxnaU2Z"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="relative inline-flex items-center gap-3 px-8 py-4 bg-foreground text-background rounded-full font-medium text-sm md:text-base transition-all duration-300 group-hover:scale-[1.02] shadow-xl"
-              >
-                <MapPin className="w-5 h-5 transition-transform duration-300 group-hover:scale-110" />
-                <span>Открыть на Яндекс Картах</span>
-                <span className="w-6 h-6 rounded-full bg-accent flex items-center justify-center ml-1 transition-transform duration-300 group-hover:translate-x-1">
-                  <svg className="w-3 h-3 text-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                  </svg>
-                </span>
-              </a>
+              <div className="relative group inline-block">
+                <div className="absolute -inset-1 bg-gradient-to-r from-accent via-amber-300 to-accent rounded-full opacity-70 blur-sm group-hover:opacity-100 group-hover:blur-md transition-all duration-500" />
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-accent to-amber-400 rounded-full opacity-50 group-hover:opacity-80 transition-opacity duration-300" />
+                
+                <a
+                  href="https://yandex.ru/maps/-/CLxnaU2Z"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative inline-flex items-center gap-3 px-8 py-4 bg-foreground text-background rounded-full font-medium text-sm md:text-base transition-all duration-300 group-hover:scale-[1.02] shadow-xl"
+                >
+                  <MapPin className="w-5 h-5 transition-transform duration-300 group-hover:scale-110" />
+                  <span>Открыть на Яндекс Картах</span>
+                  <span className="w-6 h-6 rounded-full bg-accent flex items-center justify-center ml-1 transition-transform duration-300 group-hover:translate-x-1">
+                    <svg className="w-3 h-3 text-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                    </svg>
+                  </span>
+                </a>
+              </div>
+            </div>
+
+            {/* Right: Map Image */}
+            <div className="opacity-0 animate-fade-in" style={{ animationDelay: "0.25s", animationFillMode: "forwards" }}>
+              <div className="rounded-3xl overflow-hidden shadow-2xl">
+                <img
+                  src={locationMap}
+                  alt="Расположение участка на карте Москвы и Московской области"
+                  className="w-full h-auto object-contain bg-white"
+                />
+              </div>
             </div>
           </div>
         </div>
