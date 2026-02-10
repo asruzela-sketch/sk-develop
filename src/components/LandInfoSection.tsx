@@ -50,14 +50,14 @@ export const LandInfoSection = () => {
             />
             <InfoCard
               icon={<Building2 className="w-5 h-5 text-white" strokeWidth={1.5} />}
-              label="Форма собственности"
+              label="Форма владения"
               value="Участок в собственности"
               delay="0.3s"
             />
             <InfoCard
               icon={<Users className="w-5 h-5 text-white" strokeWidth={1.5} />}
-              label="Население"
-              value="г. Одинцово — 187 тыс. жителей"
+              label="187 тыс. жителей"
+              value="г. Одинцово"
               delay="0.45s"
             />
           </div>
