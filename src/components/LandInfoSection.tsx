@@ -65,23 +65,22 @@ export const LandInfoSection = () => {
       </section>
 
       {/* Map Section */}
-      <section
-        id="project"
-        className="relative min-h-[400px] md:min-h-[500px] pb-16 md:pb-20 flex items-end justify-start bg-background"
-      >
-        <div
-          aria-hidden="true"
-          className="absolute inset-0"
-          style={{
-            backgroundImage: `url(${locationMap})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        />
-        
-        <div className="container-wide relative z-10">
-          <div className="inline-block opacity-0 animate-fade-in" style={{ animationDelay: "0.3s", animationFillMode: "forwards" }}>
-            <div className="relative group">
+      <section id="project" className="bg-background py-12 md:py-20">
+        <div className="container-wide">
+          <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground tracking-tight mb-8 md:mb-12 opacity-0 animate-fade-in" style={{ animationDelay: "0.1s", animationFillMode: "forwards" }}>
+            ЛОКАЦИЯ
+          </h2>
+          
+          <div className="rounded-2xl overflow-hidden opacity-0 animate-fade-in" style={{ animationDelay: "0.2s", animationFillMode: "forwards" }}>
+            <img
+              src={locationMap}
+              alt="Расположение участка на карте Москвы и Московской области"
+              className="w-full h-auto object-contain"
+            />
+          </div>
+
+          <div className="mt-8 opacity-0 animate-fade-in" style={{ animationDelay: "0.4s", animationFillMode: "forwards" }}>
+            <div className="relative group inline-block">
               <div className="absolute -inset-1 bg-gradient-to-r from-accent via-amber-300 to-accent rounded-full opacity-70 blur-sm group-hover:opacity-100 group-hover:blur-md transition-all duration-500" />
               <div className="absolute -inset-0.5 bg-gradient-to-r from-accent to-amber-400 rounded-full opacity-50 group-hover:opacity-80 transition-opacity duration-300" />
               
