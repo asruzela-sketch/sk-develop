@@ -38,11 +38,11 @@ const InfoCard = ({ icon, label, value, delay = "0s" }: InfoCardProps) => (
 interface InfraCardProps {
   image: string;
   name: string;
-  detail?: string;
+  badges?: string[];
   delay?: string;
 }
 
-const InfraCard = ({ image, name, detail, delay = "0s" }: InfraCardProps) => (
+const InfraCard = ({ image, name, badges, delay = "0s" }: InfraCardProps) => (
   <div 
     className="group relative rounded-2xl overflow-hidden aspect-square opacity-0 animate-fade-in cursor-default"
     style={{ animationDelay: delay, animationFillMode: "forwards" }}
@@ -52,21 +52,33 @@ const InfraCard = ({ image, name, detail, delay = "0s" }: InfraCardProps) => (
       alt={name}
       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
     />
-    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+    
+    {/* Floating badges */}
+    {badges && badges.length > 0 && (
+      <div className="absolute top-2.5 right-2.5 flex flex-col gap-1.5">
+        {badges.map((badge) => (
+          <span
+            key={badge}
+            className="px-2.5 py-1 rounded-full bg-white/90 backdrop-blur-sm text-foreground text-[10px] md:text-xs font-medium shadow-lg"
+          >
+            {badge}
+          </span>
+        ))}
+      </div>
+    )}
+
     <div className="absolute bottom-0 left-0 right-0 p-4">
       <p className="text-white font-medium text-sm md:text-base leading-tight">{name}</p>
-      {detail && (
-        <p className="text-white/70 text-xs mt-1">{detail}</p>
-      )}
     </div>
   </div>
 );
 
 export const LandInfoSection = () => {
   const infraItems: InfraCardProps[] = [
-    { image: infraArena, name: "Live Arena", detail: "Стадион на 11 тыс. человек · 2,27 км" },
-    { image: infraGolf, name: "Skolkovo Golf Club", detail: "Гольф-клуб премиум-класса" },
-    { image: infraVnukovo, name: "Аэропорт Внуково", detail: "Международный аэропорт" },
+    { image: infraArena, name: "Live Arena", badges: ["11 тыс. мест", "2,27 км"] },
+    { image: infraGolf, name: "Skolkovo Golf Club", badges: ["Премиум"] },
+    { image: infraVnukovo, name: "Аэропорт Внуково", badges: ["Международный"] },
     { image: infraInnovacia, name: "ЖК Инновация" },
     { image: infraTrekhgorka, name: "ЖК Новая Трёхгорка" },
     { image: infraSkolkovsky, name: "ЖК Сколковский" },
