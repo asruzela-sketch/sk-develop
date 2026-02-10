@@ -77,8 +77,8 @@ const InfraCard = ({ image, name, badges, delay = "0s" }: InfraCardProps) => (
 export const LandInfoSection = () => {
   const infraItems: InfraCardProps[] = [
     { image: infraArena, name: "Live Arena", badges: ["11 тыс. мест", "2,27 км"] },
-    { image: infraGolf, name: "Skolkovo Golf Club", badges: ["Премиум"] },
-    { image: infraVnukovo, name: "Аэропорт Внуково", badges: ["Международный"] },
+    { image: infraGolf, name: "Skolkovo Golf Club" },
+    { image: infraVnukovo, name: "Аэропорт Внуково" },
     { image: infraInnovacia, name: "ЖК Инновация" },
     { image: infraTrekhgorka, name: "ЖК Новая Трёхгорка" },
     { image: infraSkolkovsky, name: "ЖК Сколковский" },
