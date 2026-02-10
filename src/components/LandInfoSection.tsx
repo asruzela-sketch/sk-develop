@@ -53,28 +53,28 @@ const InfraCard = ({ image, name, badges, delay = "0s" }: InfraCardProps) => (
       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
     />
     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
-    
+    {badges && badges.length > 0 && (
+      <div className="absolute top-3 left-3 flex flex-wrap gap-1.5">
+        {badges.map((badge) => (
+          <span
+            key={badge}
+            className="px-3 py-1 rounded-full bg-black/40 backdrop-blur-md text-white text-[10px] md:text-xs font-medium border border-white/20"
+          >
+            {badge}
+          </span>
+        ))}
+      </div>
+    )}
+
     <div className="absolute bottom-0 left-0 right-0 p-3">
       <p className="text-white font-medium text-sm md:text-base leading-tight">{name}</p>
-      {badges && badges.length > 0 && (
-        <div className="flex flex-wrap gap-1.5 mt-2">
-          {badges.map((badge) => (
-            <span
-              key={badge}
-              className="px-3 py-1 rounded-full bg-black/40 backdrop-blur-md text-white text-[10px] md:text-xs font-medium border border-white/20"
-            >
-              {badge}
-            </span>
-          ))}
-        </div>
-      )}
     </div>
   </div>
 );
 
 export const LandInfoSection = () => {
   const infraItems: InfraCardProps[] = [
-    { image: infraArena, name: "Live Arena", badges: ["11 тыс. мест", "2,27 км"] },
+    { image: infraArena, name: "Live Arena", badges: ["11 тыс. мест"] },
     { image: infraGolf, name: "Skolkovo Golf Club" },
     { image: infraVnukovo, name: "Аэропорт Внуково" },
     { image: infraInnovacia, name: "ЖК Инновация" },
