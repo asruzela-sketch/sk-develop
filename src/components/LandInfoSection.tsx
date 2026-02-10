@@ -56,11 +56,11 @@ const InfraCard = ({ image, name, badges, delay = "0s" }: InfraCardProps) => (
     
     {/* Floating badges */}
     {badges && badges.length > 0 && (
-      <div className="absolute top-2.5 right-2.5 flex flex-col gap-1.5">
+      <div className="absolute bottom-14 left-3 right-3 flex flex-wrap gap-1.5">
         {badges.map((badge) => (
           <span
             key={badge}
-            className="px-2.5 py-1 rounded-full bg-white/90 backdrop-blur-sm text-foreground text-[10px] md:text-xs font-medium shadow-lg"
+            className="px-3 py-1.5 rounded-full bg-black/40 backdrop-blur-md text-white text-[10px] md:text-xs font-medium border border-white/20"
           >
             {badge}
           </span>
@@ -68,7 +68,7 @@ const InfraCard = ({ image, name, badges, delay = "0s" }: InfraCardProps) => (
       </div>
     )}
 
-    <div className="absolute bottom-0 left-0 right-0 p-4">
+    <div className="absolute bottom-0 left-0 right-0 p-3 pt-6">
       <p className="text-white font-medium text-sm md:text-base leading-tight">{name}</p>
     </div>
   </div>
