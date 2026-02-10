@@ -33,7 +33,7 @@ export const HeroSection = () => {
             <div className="w-12 h-px bg-[#ffff00]/60 mb-6" />
             
             {/* Main headline */}
-            <p className="text-lg md:text-xl lg:text-2xl text-white leading-relaxed mb-8 font-normal">Зрелый девелоперский актив в Сколково: земельный участок с разработанной архитектурно-градостроительной концепцией</p>
+            <p className="text-lg md:text-xl lg:text-2xl text-white leading-relaxed mb-8 font-normal">Девелоперский актив рядом со Сколково: земельный участок с разработанной архитектурно-градостроительной концепцией</p>
             
             {/* Divider */}
             <div className="w-full h-px bg-white/10 mb-6" />
