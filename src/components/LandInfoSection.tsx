@@ -1,5 +1,11 @@
 import { MapPin, Maximize2, Building2, Users } from "lucide-react";
 import locationMap from "@/assets/location-map.jpg";
+import infraArena from "@/assets/infra-live-arena.jpg";
+import infraGolf from "@/assets/infra-golf-club.jpg";
+import infraVnukovo from "@/assets/infra-vnukovo.jpg";
+import infraInnovacia from "@/assets/infra-zhk-innovacia.jpg";
+import infraTrekhgorka from "@/assets/infra-zhk-trekhgorka.jpg";
+import infraSkolkovsky from "@/assets/infra-zhk-skolkovsky.jpg";
 
 interface InfoCardProps {
   icon: React.ReactNode;
@@ -29,7 +35,43 @@ const InfoCard = ({ icon, label, value, delay = "0s" }: InfoCardProps) => (
   </div>
 );
 
+interface InfraCardProps {
+  image: string;
+  name: string;
+  detail?: string;
+  delay?: string;
+}
+
+const InfraCard = ({ image, name, detail, delay = "0s" }: InfraCardProps) => (
+  <div 
+    className="group relative rounded-2xl overflow-hidden aspect-square opacity-0 animate-fade-in cursor-default"
+    style={{ animationDelay: delay, animationFillMode: "forwards" }}
+  >
+    <img
+      src={image}
+      alt={name}
+      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+    />
+    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+    <div className="absolute bottom-0 left-0 right-0 p-4">
+      <p className="text-white font-medium text-sm md:text-base leading-tight">{name}</p>
+      {detail && (
+        <p className="text-white/70 text-xs mt-1">{detail}</p>
+      )}
+    </div>
+  </div>
+);
+
 export const LandInfoSection = () => {
+  const infraItems: InfraCardProps[] = [
+    { image: infraArena, name: "Live Arena", detail: "Стадион на 11 тыс. человек · 2,27 км" },
+    { image: infraGolf, name: "Skolkovo Golf Club", detail: "Гольф-клуб премиум-класса" },
+    { image: infraVnukovo, name: "Аэропорт Внуково", detail: "Международный аэропорт" },
+    { image: infraInnovacia, name: "ЖК Инновация", detail: "Жилой комплекс" },
+    { image: infraTrekhgorka, name: "ЖК Трёхгорка", detail: "Жилой комплекс" },
+    { image: infraSkolkovsky, name: "ЖК Сколковский", detail: "Жилой комплекс" },
+  ];
+
   return (
     <>
       {/* Info Cards Section */}
@@ -67,17 +109,14 @@ export const LandInfoSection = () => {
       {/* Map Section */}
       <section id="project" className="bg-muted/40 py-16 md:py-24">
         <div className="container-wide">
-          <div className="grid lg:grid-cols-[1fr_1.5fr] gap-10 md:gap-16 items-center">
-            {/* Left: Text */}
+          <div className="grid lg:grid-cols-[1fr_1.5fr] gap-10 md:gap-16 items-start">
+            {/* Left: Text + Button */}
             <div className="opacity-0 animate-fade-in" style={{ animationDelay: "0.1s", animationFillMode: "forwards" }}>
-              <h2 className="text-5xl md:text-7xl lg:text-8xl font-bold text-foreground tracking-tight leading-[0.9] mb-6">
+              <h2 className="text-5xl md:text-7xl lg:text-8xl font-extralight text-foreground tracking-tight leading-[0.9] mb-10">
                 ЛОКАЦИЯ
               </h2>
-              <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-8 max-w-md">
-                Московская область, Одинцовский район, г.&nbsp;Одинцово, ул.&nbsp;Чистяковой — в непосредственной близости от Сколково
-              </p>
 
-              <div className="relative group inline-block">
+              <div className="relative group inline-block mb-12">
                 <div className="absolute -inset-1 bg-gradient-to-r from-accent via-amber-300 to-accent rounded-full opacity-70 blur-sm group-hover:opacity-100 group-hover:blur-md transition-all duration-500" />
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-accent to-amber-400 rounded-full opacity-50 group-hover:opacity-80 transition-opacity duration-300" />
                 
@@ -95,6 +134,20 @@ export const LandInfoSection = () => {
                     </svg>
                   </span>
                 </a>
+              </div>
+
+              {/* Infrastructure Grid */}
+              <div>
+                <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-4">Окружение и инфраструктура</p>
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                  {infraItems.map((item, i) => (
+                    <InfraCard
+                      key={item.name}
+                      {...item}
+                      delay={`${0.2 + i * 0.1}s`}
+                    />
+                  ))}
+                </div>
               </div>
             </div>
 
