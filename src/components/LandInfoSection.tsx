@@ -75,7 +75,7 @@ export const LandInfoSection = () => {
   return (
     <>
       {/* Info Cards Section */}
-      <section className="bg-background py-10 md:py-14">
+      <section className="bg-muted/40 py-10 md:py-14">
         <div className="container-wide">
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
             <InfoCard
@@ -106,17 +106,39 @@ export const LandInfoSection = () => {
         </div>
       </section>
 
-      {/* Map Section */}
-      <section id="project" className="bg-muted/40 py-16 md:py-24">
+      {/* Map + Infrastructure Section */}
+      <section id="project" className="bg-muted/40 pb-16 md:pb-24">
         <div className="container-wide">
-          <div className="grid lg:grid-cols-[1fr_1.5fr] gap-10 md:gap-16 items-start">
-            {/* Left: Text + Button */}
-            <div className="opacity-0 animate-fade-in" style={{ animationDelay: "0.1s", animationFillMode: "forwards" }}>
-              <h2 className="text-5xl md:text-7xl lg:text-8xl font-extralight text-foreground tracking-tight leading-[0.9] mb-10">
-                ЛОКАЦИЯ
-              </h2>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-foreground tracking-tight leading-[0.9] mb-10 opacity-0 animate-fade-in" style={{ animationDelay: "0.1s", animationFillMode: "forwards" }}>
+            ЛОКАЦИЯ
+          </h2>
 
-              <div className="relative group inline-block mb-12">
+          <div className="grid lg:grid-cols-[1.2fr_1fr] gap-6 md:gap-8 items-start">
+            {/* Left: Map Image */}
+            <div className="opacity-0 animate-fade-in" style={{ animationDelay: "0.15s", animationFillMode: "forwards" }}>
+              <div className="rounded-3xl overflow-hidden shadow-2xl">
+                <img
+                  src={locationMap}
+                  alt="Расположение участка на карте Москвы и Московской области"
+                  className="w-full h-auto object-contain bg-white"
+                />
+              </div>
+            </div>
+
+            {/* Right: Infrastructure Grid + Button */}
+            <div className="opacity-0 animate-fade-in flex flex-col h-full" style={{ animationDelay: "0.25s", animationFillMode: "forwards" }}>
+              <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-4">Окружение и инфраструктура</p>
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 flex-1">
+                {infraItems.map((item, i) => (
+                  <InfraCard
+                    key={item.name}
+                    {...item}
+                    delay={`${0.2 + i * 0.1}s`}
+                  />
+                ))}
+              </div>
+
+              <div className="mt-6 relative group inline-block self-start opacity-0 animate-fade-in" style={{ animationDelay: "0.8s", animationFillMode: "forwards" }}>
                 <div className="absolute -inset-1 bg-gradient-to-r from-accent via-amber-300 to-accent rounded-full opacity-70 blur-sm group-hover:opacity-100 group-hover:blur-md transition-all duration-500" />
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-accent to-amber-400 rounded-full opacity-50 group-hover:opacity-80 transition-opacity duration-300" />
                 
@@ -134,31 +156,6 @@ export const LandInfoSection = () => {
                     </svg>
                   </span>
                 </a>
-              </div>
-
-              {/* Infrastructure Grid */}
-              <div>
-                <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-4">Окружение и инфраструктура</p>
-                <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-                  {infraItems.map((item, i) => (
-                    <InfraCard
-                      key={item.name}
-                      {...item}
-                      delay={`${0.2 + i * 0.1}s`}
-                    />
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            {/* Right: Map Image */}
-            <div className="opacity-0 animate-fade-in" style={{ animationDelay: "0.25s", animationFillMode: "forwards" }}>
-              <div className="rounded-3xl overflow-hidden shadow-2xl">
-                <img
-                  src={locationMap}
-                  alt="Расположение участка на карте Москвы и Московской области"
-                  className="w-full h-auto object-contain bg-white"
-                />
               </div>
             </div>
           </div>
