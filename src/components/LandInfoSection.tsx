@@ -1,4 +1,4 @@
-import { MapPin, Maximize2, Building2 } from "lucide-react";
+import { MapPin, Maximize2, Building2, Users } from "lucide-react";
 import locationMap from "@/assets/location-map.jpg";
 
 interface InfoCardProps {
@@ -35,7 +35,7 @@ export const LandInfoSection = () => {
       {/* Info Cards Section */}
       <section className="bg-background py-10 md:py-14">
         <div className="container-wide">
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
             <InfoCard
               icon={<Maximize2 className="w-5 h-5 text-white" strokeWidth={1.5} />}
               label="Площадь участка"
@@ -51,8 +51,14 @@ export const LandInfoSection = () => {
             <InfoCard
               icon={<Building2 className="w-5 h-5 text-white" strokeWidth={1.5} />}
               label="Форма собственности"
-              value="Владелец: общество с ограниченной ответственностью"
+              value="Участок в собственности"
               delay="0.3s"
+            />
+            <InfoCard
+              icon={<Users className="w-5 h-5 text-white" strokeWidth={1.5} />}
+              label="Население"
+              value="г. Одинцово — 187 тыс. жителей"
+              delay="0.45s"
             />
           </div>
         </div>
@@ -61,9 +67,8 @@ export const LandInfoSection = () => {
       {/* Map Section */}
       <section
         id="project"
-        className="relative min-h-[400px] md:min-h-[500px] pb-16 md:pb-20 flex items-end justify-start"
+        className="relative min-h-[400px] md:min-h-[500px] pb-16 md:pb-20 flex items-end justify-start bg-background"
       >
-        {/* Background image with soft edges */}
         <div
           aria-hidden="true"
           className="absolute inset-0"
@@ -71,10 +76,6 @@ export const LandInfoSection = () => {
             backgroundImage: `url(${locationMap})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
-            WebkitMaskImage:
-              "linear-gradient(to bottom, transparent 0%, black 12%, black 100%)",
-            maskImage:
-              "linear-gradient(to bottom, transparent 0%, black 12%, black 100%)",
           }}
         />
         
