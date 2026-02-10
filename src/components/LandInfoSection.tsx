@@ -67,9 +67,9 @@ export const LandInfoSection = () => {
     { image: infraArena, name: "Live Arena", detail: "Стадион на 11 тыс. человек · 2,27 км" },
     { image: infraGolf, name: "Skolkovo Golf Club", detail: "Гольф-клуб премиум-класса" },
     { image: infraVnukovo, name: "Аэропорт Внуково", detail: "Международный аэропорт" },
-    { image: infraInnovacia, name: "ЖК Инновация", detail: "Жилой комплекс" },
-    { image: infraTrekhgorka, name: "ЖК Трёхгорка", detail: "Жилой комплекс" },
-    { image: infraSkolkovsky, name: "ЖК Сколковский", detail: "Жилой комплекс" },
+    { image: infraInnovacia, name: "ЖК Инновация" },
+    { image: infraTrekhgorka, name: "ЖК Новая Трёхгорка" },
+    { image: infraSkolkovsky, name: "ЖК Сколковский" },
   ];
 
   return (
