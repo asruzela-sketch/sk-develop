@@ -18,9 +18,9 @@ export const JourneySection = () => {
 
           {/* Top-left: Title + items */}
           <div className="lg:col-span-5 bg-background rounded-[1.5rem] border border-border/50 p-8 md:p-10 flex flex-col justify-center shadow-lg">
-            <h2 className="heading-section mb-8">
-              Текущая стадия
-            </h2>
+            <p className="label-small mb-8 text-secondary-foreground">
+              ТЕКУЩАЯ СТАДИЯ
+            </p>
             <div className="space-y-3">
               {currentItems.map((item) => (
                 <div
