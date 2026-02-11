@@ -1,4 +1,4 @@
-import { Train, Plane, MapPin, Navigation } from "lucide-react";
+import { Train, Plane, Navigation } from "lucide-react";
 
 interface TransportCardProps {
   icon: React.ReactNode;
@@ -12,26 +12,27 @@ const TransportCard = ({ icon, destination, details, delay = "0s" }: TransportCa
     className="group relative rounded-2xl overflow-hidden opacity-0 animate-fade-in"
     style={{ animationDelay: delay, animationFillMode: "forwards" }}
   >
-    {/* Glass background */}
-    <div className="absolute inset-0 bg-foreground/5 backdrop-blur-sm border border-foreground/[0.08] rounded-2xl" />
+    {/* Premium glass background */}
+    <div className="absolute inset-0 bg-gradient-to-br from-foreground/[0.04] to-foreground/[0.08] backdrop-blur-md border border-foreground/[0.06] rounded-2xl group-hover:border-accent/20 transition-all duration-500" />
     
-    <div className="relative p-5 md:p-6 flex items-start gap-4">
-      <div className="flex-shrink-0 w-11 h-11 rounded-xl bg-foreground/[0.07] border border-foreground/[0.06] flex items-center justify-center group-hover:bg-accent/20 group-hover:border-accent/30 transition-all duration-500">
+    <div className="relative p-5 md:p-7 flex items-center gap-5">
+      {/* Premium icon container */}
+      <div className="flex-shrink-0 w-14 h-14 rounded-2xl bg-foreground flex items-center justify-center shadow-[0_8px_30px_rgba(0,0,0,0.15)] group-hover:shadow-[0_8px_30px_rgba(0,0,0,0.25)] transition-all duration-500 group-hover:scale-105">
         {icon}
       </div>
       <div className="flex-1 min-w-0">
-        <p className="text-sm md:text-base font-medium text-foreground mb-2 leading-snug">
+        <p className="text-base md:text-lg font-medium text-foreground mb-2.5 leading-snug tracking-tight">
           {destination}
         </p>
         <div className="flex flex-wrap gap-2">
           {details.map((d, i) => (
             <span
               key={i}
-              className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-foreground/[0.04] border border-foreground/[0.06] text-xs text-muted-foreground"
+              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-foreground/[0.05] border border-foreground/[0.08] text-xs tracking-wide"
             >
-              <span className="font-medium text-foreground">{d.time}</span>
-              <span className="text-muted-foreground/60">·</span>
-              <span>{d.mode}</span>
+              <span className="font-semibold text-foreground">{d.time}</span>
+              <span className="text-foreground/20">|</span>
+              <span className="text-muted-foreground">{d.mode}</span>
             </span>
           ))}
         </div>
@@ -43,7 +44,7 @@ const TransportCard = ({ icon, destination, details, delay = "0s" }: TransportCa
 export const TransportSection = () => {
   const transportData: TransportCardProps[] = [
     {
-      icon: <Train className="w-5 h-5 text-foreground/70" strokeWidth={1.5} />,
+      icon: <Train className="w-5 h-5 text-accent" strokeWidth={1.5} />,
       destination: "МЦД",
       details: [
         { mode: "на такси", time: "6 мин" },
@@ -51,21 +52,21 @@ export const TransportSection = () => {
       ],
     },
     {
-      icon: <Plane className="w-5 h-5 text-foreground/70" strokeWidth={1.5} />,
+      icon: <Plane className="w-5 h-5 text-accent" strokeWidth={1.5} />,
       destination: "Аэропорт Внуково",
       details: [
         { mode: "на авто/такси", time: "27 мин" },
       ],
     },
     {
-      icon: <Plane className="w-5 h-5 text-foreground/70" strokeWidth={1.5} />,
+      icon: <Plane className="w-5 h-5 text-accent" strokeWidth={1.5} />,
       destination: "Аэропорт Шереметьево",
       details: [
         { mode: "на МЦД", time: "1 ч 20 мин" },
       ],
     },
     {
-      icon: <Navigation className="w-5 h-5 text-foreground/70" strokeWidth={1.5} />,
+      icon: <Navigation className="w-5 h-5 text-accent" strokeWidth={1.5} />,
       destination: "Метро Киевская",
       details: [
         { mode: "на авто/такси", time: "25 мин" },
@@ -77,7 +78,7 @@ export const TransportSection = () => {
   return (
     <section className="bg-background py-12 md:py-16">
       <div className="container-wide">
-        <div className="grid lg:grid-cols-[1fr_1fr] gap-8 lg:gap-12 items-center">
+        <div className="grid lg:grid-cols-[1fr_1fr] gap-8 lg:gap-16 items-center">
           
           {/* Left: Transport Cards */}
           <div className="space-y-3">
@@ -93,52 +94,71 @@ export const TransportSection = () => {
             ))}
           </div>
 
-          {/* Right: Location Icon with Building Outline */}
+          {/* Right: Map pin with land plot outline — reference style */}
           <div className="flex items-center justify-center opacity-0 animate-fade-in" style={{ animationDelay: "0.3s", animationFillMode: "forwards" }}>
-            <div className="relative w-72 h-72 md:w-96 md:h-96">
-              {/* Outer glow ring */}
-              <div className="absolute inset-0 rounded-full bg-accent/[0.06] border border-accent/[0.12]" />
-              <div className="absolute inset-4 rounded-full bg-accent/[0.04] border border-accent/[0.08]" />
-              
-              {/* Center pin icon with building */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="relative">
-                  {/* Map pin shape */}
-                  <svg viewBox="0 0 120 160" className="w-36 h-48 md:w-44 md:h-60" fill="none">
-                    {/* Pin body */}
-                    <path
-                      d="M60 155 C60 155 110 95 110 55 C110 27.4 87.6 5 60 5 C32.4 5 10 27.4 10 55 C10 95 60 155 60 155Z"
-                      className="fill-foreground/[0.08] stroke-foreground/20"
-                      strokeWidth="1.5"
-                    />
-                    
-                    {/* Building outline inside pin */}
-                    <g className="stroke-foreground/50" strokeWidth="1.2" fill="none">
-                      {/* Main building */}
-                      <rect x="35" y="35" width="50" height="55" rx="2" />
-                      {/* Windows row 1 */}
-                      <rect x="40" y="40" width="8" height="8" rx="1" className="fill-accent/20" />
-                      <rect x="52" y="40" width="8" height="8" rx="1" className="fill-accent/20" />
-                      <rect x="64" y="40" width="8" height="8" rx="1" className="fill-accent/20" />
-                      {/* Windows row 2 */}
-                      <rect x="40" y="53" width="8" height="8" rx="1" className="fill-accent/20" />
-                      <rect x="52" y="53" width="8" height="8" rx="1" className="fill-accent/20" />
-                      <rect x="64" y="53" width="8" height="8" rx="1" className="fill-accent/20" />
-                      {/* Windows row 3 */}
-                      <rect x="40" y="66" width="8" height="8" rx="1" className="fill-accent/20" />
-                      <rect x="52" y="66" width="8" height="8" rx="1" className="fill-accent/20" />
-                      <rect x="64" y="66" width="8" height="8" rx="1" className="fill-accent/20" />
-                      {/* Entrance */}
-                      <rect x="52" y="78" width="16" height="12" rx="1" className="fill-foreground/[0.06]" />
-                      {/* Roof accent */}
-                      <line x1="35" y1="35" x2="85" y2="35" className="stroke-accent/40" strokeWidth="2" />
-                    </g>
-                  </svg>
+            <div className="relative">
+              <svg viewBox="0 0 300 400" className="w-64 h-[340px] md:w-80 md:h-[420px]" fill="none">
+                {/* Subtle outer glow */}
+                <defs>
+                  <radialGradient id="pinGlow" cx="50%" cy="40%" r="50%">
+                    <stop offset="0%" stopColor="hsl(60 100% 50% / 0.08)" />
+                    <stop offset="100%" stopColor="hsl(60 100% 50% / 0)" />
+                  </radialGradient>
+                  <filter id="softShadow" x="-20%" y="-10%" width="140%" height="130%">
+                    <feDropShadow dx="0" dy="8" stdDeviation="12" floodColor="hsl(220 15% 15% / 0.15)" />
+                  </filter>
+                </defs>
+                
+                {/* Background glow */}
+                <circle cx="150" cy="160" r="140" fill="url(#pinGlow)" />
+
+                {/* Pin shape — filled dark like reference */}
+                <path
+                  d="M150 385 C150 385 275 240 275 145 C275 76 219.0 20 150 20 C81 20 25 76 25 145 C25 240 150 385 150 385Z"
+                  className="fill-foreground"
+                  filter="url(#softShadow)"
+                />
+
+                {/* Inner pin highlight edge */}
+                <path
+                  d="M150 385 C150 385 275 240 275 145 C275 76 219.0 20 150 20 C81 20 25 76 25 145 C25 240 150 385 150 385Z"
+                  fill="none"
+                  stroke="hsl(0 0% 100% / 0.08)"
+                  strokeWidth="1"
+                />
+
+                {/* Land plot outline inside pin — irregular polygon resembling a real plot */}
+                <g transform="translate(150, 140)" className="stroke-accent" strokeWidth="2" fill="none">
+                  {/* Irregular land plot shape */}
+                  <path
+                    d="M-45 -50 L15 -55 L50 -35 L55 10 L40 45 L5 55 L-35 40 L-50 5 Z"
+                    className="fill-accent/15"
+                    strokeLinejoin="round"
+                  />
+                  {/* Inner building footprint */}
+                  <rect x="-20" y="-22" width="40" height="44" rx="2" className="fill-accent/10 stroke-accent/60" strokeWidth="1.5" strokeDasharray="3 2" />
                   
-                  {/* Subtle pulse */}
-                  <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-16 h-3 rounded-full bg-foreground/[0.06] animate-pulse" />
-                </div>
-              </div>
+                  {/* Small marker dot at center */}
+                  <circle cx="0" cy="0" r="4" className="fill-accent" />
+                  <circle cx="0" cy="0" r="8" className="fill-accent/20 stroke-accent/40" strokeWidth="1" />
+                </g>
+
+                {/* Label text */}
+                <text x="150" y="245" textAnchor="middle" className="fill-background/60" fontSize="11" fontWeight="500" letterSpacing="0.15em">
+                  УЧАСТОК 6 000 М²
+                </text>
+
+                {/* Small crosshair lines */}
+                <g className="stroke-accent/30" strokeWidth="0.8">
+                  <line x1="130" y1="140" x2="110" y2="140" />
+                  <line x1="170" y1="140" x2="190" y2="140" />
+                  <line x1="150" y1="120" x2="150" y2="100" />
+                  <line x1="150" y1="160" x2="150" y2="180" />
+                </g>
+              </svg>
+
+              {/* Pulse under pin */}
+              <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-20 h-4 rounded-full bg-foreground/[0.08] animate-pulse blur-sm" />
             </div>
           </div>
 
