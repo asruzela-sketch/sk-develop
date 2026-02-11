@@ -90,7 +90,7 @@ export const ConceptSection = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           
           {/* Hotel Zone */}
-          <ZoneCard title="Гостиница" area="23 232,5" areaLabel="м²" image={buildingImage} description="Гостиничный блок с номерным фондом, ориентированным на деловой и транзитный спрос." details={<ul className="space-y-2">
+          <ZoneCard title="Гостиница" area="23 232,5" areaLabel="м²" secondaryArea="509" secondaryLabel="номеров" image={buildingImage} description="Гостиничный блок с номерным фондом, ориентированным на деловой и транзитный спрос." details={<ul className="space-y-2">
                 <li className="flex items-start gap-2 text-sm text-muted-foreground">
                   <span className="text-accent mt-0.5">●</span>
                   <span><span className="text-foreground">Standard</span> — средняя площадь 25 м²</span>
