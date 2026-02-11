@@ -1,5 +1,5 @@
 import { CheckCircle2, Clock } from "lucide-react";
-import buildingImage from "@/assets/building-render.jpg";
+import stageImage from "@/assets/stage-render.jpg";
 
 const currentStage = {
   title: "Текущая стадия",
@@ -18,28 +18,28 @@ export const JourneySection = () => {
   return (
     <section id="journey" className="pt-8 md:pt-12 pb-16 md:pb-24 bg-muted/30">
       <div className="container-wide">
-        <div className="relative bg-background rounded-[2rem] shadow-2xl overflow-hidden border border-border/50">
+        <div className="relative rounded-[2rem] shadow-2xl overflow-hidden border border-border/50 min-h-[500px]">
           
-          {/* Top: Full-width image */}
-          <div className="w-full aspect-[21/9] overflow-hidden">
-            <img
-              src={buildingImage}
-              alt="Архитектурная визуализация проекта"
-              className="w-full h-full object-contain bg-muted/20"
-            />
-          </div>
+          {/* Full background image */}
+          <img
+            src={stageImage}
+            alt="Архитектурная визуализация проекта Сколковский"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+          {/* Gradient overlay — darker on left for text readability */}
+          <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/60 to-transparent" />
 
-          {/* Bottom: Content */}
-          <div className="p-8 md:p-12 lg:p-16">
+          {/* Content overlay — left aligned */}
+          <div className="relative flex flex-col justify-center p-8 md:p-12 lg:p-16 max-w-lg min-h-[500px]">
             <h2 className="heading-section mb-8">
               Текущая стадия
             </h2>
 
-            <div className="grid sm:grid-cols-3 gap-4">
+            <div className="space-y-3">
               {currentStage.items.map((item) => (
-                <div key={item} className="group p-5 rounded-2xl bg-gradient-to-br from-muted/60 to-muted/30 border border-border/40 hover:border-border transition-all duration-500 shadow-sm hover:shadow-md">
+                <div key={item} className="group p-4 md:p-5 rounded-2xl bg-background/60 backdrop-blur-md border border-border/30 hover:border-border/60 transition-all duration-500 shadow-sm hover:shadow-md">
                   <div className="flex items-center gap-4">
-                    <div className="flex-shrink-0 w-11 h-11 rounded-xl bg-foreground flex items-center justify-center shadow-lg">
+                    <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-foreground flex items-center justify-center shadow-lg">
                       <CheckCircle2 className="w-5 h-5 text-background" strokeWidth={1.5} />
                     </div>
                     <p className="text-sm md:text-base font-medium tracking-tight">{item}</p>
@@ -47,10 +47,9 @@ export const JourneySection = () => {
                 </div>
               ))}
 
-              {/* Next step */}
-              <div className="group p-5 rounded-2xl bg-gradient-to-br from-muted/60 to-muted/30 border border-border/40 hover:border-border transition-all duration-500 shadow-sm hover:shadow-md">
+              <div className="group p-4 md:p-5 rounded-2xl bg-background/60 backdrop-blur-md border border-border/30 hover:border-border/60 transition-all duration-500 shadow-sm hover:shadow-md">
                 <div className="flex items-center gap-4">
-                  <div className="flex-shrink-0 w-11 h-11 rounded-xl bg-foreground flex items-center justify-center shadow-lg">
+                  <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-foreground flex items-center justify-center shadow-lg">
                     <Clock className="w-5 h-5 text-background" strokeWidth={1.5} />
                   </div>
                   <div>
