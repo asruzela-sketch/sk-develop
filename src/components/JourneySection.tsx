@@ -18,13 +18,13 @@ export const JourneySection = () => {
   return (
     <section id="journey" className="pt-8 md:pt-12 pb-16 md:pb-24 bg-muted/30">
       <div className="container-wide">
-        <div className="relative rounded-[2rem] shadow-2xl overflow-hidden border border-border/50 min-h-[500px]">
+        <div className="relative rounded-[2rem] shadow-2xl overflow-hidden border border-border/50 min-h-[500px]" style={{ backgroundColor: '#7BA4C7' }}>
           
-          {/* Full background image */}
+          {/* Background image — right-aligned, full height */}
           <img
             src={stageImage}
             alt="Архитектурная визуализация проекта Сколковский"
-            className="absolute inset-0 w-full h-full object-contain"
+            className="absolute inset-0 w-full h-full object-cover object-right"
           />
 
           {/* Content overlay — left aligned */}
