@@ -24,10 +24,8 @@ export const JourneySection = () => {
           <img
             src={stageImage}
             alt="Архитектурная визуализация проекта Сколковский"
-            className="absolute inset-0 w-full h-full object-cover"
+            className="absolute inset-0 w-full h-full object-cover object-right"
           />
-          {/* Gradient overlay — darker on left for text readability */}
-          <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/60 to-transparent" />
 
           {/* Content overlay — left aligned */}
           <div className="relative flex flex-col justify-center p-8 md:p-12 lg:p-16 max-w-lg min-h-[500px]">
