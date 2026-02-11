@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import buildingImage from "@/assets/building-render.jpg";
-import retailImage from "@/assets/retail-render.jpg";
+import retailImage from "@/assets/retail-render-v2.jpg";
 import parkingImage from "@/assets/parking-render.jpg";
 interface ZoneCardProps {
   title: string;
