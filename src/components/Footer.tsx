@@ -9,7 +9,7 @@ export const Footer = () => {
             © 2025 <img src={logo144} alt="144/Девелопмент" className="h-8 w-auto inline" />
           </div>
           <p className="text-sm text-[hsl(var(--text-light)_/_0.5)]">
-            Сколковский — девелоперский проект
+            Проект команды 144/Capital
           </p>
         </div>
       </div>
