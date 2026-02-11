@@ -24,8 +24,7 @@ export const JourneySection = () => {
           <img
             src={stageImage}
             alt="Архитектурная визуализация проекта Сколковский"
-            className="absolute inset-0 w-full h-full object-cover"
-            style={{ objectPosition: "center center" }}
+            className="absolute inset-0 w-full h-full object-contain"
           />
 
           {/* Content overlay — left aligned */}
