@@ -20,7 +20,7 @@ const InfoCard = ({ icon, label, value, delay = "0s" }: InfoCardProps) => (
     style={{ animationDelay: delay, animationFillMode: "forwards" }}
   >
     <div className="flex items-start gap-4">
-      <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-foreground flex items-center justify-center shadow-[0_8px_30px_rgba(0,0,0,0.2)] transform -rotate-3 hover:rotate-0 transition-all duration-300">
+      <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-foreground flex items-center justify-center shadow-[0_8px_30px_rgba(0,0,0,0.2)]">
         {icon}
       </div>
       <div className="flex-1 min-w-0">
