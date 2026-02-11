@@ -14,11 +14,11 @@ export const JourneySection = () => {
   return (
     <section id="journey" className="pt-8 md:pt-12 pb-16 md:pb-24 bg-muted/30">
       <div className="container-wide">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-3 auto-rows-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-3">
 
           {/* Top-left: Title + items */}
-          <div className="lg:col-span-5 bg-background rounded-[1.5rem] border border-border/50 p-8 md:p-10 flex flex-col justify-center shadow-lg">
-            <p className="label-small mb-8 text-secondary-foreground">
+          <div className="lg:col-span-4 bg-background rounded-[1.5rem] border border-border/50 p-6 md:p-8 flex flex-col justify-end shadow-lg">
+            <p className="label-small mb-5 text-secondary-foreground">
               ТЕКУЩАЯ СТАДИЯ
             </p>
             <div className="space-y-3">
@@ -38,7 +38,7 @@ export const JourneySection = () => {
           </div>
 
           {/* Right: Full image */}
-          <div className="lg:col-span-7 rounded-[1.5rem] overflow-hidden border border-border/50 shadow-lg min-h-[400px] lg:min-h-[500px]">
+          <div className="lg:col-span-8 rounded-[1.5rem] overflow-hidden border border-border/50 shadow-lg min-h-[400px] lg:min-h-[500px]">
             <img
               src={stageImage}
               alt="Архитектурная визуализация проекта Сколковский"
