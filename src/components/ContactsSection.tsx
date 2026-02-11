@@ -54,8 +54,8 @@ export const ContactsSection = () => {
                   <span className="text-secondary-foreground">144/</span> Capital
                 </div>
                 <div className="absolute bottom-8 right-8 px-4 py-3 bg-background/80 backdrop-blur-md rounded-2xl shadow-lg">
-                  <p className="text-xs text-muted-foreground mb-1">Проект</p>
-                  <p className="text-sm font-medium">Сколковский</p>
+                  <p className="text-xs text-muted-foreground mb-1">Проект команды</p>
+                  <p className="text-sm font-medium">144/Capital</p>
                 </div>
               </div>
             </div>
