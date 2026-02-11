@@ -90,7 +90,7 @@ export const ConceptSection = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           
           {/* Hotel Zone */}
-          <ZoneCard title="Гостиничная зона" area="23 232,5" areaLabel="м²" image={buildingImage} description="Гостиничный блок с номерным фондом, ориентированным на деловой и транзитный спрос." details={<ul className="space-y-2">
+          <ZoneCard title="Гостиница" area="23 232,5" areaLabel="м²" image={buildingImage} description="Гостиничный блок с номерным фондом, ориентированным на деловой и транзитный спрос." details={<ul className="space-y-2">
                 <li className="flex items-start gap-2 text-sm text-muted-foreground">
                   <span className="text-accent mt-0.5">●</span>
                   <span><span className="text-foreground">Standard</span> — средняя площадь 25 м²</span>
@@ -110,7 +110,7 @@ export const ConceptSection = () => {
               </ul>} />
 
           {/* Retail Zone */}
-          <ZoneCard title="Торгово-общественный блок" area="12 411" areaLabel="м²" image={retailImage} description="Коммерческая инфраструктура, формирующая активную городскую среду и сервисное ядро проекта." details={<div className="space-y-4">
+          <ZoneCard title="Торговый центр и офисы" area="12 411" areaLabel="м²" image={retailImage} description="Коммерческая инфраструктура, формирующая активную городскую среду и сервисное ядро проекта." details={<div className="space-y-4">
                 <div>
                   <p className="text-xs uppercase tracking-wider text-foreground mb-2">Ритейл — 4 988 м²</p>
                   <ul className="space-y-1 text-xs text-muted-foreground">
