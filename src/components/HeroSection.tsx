@@ -26,14 +26,14 @@ export const HeroSection = () => {
             
             {/* Title */}
             <h1 className="text-xl md:text-2xl text-white mb-6 tracking-wide uppercase font-normal">
-              Сколковский
+              Девелоперский актив рядом со Сколково
             </h1>
             
             {/* Divider */}
             <div className="w-12 h-px bg-[#ffff00]/60 mb-6" />
             
             {/* Main headline */}
-            <p className="text-lg md:text-xl lg:text-2xl text-white leading-relaxed mb-8 font-normal">Девелоперский актив рядом со Сколково: земельный участок с разработанной архитектурно-градостроительной концепцией</p>
+            <p className="text-lg md:text-xl lg:text-2xl text-white leading-relaxed mb-8 font-normal">Земельный участок с разработанной архитектурно-градостроительной концепцией</p>
             
             {/* Divider */}
             <div className="w-full h-px bg-white/10 mb-6" />
