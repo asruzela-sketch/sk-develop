@@ -4,6 +4,7 @@ import { LandInfoSection } from "@/components/LandInfoSection";
 import { ValueSection } from "@/components/ValueSection";
 import { ConceptSection } from "@/components/ConceptSection";
 import { EnvironmentSection } from "@/components/EnvironmentSection";
+import { TransportSection } from "@/components/TransportSection";
 import { JourneySection } from "@/components/JourneySection";
 import { SberFinancingSection } from "@/components/SberFinancingSection";
 import { DeveloperSection } from "@/components/DeveloperSection";
@@ -21,6 +22,7 @@ const Index = () => {
         <ValueSection />
         <ConceptSection />
         <EnvironmentSection />
+        <TransportSection />
         <JourneySection />
         <SberFinancingSection />
         {/* Временно скрыты - можно вернуть, раскомментировав */}
