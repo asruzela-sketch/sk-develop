@@ -21,56 +21,61 @@ const usePdfDownload = () => {
       const html2canvas = (await import("html2canvas-pro")).default;
       const { jsPDF } = await import("jspdf");
 
-      const main = document.querySelector("main");
-      if (!main) return;
-
       // Hide header during capture
       const header = document.querySelector("header");
       if (header) (header as HTMLElement).style.display = "none";
 
-      // Scroll to top
+      // Get all sections as individual slides
+      const main = document.querySelector("main");
+      if (!main) return;
+
+      const sections = main.querySelectorAll(":scope > section, :scope > div > section");
+      // Fallback: if no sections found, use direct children
+      const elements = sections.length > 0 ? Array.from(sections) : Array.from(main.children);
+
+      if (elements.length === 0) return;
+
       window.scrollTo(0, 0);
-      await new Promise((r) => setTimeout(r, 500));
-
-      const canvas = await html2canvas(main as HTMLElement, {
-        scale: 2,
-        useCORS: true,
-        allowTaint: true,
-        logging: false,
-        windowWidth: 1440,
-      });
-
-      if (header) (header as HTMLElement).style.display = "";
-
-      const imgWidth = 297; // A4 landscape width mm
-      const imgHeight = 210; // A4 landscape height mm
-      const canvasRatio = canvas.width / canvas.height;
-      const pageRatio = imgWidth / imgHeight;
+      await new Promise((r) => setTimeout(r, 300));
 
       const pdf = new jsPDF({ orientation: "landscape", unit: "mm", format: "a4" });
+      const pageW = 297;
+      const pageH = 210;
 
-      // Split canvas into pages
-      const pageCanvasHeight = canvas.width / pageRatio;
-      const totalPages = Math.ceil(canvas.height / pageCanvasHeight);
+      for (let i = 0; i < elements.length; i++) {
+        const el = elements[i] as HTMLElement;
+        
+        // Scroll element into view for proper rendering
+        el.scrollIntoView({ behavior: "instant", block: "start" });
+        await new Promise((r) => setTimeout(r, 200));
 
-      for (let i = 0; i < totalPages; i++) {
+        const canvas = await html2canvas(el, {
+          scale: 2,
+          useCORS: true,
+          allowTaint: true,
+          logging: false,
+          windowWidth: 1440,
+        });
+
         if (i > 0) pdf.addPage();
 
-        const srcY = i * pageCanvasHeight;
-        const srcH = Math.min(pageCanvasHeight, canvas.height - srcY);
+        // Fit the section into the slide, centered
+        const ratio = Math.min(pageW / canvas.width, pageH / canvas.height);
+        const drawW = canvas.width * ratio;
+        const drawH = canvas.height * ratio;
+        const offsetX = (pageW - drawW) / 2;
+        const offsetY = (pageH - drawH) / 2;
 
-        const pageCanvas = document.createElement("canvas");
-        pageCanvas.width = canvas.width;
-        pageCanvas.height = srcH;
-        const ctx = pageCanvas.getContext("2d");
-        if (!ctx) continue;
+        // White background
+        pdf.setFillColor(255, 255, 255);
+        pdf.rect(0, 0, pageW, pageH, "F");
 
-        ctx.drawImage(canvas, 0, srcY, canvas.width, srcH, 0, 0, canvas.width, srcH);
-
-        const imgData = pageCanvas.toDataURL("image/jpeg", 0.92);
-        const drawHeight = (srcH / canvas.width) * imgWidth;
-        pdf.addImage(imgData, "JPEG", 0, 0, imgWidth, drawHeight);
+        const imgData = canvas.toDataURL("image/jpeg", 0.92);
+        pdf.addImage(imgData, "JPEG", offsetX, offsetY, drawW, drawH);
       }
+
+      if (header) (header as HTMLElement).style.display = "";
+      window.scrollTo(0, 0);
 
       pdf.save("144-Development-Presentation.pdf");
     } catch (err) {
