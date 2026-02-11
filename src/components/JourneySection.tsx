@@ -18,7 +18,7 @@ export const JourneySection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-3">
 
           {/* Left column: small photo on top + text below */}
-          <div className="lg:col-span-4 flex flex-col gap-3">
+          <div className="lg:col-span-4 flex flex-col gap-3 order-2 lg:order-1">
             {/* Small photo cell */}
             <div className="rounded-[1.5rem] overflow-hidden border border-border/50 shadow-lg aspect-[4/3]">
               <img
@@ -51,7 +51,7 @@ export const JourneySection = () => {
           </div>
 
           {/* Right: Main image */}
-          <div className="lg:col-span-8 rounded-[1.5rem] overflow-hidden border border-border/50 shadow-lg min-h-[400px]">
+          <div className="lg:col-span-8 rounded-[1.5rem] overflow-hidden border border-border/50 shadow-lg min-h-[250px] sm:min-h-[400px] order-1 lg:order-2">
             <img
               src={stageImage}
               alt="Архитектурная визуализация проекта Сколковский"

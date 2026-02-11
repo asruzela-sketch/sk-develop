@@ -58,7 +58,7 @@ export const EnvironmentSection = () => {
   return <section id="environment" className="bg-background pt-12 md:pt-16 pb-12 md:pb-16">
       <div className="container-wide">
         {/* Header */}
-        <div className="text-center mb-16 max-w-3xl mx-auto">
+        <div className="text-center mb-8 sm:mb-16 max-w-3xl mx-auto">
           <p className="label-small mb-4 text-secondary-foreground">Локация</p>
           <h2 className="heading-section mb-6">
             Городское окружение и транспортный контекст
@@ -66,7 +66,7 @@ export const EnvironmentSection = () => {
         </div>
 
         {/* Main Content Grid */}
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 mb-12">
+        <div className="grid lg:grid-cols-2 gap-4 sm:gap-8 lg:gap-12 mb-8 sm:mb-12">
           
           {/* Map Section */}
           <div className="relative rounded-2xl overflow-hidden bg-[hsl(40_25%_94%)]">
@@ -84,7 +84,7 @@ export const EnvironmentSection = () => {
           </div>
 
           {/* Photos Grid */}
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 gap-2 sm:gap-4">
             {locationPoints.map(point => <div key={point.id} className={`relative rounded-xl overflow-hidden cursor-pointer transition-all duration-300 ${activePoint === point.id ? "ring-2 ring-accent shadow-xl scale-[1.02]" : "hover:shadow-lg"}`} onMouseEnter={() => setActivePoint(point.id)} onMouseLeave={() => setActivePoint(null)}>
                 {/* Photo */}
                 <div className="aspect-[4/3] overflow-hidden">

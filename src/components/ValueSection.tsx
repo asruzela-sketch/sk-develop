@@ -9,7 +9,7 @@ const blocks = [
 
 export const ValueSection = () => {
   return (
-    <section className="section-dark py-24 md:py-32">
+    <section className="section-dark py-16 sm:py-24 md:py-32">
       <div className="container-wide">
         <div className="max-w-4xl mx-auto text-center">
           <p className="label-small text-accent mb-4">Ценность актива</p>
