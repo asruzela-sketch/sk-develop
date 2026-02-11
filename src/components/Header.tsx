@@ -3,14 +3,11 @@ import { useState } from "react";
 import logo144 from "@/assets/logo-144capital.png";
 
 const navItems = [{
-  label: "Проект",
+  label: "Локация",
   href: "#project"
 }, {
   label: "Концепция",
   href: "#concept"
-}, {
-  label: "Девелопер",
-  href: "#developer"
 }];
 
 export const Header = () => {
