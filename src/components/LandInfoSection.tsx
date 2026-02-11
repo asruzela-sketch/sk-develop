@@ -119,7 +119,7 @@ export const LandInfoSection = () => {
       {/* Map + Infrastructure Section */}
       <section id="project" className="bg-muted/40 pb-16 md:pb-24">
         <div className="container-wide">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-foreground tracking-tight leading-[0.9] mb-10 opacity-0 animate-fade-in" style={{ animationDelay: "0.1s", animationFillMode: "forwards" }}>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-foreground tracking-tight leading-[0.9] mb-10 text-center opacity-0 animate-fade-in" style={{ animationDelay: "0.1s", animationFillMode: "forwards" }}>
             ЛОКАЦИЯ
           </h2>
 
