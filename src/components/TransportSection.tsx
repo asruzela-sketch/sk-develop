@@ -87,28 +87,20 @@ export const TransportSection = () => {
       </div>
 
       <div className="relative container-wide py-16 md:py-24">
-        <div className="max-w-xl">
+        <div className="max-w-md">
           <p
-            className="label-small mb-4 text-accent opacity-0 animate-fade-in"
+            className="label-small mb-6 text-accent opacity-0 animate-fade-in"
             style={{ animationDelay: "0.05s", animationFillMode: "forwards" }}
           >
             Транспортная доступность
           </p>
-          <h2
-            className="text-3xl md:text-4xl lg:text-5xl font-light text-white tracking-tight leading-[0.95] mb-10 opacity-0 animate-fade-in"
-            style={{ animationDelay: "0.1s", animationFillMode: "forwards" }}
-          >
-            КЛЮЧЕВЫЕ
-            <br />
-            НАПРАВЛЕНИЯ
-          </h2>
 
-          <div className="space-y-3">
+          <div className="space-y-2">
             {transportData.map((item, i) => (
               <TransportCard
                 key={item.destination}
                 {...item}
-                delay={`${0.15 + i * 0.1}s`}
+                delay={`${0.1 + i * 0.08}s`}
               />
             ))}
           </div>
