@@ -108,35 +108,6 @@ export const EnvironmentSection = () => {
           </div>
         </div>
 
-        {/* Location Descriptions */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-          {locationPoints.map(point => <div key={point.id} className={`p-5 rounded-xl transition-all duration-300 cursor-pointer ${activePoint === point.id ? "bg-accent/10 border border-accent" : "bg-[hsl(40_25%_96%)] hover:bg-[hsl(40_25%_94%)]"}`} onMouseEnter={() => setActivePoint(point.id)} onMouseLeave={() => setActivePoint(null)}>
-              <div className="flex items-start gap-3">
-                <span className={`flex-shrink-0 w-7 h-7 rounded-full flex items-center justify-center text-sm font-medium transition-colors ${activePoint === point.id ? "bg-accent text-foreground" : "bg-foreground text-background"}`}>
-                  {point.id}
-                </span>
-                <div>
-                  <h4 className="text-sm font-medium text-foreground mb-1.5">
-                    {point.title}
-                  </h4>
-                  <p className="text-xs text-muted-foreground leading-relaxed">
-                    {point.description}
-                  </p>
-                </div>
-              </div>
-            </div>)}
-        </div>
-
-        {/* Concluding Text */}
-        <div className="max-w-3xl mx-auto text-center">
-          <div className="p-6 rounded-xl bg-[hsl(40_25%_96%)] border border-[hsl(40_20%_90%)]">
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              Локация характеризуется высокой степенью урбанизации и наличием устойчивого транспортного 
-              и пешеходного потока. Сочетание жилой застройки, коммерческих функций и транспортных связей 
-              формирует благоприятные условия для размещения многофункционального комплекса.
-            </p>
-          </div>
-        </div>
       </div>
     </section>;
 };
