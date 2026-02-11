@@ -63,10 +63,6 @@ export const EnvironmentSection = () => {
           <h2 className="heading-section mb-6">
             Городское окружение и транспортный контекст
           </h2>
-          <p className="body-base text-muted-foreground">
-            Участок расположен в сформированной городской среде с активной жилой застройкой, 
-            коммерческой инфраструктурой и ключевыми транспортными артериями.
-          </p>
         </div>
 
         {/* Main Content Grid */}

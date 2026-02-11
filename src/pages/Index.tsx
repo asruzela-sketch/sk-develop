@@ -21,8 +21,8 @@ const Index = () => {
         <LandInfoSection />
         <ValueSection />
         <ConceptSection />
-        <EnvironmentSection />
         <TransportSection />
+        <EnvironmentSection />
         <JourneySection />
         
         {/* Временно скрыты - можно вернуть, раскомментировав */}
