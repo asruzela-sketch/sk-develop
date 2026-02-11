@@ -26,7 +26,7 @@ export const HeroSection = () => {
             
             {/* Title */}
             <h1 className="text-xl md:text-2xl text-white mb-6 tracking-wide font-normal">
-              Девелоперский актив рядом со Сколково
+              Девелоперский актив<br />рядом со Сколково
             </h1>
             
             {/* Divider */}
