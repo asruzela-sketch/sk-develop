@@ -25,7 +25,7 @@ export const HeroSection = () => {
             </div>
             
             {/* Title */}
-            <h1 className="text-xl md:text-2xl text-white mb-6 tracking-wide uppercase font-normal">
+            <h1 className="text-xl md:text-2xl text-white mb-6 tracking-wide font-normal">
               Девелоперский актив рядом со Сколково
             </h1>
             
