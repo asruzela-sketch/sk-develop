@@ -72,10 +72,10 @@ export const TransportSection = () => {
     },
     {
       icon: <Car className="w-5 h-5 text-accent" strokeWidth={1.5} />,
-      destination: "Автодороги",
+      destination: "Выезды",
       details: [
-        { mode: "Можайское ш.", time: "1 мин" },
-        { mode: "Минское ш.", time: "6 мин" },
+        { mode: "Можайское шоссе", time: "1 мин" },
+        { mode: "Минское шоссе", time: "6 мин" },
         { mode: "МКАД", time: "12 мин" },
       ],
     },
