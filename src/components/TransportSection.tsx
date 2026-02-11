@@ -72,18 +72,12 @@ export const TransportSection = () => {
     },
     {
       icon: <Car className="w-5 h-5 text-accent" strokeWidth={1.5} />,
-      destination: "Можайское шоссе",
-      details: [{ mode: "выезд", time: "1 мин" }],
-    },
-    {
-      icon: <Car className="w-5 h-5 text-accent" strokeWidth={1.5} />,
-      destination: "Минское шоссе",
-      details: [{ mode: "выезд", time: "6 мин" }],
-    },
-    {
-      icon: <Car className="w-5 h-5 text-accent" strokeWidth={1.5} />,
-      destination: "МКАД",
-      details: [{ mode: "выезд", time: "12 мин" }],
+      destination: "Автодороги",
+      details: [
+        { mode: "Можайское ш.", time: "1 мин" },
+        { mode: "Минское ш.", time: "6 мин" },
+        { mode: "МКАД", time: "12 мин" },
+      ],
     },
   ];
 
@@ -106,7 +100,7 @@ export const TransportSection = () => {
           Транспортная доступность
         </p>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-3">
           {transportData.map((item, i) => (
             <TransportCard
               key={item.destination}
