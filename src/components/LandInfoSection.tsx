@@ -119,11 +119,11 @@ export const LandInfoSection = () => {
       {/* Map + Infrastructure Section */}
       <section id="project" className="bg-muted/40 pb-16 md:pb-24">
         <div className="container-wide">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-foreground tracking-tight leading-[0.9] mb-10 text-center opacity-0 animate-fade-in" style={{ animationDelay: "0.1s", animationFillMode: "forwards" }}>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-foreground tracking-tight leading-[0.9] mb-8 sm:mb-10 text-center opacity-0 animate-fade-in" style={{ animationDelay: "0.1s", animationFillMode: "forwards" }}>
             ЛОКАЦИЯ
           </h2>
 
-          <div className="grid lg:grid-cols-[1.2fr_1fr] gap-6 md:gap-8 items-start">
+          <div className="grid lg:grid-cols-[1.2fr_1fr] gap-4 sm:gap-6 md:gap-8 items-start">
             {/* Left: Map Image */}
             <div className="opacity-0 animate-fade-in" style={{ animationDelay: "0.15s", animationFillMode: "forwards" }}>
               <div className="rounded-3xl overflow-hidden shadow-2xl">
@@ -138,7 +138,7 @@ export const LandInfoSection = () => {
             {/* Right: Infrastructure Grid + Button */}
             <div className="opacity-0 animate-fade-in flex flex-col h-full" style={{ animationDelay: "0.25s", animationFillMode: "forwards" }}>
               <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-4">Окружение и инфраструктура</p>
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 flex-1">
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-3 flex-1">
                 {infraItems.map((item, i) => (
                   <InfraCard
                     key={item.name}

@@ -8,7 +8,7 @@ export const ContactsSection = () => {
           <div className="grid lg:grid-cols-2 min-h-[500px]">
             
             {/* Left: Contact Info Card */}
-            <div className="flex flex-col justify-center p-10 md:p-16 lg:p-20">
+            <div className="flex flex-col justify-center p-6 sm:p-10 md:p-16 lg:p-20">
               <p className="label-small mb-4 text-secondary-foreground">Контакты</p>
               <h2 className="heading-section mb-8">
                 Получить больше информации

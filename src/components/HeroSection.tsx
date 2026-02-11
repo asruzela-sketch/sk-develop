@@ -10,44 +10,44 @@ export const HeroSection = () => {
       <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-black/10 to-transparent" />
       
       {/* Content */}
-      <div className="relative z-10 w-full p-6 md:p-10 lg:p-16">
-        <div className="max-w-md">
+      <div className="relative z-10 w-full p-4 sm:p-6 md:p-10 lg:p-16 flex items-end sm:items-center min-h-screen pb-16 sm:pb-0">
+        <div className="max-w-md w-full">
           {/* Glass frame - narrow and tall */}
-          <div className="backdrop-blur-md bg-white/5 border-white/15 rounded-2xl p-8 md:p-10 opacity-90 border-2">
+          <div className="backdrop-blur-md bg-white/5 border-white/15 rounded-2xl p-5 sm:p-8 md:p-10 opacity-90 border-2">
             {/* Team label */}
-            <div className="flex items-center gap-2 mb-6">
-              <span className="text-xs uppercase tracking-[0.15em] text-white/50 font-light">
+            <div className="flex items-center gap-2 mb-4 sm:mb-6">
+              <span className="text-[10px] sm:text-xs uppercase tracking-[0.15em] text-white/50 font-light">
                 Проект команды
               </span>
-              <span className="text-xs uppercase tracking-[0.15em] text-[#ffff00] font-medium">
+              <span className="text-[10px] sm:text-xs uppercase tracking-[0.15em] text-[#ffff00] font-medium">
                 144/Capital
               </span>
             </div>
             
             {/* Title */}
-            <h1 className="text-xl md:text-2xl text-white mb-6 tracking-wide font-normal">
+            <h1 className="text-lg sm:text-xl md:text-2xl text-white mb-4 sm:mb-6 tracking-wide font-normal">
               Девелоперский актив<br />рядом со Сколково
             </h1>
             
             {/* Divider */}
-            <div className="w-12 h-px bg-[#ffff00]/60 mb-6" />
+            <div className="w-12 h-px bg-[#ffff00]/60 mb-4 sm:mb-6" />
             
             {/* Main headline */}
-            <p className="text-lg md:text-xl lg:text-2xl text-white leading-relaxed mb-8 font-normal">Земельный участок с разработанной архитектурно-градостроительной концепцией</p>
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white leading-relaxed mb-6 sm:mb-8 font-normal">Земельный участок с разработанной архитектурно-градостроительной концепцией</p>
             
             {/* Divider */}
-            <div className="w-full h-px bg-white/10 mb-6" />
+            <div className="w-full h-px bg-white/10 mb-4 sm:mb-6" />
             
             {/* Location inside card */}
             <div className="flex items-center gap-3">
-              <div className="w-8 h-8 rounded-full bg-[#ffff00] flex items-center justify-center">
+              <div className="w-8 h-8 rounded-full bg-[#ffff00] flex items-center justify-center flex-shrink-0">
                 <MapPin className="w-4 h-4 text-black" />
               </div>
               <div>
-                <span className="text-xs uppercase tracking-widest text-white/50 block mb-0.5">
+                <span className="text-[10px] sm:text-xs uppercase tracking-widest text-white/50 block mb-0.5">
                   Локация
                 </span>
-                <span className="text-sm text-white font-light">
+                <span className="text-xs sm:text-sm text-white font-light">
                   Московская область, г. Одинцово
                 </span>
               </div>

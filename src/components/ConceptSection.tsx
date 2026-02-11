@@ -72,10 +72,10 @@ const ZoneCard = ({
     </div>;
 };
 export const ConceptSection = () => {
-  return <section id="concept" className="bg-[hsl(40_30%_96%)] pt-24 md:pt-32 pb-12 md:pb-16">
+    return <section id="concept" className="bg-[hsl(40_30%_96%)] pt-16 sm:pt-24 md:pt-32 pb-10 sm:pb-12 md:pb-16">
       <div className="container-wide">
         {/* Header */}
-        <div className="text-center mb-16 max-w-3xl mx-auto">
+        <div className="text-center mb-8 sm:mb-16 max-w-3xl mx-auto">
           <p className="label-small mb-4 text-secondary-foreground">Концепция</p>
           <h2 className="heading-section mb-6">
             Архитектурно-градостроительная концепция МФК
