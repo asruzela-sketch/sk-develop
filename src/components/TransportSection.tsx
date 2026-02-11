@@ -94,7 +94,7 @@ export const TransportSection = () => {
 
       <div className="relative container-wide py-16 md:py-24">
         <p
-          className="label-small mb-8 text-accent opacity-0 animate-fade-in"
+          className="label-small mb-8 text-accent text-center opacity-0 animate-fade-in"
           style={{ animationDelay: "0.05s", animationFillMode: "forwards" }}
         >
           Транспортная доступность
