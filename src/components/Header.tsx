@@ -29,7 +29,7 @@ export const Header = () => {
             
             {/* Telegram Button */}
             <a 
-              href="https://t.me/info_144capital" 
+              href="https://t.me/+79269852905" 
               target="_blank" 
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-4 py-2 bg-[hsl(var(--text-light))] text-[hsl(var(--dark-bg))] rounded-full text-sm font-medium hover:bg-[hsl(var(--text-light)_/_0.9)] transition-colors"
@@ -54,7 +54,7 @@ export const Header = () => {
               
               {/* Mobile Telegram Button */}
               <a 
-                href="https://t.me/info_144capital" 
+                href="https://t.me/+79269852905" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 px-4 py-2 bg-[hsl(var(--text-light))] text-[hsl(var(--dark-bg))] rounded-full text-sm font-medium w-fit"

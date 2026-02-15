@@ -1,4 +1,4 @@
-import { Phone, Send, ArrowUpRight } from "lucide-react";
+import { Phone, Send, Mail, ArrowUpRight } from "lucide-react";
 import contactVisual from "@/assets/contact-visual.jpg";
 export const ContactsSection = () => {
   return <section id="contacts" className="py-16 md:py-24 bg-muted/30">
@@ -16,25 +16,37 @@ export const ContactsSection = () => {
               
               <div className="space-y-6 mb-10">
                 {/* Phone */}
-                <a href="tel:+79154444444" className="group flex items-center gap-4 p-4 rounded-2xl bg-muted/50 hover:bg-muted transition-all duration-300">
+                <a href="tel:+79269852905" className="group flex items-center gap-4 p-4 rounded-2xl bg-muted/50 hover:bg-muted transition-all duration-300">
                   <div className="w-12 h-12 rounded-full bg-foreground flex items-center justify-center">
                     <Phone className="w-5 h-5 text-background" strokeWidth={1.5} />
                   </div>
                   <div className="flex-1">
                     <p className="text-sm text-muted-foreground mb-1">Телефон</p>
-                    <p className="text-lg font-medium group-hover:text-accent transition-colors">+7 915 444 44 44</p>
+                    <p className="text-lg font-medium group-hover:text-accent transition-colors">+7 (926) 985-29-05</p>
                   </div>
                   <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:text-accent group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300" />
                 </a>
 
                 {/* Telegram */}
-                <a href="https://t.me/info_144capital" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-4 p-4 rounded-2xl bg-muted/50 hover:bg-muted transition-all duration-300">
+                <a href="https://t.me/+79269852905" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-4 p-4 rounded-2xl bg-muted/50 hover:bg-muted transition-all duration-300">
                   <div className="w-12 h-12 rounded-full bg-foreground flex items-center justify-center">
                     <Send className="w-5 h-5 text-background" strokeWidth={1.5} />
                   </div>
                   <div className="flex-1">
                     <p className="text-sm text-muted-foreground mb-1">Telegram</p>
-                    <p className="text-lg font-medium group-hover:text-accent transition-colors">@info_144capital</p>
+                    <p className="text-lg font-medium group-hover:text-accent transition-colors">Написать в Telegram</p>
+                  </div>
+                  <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:text-accent group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300" />
+                </a>
+
+                {/* Email */}
+                <a href="mailto:Chaplinsky@mail.ru" className="group flex items-center gap-4 p-4 rounded-2xl bg-muted/50 hover:bg-muted transition-all duration-300">
+                  <div className="w-12 h-12 rounded-full bg-foreground flex items-center justify-center">
+                    <Mail className="w-5 h-5 text-background" strokeWidth={1.5} />
+                  </div>
+                  <div className="flex-1">
+                    <p className="text-sm text-muted-foreground mb-1">Почта</p>
+                    <p className="text-lg font-medium group-hover:text-accent transition-colors">Chaplinsky@mail.ru</p>
                   </div>
                   <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:text-accent group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300" />
                 </a>
