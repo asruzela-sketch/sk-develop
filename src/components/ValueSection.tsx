@@ -3,7 +3,7 @@ import { Hotel, ShoppingBag, Briefcase, CarFront } from "lucide-react";
 const blocks = [
   { icon: Hotel, label: "Гостиница" },
   { icon: ShoppingBag, label: "Торговый центр" },
-  { icon: Briefcase, label: "Коворкинг класса А" },
+  { icon: Briefcase, label: "Офисный центр" },
   { icon: CarFront, label: "Подземный паркинг" },
 ];
 
@@ -14,7 +14,7 @@ export const ValueSection = () => {
         <div className="max-w-4xl mx-auto text-center">
           <p className="label-small text-accent mb-4">Ценность актива</p>
           <h2 className="heading-section text-[hsl(var(--text-light))] mb-8">
-            Сколковский — результат девелоперской проработки
+            Сколковский — девелоперский проект
           </h2>
           <div className="accent-line mx-auto mb-10" />
           <p className="body-large text-[hsl(var(--text-light)_/_0.8)] mb-10">

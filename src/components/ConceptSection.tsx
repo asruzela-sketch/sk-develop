@@ -128,14 +128,10 @@ export const ConceptSection = () => {
                     <li>• Бытовые услуги — 119 м²</li>
                   </ul>
                 </div>
-                <div>
-                  <p className="text-xs uppercase tracking-wider text-foreground mb-2">Техническая зона</p>
-                  <p className="text-xs text-muted-foreground">2 135 м²</p>
-                </div>
               </div>} />
 
           {/* Parking Zone */}
-          <ZoneCard title="Подземный и надземный паркинг" area="405" areaLabel="м/м" secondaryArea="3 839" secondaryLabel="м²" image={parkingImage} description="Инфраструктурный элемент, обеспечивающий транспортную доступность комплекса." details={<ul className="space-y-2">
+          <ZoneCard title="Подземный и надземный паркинг" area="135" areaLabel="м/м" image={parkingImage} description="Инфраструктурный элемент, обеспечивающий транспортную доступность комплекса." details={<div className="space-y-4"><p className="text-xs text-muted-foreground italic">С учётом аренды м/м в паркинге соседнего участка</p><ul className="space-y-2">
                 <li className="flex items-start gap-2 text-sm text-muted-foreground">
                   <span className="text-accent mt-0.5">●</span>
                   <span>Размещение в составе стилобатной части</span>
@@ -152,7 +148,7 @@ export const ConceptSection = () => {
                   <span className="text-accent mt-0.5">●</span>
                   <span>Связь с торговыми и гостиничными функциями</span>
                 </li>
-              </ul>} />
+              </ul></div>} />
         </div>
 
         {/* Total Area */}
