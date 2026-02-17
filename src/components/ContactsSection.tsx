@@ -39,6 +39,18 @@ export const ContactsSection = () => {
                   <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:text-accent group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300" />
                 </a>
 
+                {/* Personal Telegram */}
+                <a href="https://t.me/Igor_Chaplinsky" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-4 p-4 rounded-2xl bg-muted/50 hover:bg-muted transition-all duration-300">
+                  <div className="w-12 h-12 rounded-full bg-foreground flex items-center justify-center">
+                    <Send className="w-5 h-5 text-background" strokeWidth={1.5} />
+                  </div>
+                  <div className="flex-1">
+                    <p className="text-sm text-muted-foreground mb-1">Telegram</p>
+                    <p className="text-lg font-medium group-hover:text-accent transition-colors">Игорь Чаплинский</p>
+                  </div>
+                  <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:text-accent group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300" />
+                </a>
+
                 {/* Email */}
                 <a href="mailto:Chaplinsky@mail.ru" className="group flex items-center gap-4 p-4 rounded-2xl bg-muted/50 hover:bg-muted transition-all duration-300">
                   <div className="w-12 h-12 rounded-full bg-foreground flex items-center justify-center">
