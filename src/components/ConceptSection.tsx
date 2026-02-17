@@ -131,7 +131,7 @@ export const ConceptSection = () => {
               </div>} />
 
           {/* Parking Zone */}
-          <ZoneCard title="Подземный и надземный паркинг" area="135" areaLabel="м/м" image={parkingImage} description="Инфраструктурный элемент, обеспечивающий транспортную доступность комплекса." details={<div className="space-y-4"><p className="text-xs text-muted-foreground italic">С учётом аренды м/м в паркинге соседнего участка</p><ul className="space-y-2">
+          <ZoneCard title="Подземный и надземный паркинг" area="135" areaLabel="м/м" secondaryArea="с учётом аренды м/м в паркинге соседнего участка" image={parkingImage} description="Инфраструктурный элемент, обеспечивающий транспортную доступность комплекса." details={<ul className="space-y-2">
                 <li className="flex items-start gap-2 text-sm text-muted-foreground">
                   <span className="text-accent mt-0.5">●</span>
                   <span>Размещение в составе стилобатной части</span>
@@ -148,7 +148,7 @@ export const ConceptSection = () => {
                   <span className="text-accent mt-0.5">●</span>
                   <span>Связь с торговыми и гостиничными функциями</span>
                 </li>
-              </ul></div>} />
+              </ul>} />
         </div>
 
         {/* Total Area */}
