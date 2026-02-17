@@ -14,15 +14,8 @@ export const HeroSection = () => {
         <div className="max-w-md w-full">
           {/* Glass frame - narrow and tall */}
           <div className="backdrop-blur-md bg-white/5 border-white/15 rounded-2xl p-5 sm:p-8 md:p-10 opacity-90 border-2">
-            {/* Team label */}
-            <div className="flex items-center gap-2 mb-4 sm:mb-6">
-              <span className="text-[10px] sm:text-xs uppercase tracking-[0.15em] text-white/50 font-light">
-                Проект команды
-              </span>
-              <span className="text-[10px] sm:text-xs uppercase tracking-[0.15em] text-[#ffff00] font-medium">
-                144/Capital
-              </span>
-            </div>
+            {/* Spacer */}
+            <div className="mb-4 sm:mb-6" />
             
             {/* Title */}
             <h1 className="text-lg sm:text-xl md:text-2xl text-white mb-4 sm:mb-6 tracking-wide font-normal">
