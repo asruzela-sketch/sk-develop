@@ -35,7 +35,7 @@ export const ContactsSection = () => {
                   <div className="flex-1">
                     <p className="text-sm text-muted-foreground mb-1">Telegram</p>
                     <p className="text-lg font-medium group-hover:text-accent transition-colors">Написать в Telegram</p>
-                    <p className="text-sm text-muted-foreground">Игорь Чаплинский · @Igor_Chaplinsky</p>
+                    <p className="text-sm text-muted-foreground">Игорь Чаплинский</p>
                   </div>
                   <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:text-accent group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300" />
                 </a>
