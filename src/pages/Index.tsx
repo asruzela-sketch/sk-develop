@@ -24,12 +24,12 @@ const Index = () => {
         <ConceptSection />
         <TransportSection />
         <EnvironmentSection />
-        <LocationVideoSection />
         <JourneySection />
         
         {/* Временно скрыты - можно вернуть, раскомментировав */}
         {/* <DeveloperSection /> */}
         {/* <FoundersSection /> */}
+        <LocationVideoSection />
         <ContactsSection />
       </main>
       <Footer />
