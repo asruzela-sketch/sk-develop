@@ -4,6 +4,7 @@ import { LandInfoSection } from "@/components/LandInfoSection";
 import { ValueSection } from "@/components/ValueSection";
 import { ConceptSection } from "@/components/ConceptSection";
 import { EnvironmentSection } from "@/components/EnvironmentSection";
+import { LocationVideoSection } from "@/components/LocationVideoSection";
 import { TransportSection } from "@/components/TransportSection";
 import { JourneySection } from "@/components/JourneySection";
 
@@ -22,6 +23,7 @@ const Index = () => {
         <ValueSection />
         <ConceptSection />
         <TransportSection />
+        <LocationVideoSection />
         <EnvironmentSection />
         <JourneySection />
         
