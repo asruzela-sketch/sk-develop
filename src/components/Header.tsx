@@ -17,7 +17,7 @@ export const Header = () => {
       <div className="glass-panel">
         <div className="container-wide py-2 flex items-center justify-between">
           <a href="#" className="text-[hsl(var(--text-light))] text-sm md:text-base font-light tracking-wide">
-            Сколковский — девелоперский проект
+            Девелоперский проект рядом со Сколково
           </a>
 
           {/* Desktop Navigation */}
