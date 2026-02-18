@@ -14,7 +14,7 @@ export const ValueSection = () => {
         <div className="max-w-4xl mx-auto text-center">
           <p className="label-small text-accent mb-4">Ценность актива</p>
           <h2 className="heading-section text-[hsl(var(--text-light))] mb-8">
-            Девелоперский проект рядом со Сколково
+            Сколковский — девелоперский проект
           </h2>
           <div className="accent-line mx-auto mb-10" />
           <p className="body-large text-[hsl(var(--text-light)_/_0.8)] mb-10">
