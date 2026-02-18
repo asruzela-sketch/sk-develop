@@ -31,6 +31,9 @@ export const ValueSection = () => {
               </div>
             ))}
           </div>
+          <p className="body-large text-[hsl(var(--text-light)_/_0.6)] mt-10 text-sm italic">
+            Возможно формирование офисных помещений на 4 и 5 этажах здания в объеме до 3 500 м² на стадии проектирования и получения разрешения на строительство.
+          </p>
         </div>
       </div>
     </section>
