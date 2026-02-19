@@ -119,7 +119,10 @@ export const ConceptSection = () => {
                     <li>• Салон красоты — 181 м²</li>
                     <li>• Бытовые услуги — 119 м²</li>
                   </ul>
-                </div>
+              </div>
+                <p className="text-xs text-muted-foreground mt-4 leading-relaxed">
+                  Возможно формирование офисных помещений на 4 и 5 этажах здания в объеме до 3 500 м² на стадии проектирования и получения разрешения на строительство.
+                </p>
               </div>} />
 
           {/* Parking Zone */}
