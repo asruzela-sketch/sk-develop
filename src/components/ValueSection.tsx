@@ -1,13 +1,16 @@
+import { useState } from "react";
 import { Hotel, ShoppingBag, Briefcase, CarFront } from "lucide-react";
 
 const blocks = [
-  { icon: Hotel, label: "Гостиница" },
-  { icon: ShoppingBag, label: "Торговый центр" },
-  { icon: Briefcase, label: "Офисный центр" },
-  { icon: CarFront, label: "Подземный паркинг" },
+  { icon: Hotel, label: "Гостиница", key: "hotel" },
+  { icon: ShoppingBag, label: "Торговый центр", key: "retail" },
+  { icon: Briefcase, label: "Офисный центр", key: "office" },
+  { icon: CarFront, label: "Подземный паркинг", key: "parking" },
 ];
 
 export const ValueSection = () => {
+  const [activeKey, setActiveKey] = useState<string | null>(null);
+
   return (
     <section className="section-dark py-16 sm:py-24 md:py-32">
       <div className="container-wide">
@@ -21,19 +24,24 @@ export const ValueSection = () => {
             Многофункциональный комплекс в архитектурно-градостроительной концепции включает в себя:
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {blocks.map(({ icon: Icon, label }) => (
-              <div
-                key={label}
-                className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm px-5 py-6 flex flex-col items-center gap-3 hover:bg-white/10 transition-colors duration-300"
+            {blocks.map(({ icon: Icon, label, key }) => (
+              <button
+                key={key}
+                onClick={() => setActiveKey(activeKey === key ? null : key)}
+                className={`rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm px-5 py-6 flex flex-col items-center gap-3 transition-colors duration-300 cursor-pointer ${
+                  activeKey === key ? "bg-white/15 border-accent/40" : "hover:bg-white/10"
+                }`}
               >
                 <Icon className="w-6 h-6 text-accent" strokeWidth={1.5} />
                 <span className="text-sm font-medium text-[hsl(var(--text-light))]">{label}</span>
-              </div>
+              </button>
             ))}
           </div>
-          <p className="body-large text-[hsl(var(--text-light)_/_0.6)] mt-10 text-sm italic">
-            Возможно формирование офисных помещений на 4 и 5 этажах здания в объеме до 3 500 м² на стадии проектирования и получения разрешения на строительство.
-          </p>
+          {activeKey === "office" && (
+            <p className="body-large text-[hsl(var(--text-light)_/_0.7)] mt-8 text-sm italic animate-fade-in">
+              Возможно формирование офисных помещений на 4 и 5 этажах здания в объеме до 3 500 м² на стадии проектирования и получения разрешения на строительство.
+            </p>
+          )}
         </div>
       </div>
     </section>
