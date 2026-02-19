@@ -22,7 +22,7 @@ const Index = () => {
         <LandInfoSection />
         <ValueSection />
         <ConceptSection />
-        {/* <TransportSection /> */}
+        <TransportSection />
         {/* <EnvironmentSection /> */}
         <JourneySection />
         
