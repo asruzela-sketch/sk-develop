@@ -7,6 +7,7 @@ import { EnvironmentSection } from "@/components/EnvironmentSection";
 import { LocationVideoSection } from "@/components/LocationVideoSection";
 import { TransportSection } from "@/components/TransportSection";
 import { JourneySection } from "@/components/JourneySection";
+import locationAerial from "@/assets/location-aerial.jpg";
 
 import { DeveloperSection } from "@/components/DeveloperSection";
 import { FoundersSection } from "@/components/FoundersSection";
@@ -20,6 +21,9 @@ const Index = () => {
       <main>
         <HeroSection />
         <LandInfoSection />
+        <section className="w-full">
+          <img src={locationAerial} alt="Аэрофото участка под строительство" className="w-full h-auto block" />
+        </section>
         <ValueSection />
         <ConceptSection />
         <TransportSection />
