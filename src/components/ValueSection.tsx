@@ -38,7 +38,7 @@ export const ValueSection = () => {
             ))}
           </div>
           {activeKey === "office" && (
-            <p className="body-large text-[hsl(var(--text-light)_/_0.7)] mt-8 text-sm italic animate-fade-in">
+            <p className="text-[hsl(var(--text-light)_/_0.6)] mt-8 text-xs sm:text-sm leading-relaxed animate-fade-in">
               Возможно формирование офисных помещений на 4 и 5 этажах здания в объеме до 3 500 м² на стадии проектирования и получения разрешения на строительство.
             </p>
           )}
