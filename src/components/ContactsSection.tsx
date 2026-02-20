@@ -16,40 +16,40 @@ export const ContactsSection = () => {
               
               <div className="space-y-6 mb-10">
                 {/* Phone */}
-                <a href="tel:+79269852905" className="group flex items-center gap-4 p-4 rounded-2xl bg-muted/50 hover:bg-muted transition-all duration-300">
+                <a href="tel:+79269852905" className="group flex items-center gap-4 p-4 rounded-2xl border border-[hsl(40_30%_82%)] shadow-sm hover:shadow-md transition-all duration-300" style={{ background: 'linear-gradient(135deg, hsl(42 35% 92%), hsl(40 40% 87%), hsl(38 35% 90%))' }}>
                   <div className="w-12 h-12 rounded-full bg-foreground flex items-center justify-center">
                     <Phone className="w-5 h-5 text-background" strokeWidth={1.5} />
                   </div>
                   <div className="flex-1">
-                    <p className="text-sm text-muted-foreground mb-1">Телефон</p>
-                    <p className="text-lg font-medium group-hover:text-accent transition-colors">+7 (926) 985-29-05</p>
+                    <p className="text-sm text-[hsl(35_30%_50%)] mb-1">Телефон</p>
+                    <p className="text-lg font-medium text-[hsl(35_40%_30%)] group-hover:text-accent transition-colors">+7 (926) 985-29-05</p>
                   </div>
-                  <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:text-accent group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300" />
+                  <ArrowUpRight className="w-5 h-5 text-[hsl(35_30%_50%)] group-hover:text-accent group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300" />
                 </a>
 
                 {/* Telegram */}
-                <a href="https://t.me/Igor_Chaplinsky" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-4 p-4 rounded-2xl bg-muted/50 hover:bg-muted transition-all duration-300">
+                <a href="https://t.me/Igor_Chaplinsky" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-4 p-4 rounded-2xl border border-[hsl(40_30%_82%)] shadow-sm hover:shadow-md transition-all duration-300" style={{ background: 'linear-gradient(135deg, hsl(42 35% 92%), hsl(40 40% 87%), hsl(38 35% 90%))' }}>
                   <div className="w-12 h-12 rounded-full bg-foreground flex items-center justify-center">
                     <Send className="w-5 h-5 text-background" strokeWidth={1.5} />
                   </div>
                   <div className="flex-1">
-                    <p className="text-sm text-muted-foreground mb-1">Telegram</p>
-                    <p className="text-lg font-medium group-hover:text-accent transition-colors">Написать в Telegram</p>
-                    <p className="text-sm text-muted-foreground">Игорь Чаплинский</p>
+                    <p className="text-sm text-[hsl(35_30%_50%)] mb-1">Telegram</p>
+                    <p className="text-lg font-medium text-[hsl(35_40%_30%)] group-hover:text-accent transition-colors">Написать в Telegram</p>
+                    <p className="text-sm text-[hsl(35_30%_50%)]">Игорь Чаплинский</p>
                   </div>
-                  <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:text-accent group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300" />
+                  <ArrowUpRight className="w-5 h-5 text-[hsl(35_30%_50%)] group-hover:text-accent group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300" />
                 </a>
 
                 {/* Email */}
-                <a href="mailto:Chaplinsky@mail.ru" className="group flex items-center gap-4 p-4 rounded-2xl bg-muted/50 hover:bg-muted transition-all duration-300">
+                <a href="mailto:Chaplinsky@mail.ru" className="group flex items-center gap-4 p-4 rounded-2xl border border-[hsl(40_30%_82%)] shadow-sm hover:shadow-md transition-all duration-300" style={{ background: 'linear-gradient(135deg, hsl(42 35% 92%), hsl(40 40% 87%), hsl(38 35% 90%))' }}>
                   <div className="w-12 h-12 rounded-full bg-foreground flex items-center justify-center">
                     <Mail className="w-5 h-5 text-background" strokeWidth={1.5} />
                   </div>
                   <div className="flex-1">
-                    <p className="text-sm text-muted-foreground mb-1">Почта</p>
-                    <p className="text-lg font-medium group-hover:text-accent transition-colors">Chaplinsky@mail.ru</p>
+                    <p className="text-sm text-[hsl(35_30%_50%)] mb-1">Почта</p>
+                    <p className="text-lg font-medium text-[hsl(35_40%_30%)] group-hover:text-accent transition-colors">Chaplinsky@mail.ru</p>
                   </div>
-                  <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:text-accent group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300" />
+                  <ArrowUpRight className="w-5 h-5 text-[hsl(35_30%_50%)] group-hover:text-accent group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300" />
                 </a>
               </div>
 
