@@ -37,14 +37,18 @@ export const JourneySection = () => {
                 {currentItems.map((item) => (
                   <div
                     key={item}
-                    className="px-5 py-4 rounded-xl bg-muted/50 border border-border/30 text-sm md:text-base font-medium tracking-tight hover:border-border/60 transition-all duration-300"
+                    className="px-5 py-4 rounded-xl border border-[hsl(40_30%_82%)] text-sm md:text-base font-medium tracking-tight text-[hsl(35_40%_30%)] shadow-sm hover:shadow-md transition-all duration-300"
+                    style={{ background: 'linear-gradient(135deg, hsl(42 35% 92%), hsl(40 40% 87%), hsl(38 35% 90%))' }}
                   >
                     {item}
                   </div>
                 ))}
-                <div className="px-5 py-4 rounded-xl bg-muted/50 border border-border/30 hover:border-border/60 transition-all duration-300">
-                  <p className="text-sm md:text-base font-medium tracking-tight">{nextStep.title}</p>
-                  <p className="text-xs text-muted-foreground mt-1">{nextStep.date}</p>
+                <div
+                  className="px-5 py-4 rounded-xl border border-[hsl(40_30%_82%)] shadow-sm hover:shadow-md transition-all duration-300"
+                  style={{ background: 'linear-gradient(135deg, hsl(42 35% 92%), hsl(40 40% 87%), hsl(38 35% 90%))' }}
+                >
+                  <p className="text-sm md:text-base font-medium tracking-tight text-[hsl(35_40%_30%)]">{nextStep.title}</p>
+                  <p className="text-xs text-[hsl(35_30%_50%)] mt-1">{nextStep.date}</p>
                 </div>
               </div>
             </div>
