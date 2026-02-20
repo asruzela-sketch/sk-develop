@@ -31,7 +31,8 @@ export const Header = () => {
               href="https://t.me/+79269852905" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-4 py-2 bg-[hsl(var(--text-light))] text-[hsl(var(--dark-bg))] rounded-full text-sm font-medium hover:bg-[hsl(var(--text-light)_/_0.9)] transition-colors"
+              className="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium border border-[hsl(40_30%_82%)] text-[hsl(35_40%_30%)] shadow-sm hover:shadow-md transition-all duration-300"
+              style={{ background: 'linear-gradient(135deg, hsl(42 35% 92%), hsl(40 40% 87%), hsl(38 35% 90%))' }}
             >
               <Send size={16} />
               Написать
@@ -56,7 +57,8 @@ export const Header = () => {
                 href="https://t.me/+79269852905" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 px-4 py-2 bg-[hsl(var(--text-light))] text-[hsl(var(--dark-bg))] rounded-full text-sm font-medium w-fit"
+                className="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium w-fit border border-[hsl(40_30%_82%)] text-[hsl(35_40%_30%)] shadow-sm"
+                style={{ background: 'linear-gradient(135deg, hsl(42 35% 92%), hsl(40 40% 87%), hsl(38 35% 90%))' }}
                 onClick={() => setIsMenuOpen(false)}
               >
                 <Send size={16} />
