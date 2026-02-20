@@ -129,7 +129,7 @@ export const LandInfoSection = () => {
           <div className="grid lg:grid-cols-[1.2fr_1fr] gap-4 sm:gap-6 md:gap-8 items-start">
             {/* Left: Map Image */}
             <div className="opacity-0 animate-fade-in" style={{ animationDelay: "0.15s", animationFillMode: "forwards" }}>
-              <div className="rounded-3xl overflow-hidden shadow-2xl">
+              <div className="rounded-3xl overflow-hidden shadow-2xl border border-[hsl(40_30%_82%)]">
                 <img
                   src={locationMap}
                   alt="Расположение участка на карте Москвы и Московской области"
@@ -140,7 +140,6 @@ export const LandInfoSection = () => {
 
             {/* Right: Infrastructure Grid + Button */}
             <div className="opacity-0 animate-fade-in flex flex-col h-full" style={{ animationDelay: "0.25s", animationFillMode: "forwards" }}>
-              <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-4">Окружение и инфраструктура</p>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-3 flex-1">
                 {infraItems.map((item, i) => (
                   <InfraCard
