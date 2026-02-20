@@ -119,9 +119,12 @@ export const LandInfoSection = () => {
       {/* Map + Infrastructure Section */}
       <section id="project" className="bg-muted/40 pb-16 md:pb-24">
         <div className="container-wide">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-foreground tracking-tight leading-[0.9] mb-8 sm:mb-10 text-center opacity-0 animate-fade-in" style={{ animationDelay: "0.1s", animationFillMode: "forwards" }}>
-            ЛОКАЦИЯ
-          </h2>
+          <div className="text-center mb-8 sm:mb-16 max-w-3xl mx-auto opacity-0 animate-fade-in" style={{ animationDelay: "0.1s", animationFillMode: "forwards" }}>
+            <p className="label-small mb-4 text-secondary-foreground">Локация</p>
+            <h2 className="heading-section">
+              Расположение и инфраструктура
+            </h2>
+          </div>
 
           <div className="grid lg:grid-cols-[1.2fr_1fr] gap-4 sm:gap-6 md:gap-8 items-start">
             {/* Left: Map Image */}
