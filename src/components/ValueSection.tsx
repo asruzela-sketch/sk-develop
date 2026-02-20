@@ -28,11 +28,13 @@ export const ValueSection = () => {
               <button
                 key={key}
                 onClick={() => setActiveKey(activeKey === key ? null : key)}
-                className={`rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm px-5 py-6 flex flex-col items-center gap-3 transition-colors duration-300 cursor-pointer ${
-                  activeKey === key ? "bg-white/15 border-accent/40" : "hover:bg-white/10"
+                className={`rounded-2xl border border-accent/20 bg-accent/5 backdrop-blur-sm px-5 py-6 flex flex-col items-center gap-3 transition-colors duration-300 cursor-pointer ${
+                  activeKey === key ? "bg-accent/15 border-accent/40" : "hover:bg-accent/10"
                 }`}
               >
-                <Icon className="w-6 h-6 text-accent" strokeWidth={1.5} />
+                <div className="w-12 h-12 rounded-xl gold-gradient-bg/20 bg-accent/10 flex items-center justify-center">
+                  <Icon className="w-6 h-6 text-accent" strokeWidth={1.5} />
+                </div>
                 <span className="text-sm font-medium text-[hsl(var(--text-light))]">{label}</span>
               </button>
             ))}

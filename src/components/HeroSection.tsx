@@ -23,7 +23,7 @@ export const HeroSection = () => {
             </h1>
             
             {/* Divider */}
-            <div className="w-12 h-px bg-[#ffff00]/60 mb-4 sm:mb-6" />
+            <div className="w-12 h-px gold-gradient-bg opacity-60 mb-4 sm:mb-6" />
             
             {/* Main headline */}
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white leading-relaxed mb-6 sm:mb-8 font-normal">Земельный участок с разработанной архитектурно-градостроительной концепцией</p>
@@ -33,7 +33,7 @@ export const HeroSection = () => {
             
             {/* Location inside card */}
             <div className="flex items-center gap-3">
-              <div className="w-8 h-8 rounded-full bg-[#ffff00] flex items-center justify-center flex-shrink-0">
+              <div className="w-8 h-8 rounded-full gold-gradient-bg flex items-center justify-center flex-shrink-0">
                 <MapPin className="w-4 h-4 text-black" />
               </div>
               <div>

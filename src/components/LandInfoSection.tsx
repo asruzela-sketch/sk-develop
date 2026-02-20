@@ -149,8 +149,8 @@ export const LandInfoSection = () => {
               </div>
 
               <div className="mt-6 relative group inline-block self-start opacity-0 animate-fade-in" style={{ animationDelay: "0.8s", animationFillMode: "forwards" }}>
-                <div className="absolute -inset-1 bg-gradient-to-r from-accent via-amber-300 to-accent rounded-full opacity-70 blur-sm group-hover:opacity-100 group-hover:blur-md transition-all duration-500" />
-                <div className="absolute -inset-0.5 bg-gradient-to-r from-accent to-amber-400 rounded-full opacity-50 group-hover:opacity-80 transition-opacity duration-300" />
+                <div className="absolute -inset-1 bg-gradient-to-r from-accent-dark via-accent to-accent-light rounded-full opacity-70 blur-sm group-hover:opacity-100 group-hover:blur-md transition-all duration-500" />
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-accent to-accent-light rounded-full opacity-50 group-hover:opacity-80 transition-opacity duration-300" />
                 
                 <a
                   href="https://yandex.ru/maps/-/CLxnaU2Z"

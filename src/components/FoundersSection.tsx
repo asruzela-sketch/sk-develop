@@ -45,13 +45,13 @@ export const FoundersSection = () => {
                   {/* Decorative elements */}
                   <div className="absolute top-4 left-4 w-20 h-20 border border-white/10 rounded-full opacity-50" />
                   <div className="absolute top-8 left-8 w-12 h-12 border border-white/10 rounded-full opacity-30" />
-                  <div className="absolute top-4 right-4 w-16 h-16 border border-[#ffff00]/20 rounded-full" />
+                  <div className="absolute top-4 right-4 w-16 h-16 border border-accent/20 rounded-full" />
                   
                   {/* Experience Badge - Top Right */}
                   <div className="absolute top-6 right-6 z-10">
-                    <div className="bg-[#ffff00] text-foreground px-4 py-3 rounded-2xl text-center">
+                    <div className="gold-gradient-bg text-accent-foreground px-4 py-3 rounded-2xl text-center">
                       <p className="text-2xl font-bold leading-none">{founder.experience}</p>
-                      <p className="text-[10px] text-foreground/70 mt-1 leading-tight">
+                      <p className="text-[10px] text-accent-foreground/70 mt-1 leading-tight">
                         {founder.experienceLabel}
                       </p>
                     </div>
@@ -81,7 +81,7 @@ export const FoundersSection = () => {
                 <div className="p-6 pt-4 flex-1 flex flex-col">
                   {/* Name & Role */}
                   <div className="mb-4">
-                    <h3 className="text-xl md:text-2xl font-medium text-white mb-1 group-hover:text-[#ffff00] transition-colors duration-300">
+                    <h3 className="text-xl md:text-2xl font-medium text-white mb-1 group-hover:text-accent transition-colors duration-300">
                       {founder.name}
                     </h3>
                     <p className="text-white/60 text-xs uppercase tracking-wider">
@@ -96,7 +96,7 @@ export const FoundersSection = () => {
                 </div>
 
                 {/* Decorative corner accent */}
-                <div className="absolute bottom-0 right-0 w-32 h-32 bg-gradient-to-tl from-[#ffff00]/5 to-transparent pointer-events-none" />
+                <div className="absolute bottom-0 right-0 w-32 h-32 bg-gradient-to-tl from-accent/5 to-transparent pointer-events-none" />
               </div>
             </div>
           ))}
@@ -105,7 +105,7 @@ export const FoundersSection = () => {
         {/* Bottom decorative line */}
         <div className="mt-10 flex items-center justify-center gap-4">
           <div className="h-px w-16 bg-gradient-to-r from-transparent to-white/20" />
-          <div className="w-2 h-2 rounded-full bg-[#ffff00]/40" />
+          <div className="w-2 h-2 rounded-full bg-accent/40" />
           <div className="h-px w-16 bg-gradient-to-l from-transparent to-white/20" />
         </div>
       </div>

@@ -52,11 +52,11 @@ export const DeveloperSection = () => {
                   className="group p-5 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300"
                 >
                   <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-[#ffff00]/20 flex items-center justify-center">
-                      <feature.icon className="w-5 h-5 text-[#ffff00]" strokeWidth={1.5} />
+                    <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-accent/20 flex items-center justify-center">
+                      <feature.icon className="w-5 h-5 text-accent" strokeWidth={1.5} />
                     </div>
                     <div className="flex-1">
-                      <p className="text-xl font-medium text-white group-hover:text-[#ffff00] transition-colors mb-1">
+                      <p className="text-xl font-medium text-white group-hover:text-accent transition-colors mb-1">
                         {feature.title}
                       </p>
                       <p className="text-sm text-white/70 leading-relaxed">
@@ -94,7 +94,7 @@ export const DeveloperSection = () => {
                     href={mapUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-5 py-3 bg-[#ffff00] text-foreground rounded-full text-sm font-medium hover:bg-[#ffff00]/90 transition-colors group"
+                    className="inline-flex items-center gap-2 px-5 py-3 gold-gradient-bg text-accent-foreground rounded-full text-sm font-medium hover:opacity-90 transition-opacity group"
                   >
                     Все проекты на карте
                     <ExternalLink className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
