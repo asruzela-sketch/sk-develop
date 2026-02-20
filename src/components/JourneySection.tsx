@@ -24,6 +24,7 @@ export const JourneySection = () => {
               <img
                 src={stageImage2}
                 alt="Визуализация проекта — вид с дороги"
+                loading="lazy"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -59,6 +60,7 @@ export const JourneySection = () => {
             <img
               src={stageImage}
               alt="Архитектурная визуализация проекта Сколковский"
+              loading="lazy"
               className="w-full h-full object-cover"
             />
           </div>

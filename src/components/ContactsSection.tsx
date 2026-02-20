@@ -61,7 +61,7 @@ export const ContactsSection = () => {
             {/* Right: Visual */}
             <div className="relative hidden lg:block">
               <div className="absolute inset-4 rounded-[1.5rem] overflow-hidden shadow-xl">
-                <img src={contactVisual} alt="Архитектурная визуализация проекта" className="w-full h-full object-cover" />
+                <img src={contactVisual} alt="Архитектурная визуализация проекта" loading="lazy" className="w-full h-full object-cover" />
               </div>
             </div>
 

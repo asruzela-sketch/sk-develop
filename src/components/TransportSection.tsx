@@ -88,6 +88,7 @@ export const TransportSection = () => {
         <img
           src={transportMap}
           alt="Карта транспортной доступности"
+          loading="lazy"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-foreground/60" />
