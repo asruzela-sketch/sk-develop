@@ -28,16 +28,16 @@
     --muted: 40 10% 90%;
     --muted-foreground: 220 10% 45%;
 
-    /* Accent - Bright yellow */
-    --accent: 60 100% 50%;
-    --accent-foreground: 220 15% 10%;
+    /* Accent - Warm golden-brown (matching presentation) */
+    --accent: 35 50% 45%;
+    --accent-foreground: 40 20% 98%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
     --border: 40 15% 88%;
     --input: 40 15% 88%;
-    --ring: 45 85% 55%;
+    --ring: 35 50% 45%;
 
     --radius: 0.25rem;
 
@@ -73,11 +73,11 @@
     --secondary-foreground: 40 20% 90%;
     --muted: 220 15% 20%;
     --muted-foreground: 40 10% 60%;
-    --accent: 60 100% 50%;
-    --accent-foreground: 220 15% 10%;
+    --accent: 35 50% 50%;
+    --accent-foreground: 40 20% 98%;
     --border: 220 15% 20%;
     --input: 220 15% 20%;
-    --ring: 45 85% 55%;
+    --ring: 35 50% 50%;
   }
 }
 
