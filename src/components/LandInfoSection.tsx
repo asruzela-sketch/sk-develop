@@ -16,7 +16,7 @@ interface InfoCardProps {
 
 const InfoCard = ({ icon, label, value, delay = "0s" }: InfoCardProps) => (
   <div 
-    className="bg-white rounded-2xl p-5 md:p-6 shadow-sm hover:shadow-lg transition-all duration-500 hover:-translate-y-1 opacity-0 animate-fade-in"
+    className="bg-white rounded-2xl p-5 md:p-6 border border-[hsl(40_30%_82%)] shadow-sm hover:shadow-lg transition-all duration-500 hover:-translate-y-1 opacity-0 animate-fade-in"
     style={{ animationDelay: delay, animationFillMode: "forwards" }}
   >
     <div className="flex items-start gap-4">
