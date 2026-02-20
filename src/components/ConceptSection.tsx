@@ -148,7 +148,7 @@ export const ConceptSection = () => {
 
         {/* Total Area */}
         <div className="flex justify-center mb-8">
-          <div className="inline-flex items-center gap-3 px-6 py-4 rounded-full bg-accent text-accent-foreground animate-fade-in hover:scale-105 transition-transform duration-300 shadow-lg">
+          <div className="inline-flex items-center gap-3 px-6 py-4 rounded-full animate-fade-in hover:scale-105 transition-transform duration-300 shadow-lg text-accent-foreground" style={{ background: 'linear-gradient(135deg, hsl(42 65% 72%), hsl(38 55% 62%), hsl(42 65% 72%))' }}>
             <span className="text-sm opacity-90">Общая площадь</span>
             <span className="text-2xl font-semibold">39 482,5</span>
             <span className="text-sm opacity-90">м²</span>
