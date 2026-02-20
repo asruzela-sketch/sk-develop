@@ -22,7 +22,7 @@ const Index = () => {
         <HeroSection />
         <LandInfoSection />
         <section className="w-full">
-          <img src={locationAerial} alt="Аэрофото участка под строительство" className="w-full h-auto block" />
+          <img src={locationAerial} alt="Аэрофото участка под строительство" loading="lazy" className="w-full h-auto block" />
         </section>
         <ValueSection />
         <ConceptSection />

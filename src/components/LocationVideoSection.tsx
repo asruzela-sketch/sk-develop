@@ -9,6 +9,7 @@ export const LocationVideoSection = () => {
         loop
         muted
         playsInline
+        preload="none"
         className="w-full h-auto block"
       />
     </section>
