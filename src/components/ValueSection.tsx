@@ -28,8 +28,8 @@ export const ValueSection = () => {
               <button
                 key={key}
                 onClick={() => setActiveKey(activeKey === key ? null : key)}
-                className={`rounded-2xl border border-accent/20 bg-accent/5 backdrop-blur-sm px-5 py-6 flex flex-col items-center gap-3 transition-colors duration-300 cursor-pointer ${
-                  activeKey === key ? "bg-accent/15 border-accent/40" : "hover:bg-accent/10"
+                className={`rounded-2xl border border-[hsl(40_30%_60%_/_0.3)] bg-accent/5 backdrop-blur-sm px-5 py-6 flex flex-col items-center gap-3 transition-all duration-300 cursor-pointer ${
+                  activeKey === key ? "bg-accent/15 border-[hsl(40_30%_60%_/_0.5)]" : "hover:bg-accent/10"
                 }`}
               >
                 <div className="w-12 h-12 rounded-xl gold-gradient-bg/20 bg-accent/10 flex items-center justify-center">
