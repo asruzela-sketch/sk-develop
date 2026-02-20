@@ -26,11 +26,12 @@ const TransportCard = ({ icon, destination, details, delay = "0s" }: TransportCa
         {details.map((d, i) => (
           <span
             key={i}
-            className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/[0.06] border border-white/[0.06] text-[11px] tracking-wide"
+            className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl border border-[hsl(40_30%_60%/0.4)] text-xs tracking-wide shadow-sm"
+            style={{ background: 'linear-gradient(135deg, hsl(42 30% 88% / 0.15), hsl(40 35% 80% / 0.1))' }}
           >
             <span className="font-semibold text-accent">{d.time}</span>
             <span className="text-white/20">|</span>
-            <span className="text-white/50">{d.mode}</span>
+            <span className="text-white/60">{d.mode}</span>
           </span>
         ))}
       </div>
@@ -94,7 +95,7 @@ export const TransportSection = () => {
 
       <div className="relative container-wide py-16 md:py-24">
         <p
-          className="label-small mb-8 text-accent text-center opacity-0 animate-fade-in"
+          className="text-sm md:text-base uppercase tracking-[0.2em] font-medium mb-8 text-white text-center opacity-0 animate-fade-in"
           style={{ animationDelay: "0.05s", animationFillMode: "forwards" }}
         >
           Транспортная доступность
