@@ -33,8 +33,8 @@ export const HeroSection = () => {
             
             {/* Location inside card */}
             <div className="flex items-center gap-3">
-              <div className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 border border-[hsl(40_30%_60%_/_0.4)]" style={{ background: 'linear-gradient(135deg, hsl(42 35% 92% / 0.25), hsl(40 40% 87% / 0.15))' }}>
-                <MapPin className="w-4 h-4 text-[hsl(40_35%_80%)]" />
+              <div className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 border border-[hsl(40_30%_70%_/_0.6)] shadow-sm" style={{ background: 'linear-gradient(135deg, hsl(42 35% 85% / 0.5), hsl(38 40% 75% / 0.35))' }}>
+                <MapPin className="w-4 h-4 text-[hsl(40_40%_88%)]" />
               </div>
               <div>
                 <span className="text-[10px] sm:text-xs uppercase tracking-widest text-white/50 block mb-0.5">
