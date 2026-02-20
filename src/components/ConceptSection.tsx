@@ -38,14 +38,14 @@ const ZoneCard = ({
         
         {/* Area badges */}
         <div className="flex flex-wrap gap-2 mb-4">
-          <span className="inline-flex items-center px-3 py-1.5 rounded-full bg-[hsl(40_20%_88%)] text-sm font-medium text-foreground">
-            <span className="text-accent mr-1.5">●</span>
+          <span className="inline-flex items-center px-3 py-1.5 rounded-xl border border-[hsl(40_30%_82%)] text-sm font-medium text-[hsl(35_40%_30%)]" style={{ background: 'linear-gradient(135deg, hsl(42 35% 92%), hsl(40 40% 87%), hsl(38 35% 90%))' }}>
+            <span className="mr-1.5" style={{ color: 'hsl(35 45% 40%)' }}>●</span>
             {area}
-            {areaLabel && <span className="ml-1 text-muted-foreground font-normal">{areaLabel}</span>}
+            {areaLabel && <span className="ml-1 text-[hsl(35_30%_50%)] font-normal">{areaLabel}</span>}
           </span>
-          {secondaryArea && <span className="inline-flex items-center px-3 py-1.5 rounded-full bg-[hsl(40_20%_88%)] text-sm font-medium text-foreground">
+          {secondaryArea && <span className="inline-flex items-center px-3 py-1.5 rounded-xl border border-[hsl(40_30%_82%)] text-sm font-medium text-[hsl(35_40%_30%)]" style={{ background: 'linear-gradient(135deg, hsl(42 35% 92%), hsl(40 40% 87%), hsl(38 35% 90%))' }}>
               {secondaryArea}
-              {secondaryLabel && <span className="ml-1 text-muted-foreground font-normal">{secondaryLabel}</span>}
+              {secondaryLabel && <span className="ml-1 text-[hsl(35_30%_50%)] font-normal">{secondaryLabel}</span>}
             </span>}
         </div>
 
