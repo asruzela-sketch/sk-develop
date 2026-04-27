@@ -26,8 +26,8 @@ export const Header = () => {
                 {item.label}
               </a>)}
             
-            {/* Telegram Button */}
-            <a 
+            {/* Telegram Button — скрыта */}
+            {/* <a 
               href="https://t.me/+79269852905" 
               target="_blank" 
               rel="noopener noreferrer"
@@ -36,7 +36,7 @@ export const Header = () => {
             >
               <Send size={16} />
               Написать
-            </a>
+            </a> */}
           </nav>
 
           {/* Mobile Menu Button */}
@@ -52,8 +52,8 @@ export const Header = () => {
                   {item.label}
                 </a>)}
               
-              {/* Mobile Telegram Button */}
-              <a 
+              {/* Mobile Telegram Button — скрыта */}
+              {/* <a 
                 href="https://t.me/+79269852905" 
                 target="_blank" 
                 rel="noopener noreferrer"
@@ -63,7 +63,7 @@ export const Header = () => {
               >
                 <Send size={16} />
                 Написать в Telegram
-              </a>
+              </a> */}
             </div>
           </nav>}
       </div>
