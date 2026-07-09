@@ -92,7 +92,7 @@ export const LandInfoSection = () => {
             <InfoCard
               icon={<Maximize2 className="w-5 h-5 text-white" strokeWidth={1.5} />}
               label="Площадь участка"
-              value="6 000 м²"
+              value="6 038 м²"
               delay="0s"
             />
             <InfoCard

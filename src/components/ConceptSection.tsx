@@ -90,7 +90,7 @@ export const ConceptSection = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           
           {/* Hotel Zone */}
-          <ZoneCard title="Гостиница" area="23 232,5" areaLabel="м²" secondaryArea="726" secondaryLabel="номеров" image={buildingImage} description="Гостиничный блок с номерным фондом, ориентированным на деловой и транзитный спрос." details={<ul className="space-y-2">
+          <ZoneCard title="Гостиница" area="28 186,3" areaLabel="м²" secondaryArea="726" secondaryLabel="номеров" image={buildingImage} description="Гостиничный блок с номерным фондом, ориентированным на деловой и транзитный спрос." details={<ul className="space-y-2">
                 <li className="flex items-start gap-2 text-sm text-muted-foreground">
                   <span className="text-accent mt-0.5">●</span>
                   <span><span className="text-foreground">Standard</span> — площадь от 25 до 30,5 м²</span>
@@ -102,7 +102,7 @@ export const ConceptSection = () => {
               </ul>} />
 
           {/* Retail Zone */}
-          <ZoneCard title="Торговый центр и офисы" area="12 411" areaLabel="м²" image={retailImage} description="Коммерческая инфраструктура, формирующая активную городскую среду и сервисное ядро проекта." details={<div className="space-y-4">
+          <ZoneCard title="Торговый центр и офисы" area="7 788,2" areaLabel="м²" image={retailImage} description="Коммерческая инфраструктура, формирующая активную городскую среду и сервисное ядро проекта." details={<div className="space-y-4">
                 <div>
                   <p className="text-xs uppercase tracking-wider text-foreground mb-2">Ритейл — 4 988 м²</p>
                   <ul className="space-y-1 text-xs text-muted-foreground">
@@ -149,8 +149,8 @@ export const ConceptSection = () => {
         {/* Total Area */}
         <div className="flex justify-center mb-8">
           <div className="inline-flex items-center gap-3 px-8 py-4 rounded-2xl animate-fade-in hover:scale-105 transition-all duration-300 shadow-md border border-[hsl(40_30%_82%)] text-[hsl(35_40%_30%)]" style={{ background: 'linear-gradient(135deg, hsl(42 35% 92%), hsl(40 40% 87%), hsl(38 35% 90%))' }}>
-            <span className="text-sm font-medium opacity-80">Общая площадь</span>
-            <span className="text-2xl font-semibold" style={{ color: 'hsl(35 45% 40%)' }}>39 482,5</span>
+            <span className="text-sm font-medium opacity-80">Площадь МФК</span>
+            <span className="text-2xl font-semibold" style={{ color: 'hsl(35 45% 40%)' }}>40 215,1</span>
             <span className="text-sm font-medium opacity-80">м²</span>
           </div>
         </div>
