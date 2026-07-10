@@ -118,6 +118,13 @@ Host-level Nginx установлен и включён в автозапуск.
 /etc/nginx/sites-enabled/sk-develop
 ```
 
+10 июля 2026 года в host-level Nginx добавлена публичная cache policy:
+
+- `/` и `/index.html`: `Cache-Control: no-cache, no-store, must-revalidate`, `Pragma: no-cache`, `Expires: 0`;
+- hashed JS/CSS в `/assets/`: `Cache-Control: public, max-age=31536000, immutable`;
+- изображения, SVG, иконки и видео: `Cache-Control: public, max-age=86400` без `immutable`;
+- upstream-заголовки `Cache-Control` и `Expires` от контейнера скрываются через `proxy_hide_header`, чтобы не было дублей и конфликтов.
+
 Let's Encrypt сертификат выпущен через Certbot:
 
 - certificate name: `xn----dtbfebaaxjcgdhvwemepeem5a.xn--p1ai`;
@@ -236,7 +243,12 @@ server {
 }
 ```
 
-При использовании host-level Nginx как reverse proxy к контейнеру его конфиг настраивается отдельно после выбора домена и HTTPS.
+При использовании host-level Nginx как reverse proxy к контейнеру публичная cache policy настраивается в `/etc/nginx/sites-available/sk-develop`. После изменения host-level конфига обязательно выполнить:
+
+```bash
+sudo nginx -t
+sudo systemctl reload nginx
+```
 
 ## Проверка после деплоя
 

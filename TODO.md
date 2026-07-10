@@ -53,6 +53,8 @@
 - [x] Проверить автообновление сертификата через `certbot renew --dry-run --no-random-sleep-on-renew`.
 - [x] Проверить доступность сайта после `systemctl restart docker`.
 - [x] Проверить доступность сайта после `reboot` сервера.
+- [x] Настроить host-level Nginx cache policy для HTML, hashed JS/CSS и медиа.
+- [x] Проверить заголовки cache policy после `sudo nginx -t` и `sudo systemctl reload nginx`.
 
 ## Что осталось после первого Docker-деплоя
 

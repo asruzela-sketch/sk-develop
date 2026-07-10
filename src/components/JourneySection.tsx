@@ -31,21 +31,21 @@ export const JourneySection = () => {
             </div>
           </div>
 
-          <div className="lg:col-span-4 rounded-[1.5rem] overflow-hidden border border-border/50 shadow-lg min-h-[320px] order-2">
-            <img
-              src={stageImage2}
-              alt="Визуализация проекта — вид с дороги"
-              loading="lazy"
-              className="w-full h-full object-cover"
-            />
-          </div>
-
-          <div className="lg:col-span-4 rounded-[1.5rem] overflow-hidden border border-border/50 shadow-lg bg-background min-h-[320px] order-3 lg:order-3">
+          <div className="lg:col-span-4 rounded-[1.5rem] overflow-hidden border border-border/50 shadow-lg bg-background min-h-[320px] order-2">
             <img
               src={siteZoneMap}
               alt="Карта функциональной зоны участка под строительство"
               loading="lazy"
               className="w-full h-full object-cover object-center bg-white"
+            />
+          </div>
+
+          <div className="lg:col-span-4 rounded-[1.5rem] overflow-hidden border border-border/50 shadow-lg min-h-[320px] order-3">
+            <img
+              src={stageImage2}
+              alt="Визуализация проекта — вид с дороги"
+              loading="lazy"
+              className="w-full h-full object-cover"
             />
           </div>
 
