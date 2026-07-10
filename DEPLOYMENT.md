@@ -64,10 +64,9 @@ nginx:1.27-alpine
 - image id: `4e2b2f9f441e`;
 - контейнер: `sk-develop`;
 - restart policy: `unless-stopped`;
-- публикация порта: `0.0.0.0:80->80/tcp`, `[::]:80->80/tcp`;
-- host-level Nginx на сервере не активен;
-- домен не подключался;
-- SSL не настраивался.
+- исходная публикация порта: `0.0.0.0:80->80/tcp`, `[::]:80->80/tcp`;
+- host-level Nginx на сервере на первом этапе не был активен;
+- домен и SSL на первом этапе не настраивались.
 
 Проверки после запуска:
 
@@ -83,6 +82,77 @@ curl -I http://178.212.12.239
 - `curl -I http://localhost` возвращает `HTTP/1.1 200 OK`;
 - `curl -I http://178.212.12.239` возвращает `HTTP/1.1 200 OK`;
 - главная страница открывается в браузере по `http://178.212.12.239/`.
+
+## Production HTTPS
+
+Настроено 9 июня 2026 года для домена:
+
+- Unicode: `снк-девелоперскийпроект.рф`;
+- Punycode: `xn----dtbfebaaxjcgdhvwemepeem5a.xn--p1ai`;
+- `www`: `www.xn----dtbfebaaxjcgdhvwemepeem5a.xn--p1ai`;
+- DNS A-записи основного домена и `www` указывают на `178.212.12.239`.
+
+Актуальная схема:
+
+```text
+Internet
+  -> host-level Nginx :80/:443
+  -> reverse proxy http://127.0.0.1:8080
+  -> Docker container sk-develop :80
+```
+
+Контейнер теперь публикуется только на localhost:
+
+```bash
+docker run -d --name sk-develop --restart unless-stopped -p 127.0.0.1:8080:80 sk-develop:latest
+```
+
+Host-level Nginx установлен и включён в автозапуск. Конфиг сайта:
+
+```text
+/etc/nginx/sites-available/sk-develop
+/etc/nginx/sites-enabled/sk-develop
+```
+
+Let's Encrypt сертификат выпущен через Certbot:
+
+- certificate name: `xn----dtbfebaaxjcgdhvwemepeem5a.xn--p1ai`;
+- key type: `ECDSA`;
+- issuer: `Let's Encrypt YE2`;
+- domains: `xn----dtbfebaaxjcgdhvwemepeem5a.xn--p1ai`, `www.xn----dtbfebaaxjcgdhvwemepeem5a.xn--p1ai`;
+- certificate path: `/etc/letsencrypt/live/xn----dtbfebaaxjcgdhvwemepeem5a.xn--p1ai/fullchain.pem`;
+- private key path: `/etc/letsencrypt/live/xn----dtbfebaaxjcgdhvwemepeem5a.xn--p1ai/privkey.pem`;
+- valid from: `2026-06-09 13:48:59 UTC`;
+- expires: `2026-09-07 13:48:58 UTC`.
+
+Автообновление:
+
+- `certbot.timer` включён и активен;
+- `certbot renew --dry-run --no-random-sleep-on-renew` завершился успешно;
+- Certbot управляет HTTPS-блоком и HTTP -> HTTPS редиректом в Nginx-конфиге.
+
+Проверки после настройки:
+
+```bash
+curl -I http://xn----dtbfebaaxjcgdhvwemepeem5a.xn--p1ai/
+curl -I http://www.xn----dtbfebaaxjcgdhvwemepeem5a.xn--p1ai/
+curl -I https://xn----dtbfebaaxjcgdhvwemepeem5a.xn--p1ai/
+curl -I https://www.xn----dtbfebaaxjcgdhvwemepeem5a.xn--p1ai/
+```
+
+Результат:
+
+- HTTP для основного домена возвращает `301 Moved Permanently` на HTTPS;
+- HTTP для `www` возвращает `301 Moved Permanently` на HTTPS;
+- HTTPS для основного домена возвращает `HTTP/1.1 200 OK`;
+- HTTPS для `www` возвращает `HTTP/1.1 200 OK`;
+- `openssl s_client -verify_return_error` возвращает `Verification: OK` и `Verify return code: 0 (ok)`.
+- браузер открывает HTTPS-страницу сайта, предупреждение о небезопасном подключении не отображается.
+
+Проверки устойчивости:
+
+- после `systemctl restart docker` контейнер `sk-develop` автоматически поднялся с `127.0.0.1:8080->80/tcp`, сайт по HTTPS вернул `200 OK`;
+- после `reboot` сервера Docker и Nginx активны и включены в автозапуск, контейнер поднялся автоматически, оба HTTPS-адреса вернули `200 OK`.
 
 ## Подготовка сервера
 
@@ -180,7 +250,4 @@ curl -I http://SERVER_IP
 
 ## После подключения домена
 
-- Обновить `server_name` в Nginx.
-- Настроить DNS A-запись на IP сервера.
-- Выпустить HTTPS-сертификат через Certbot или другой согласованный способ.
-- Повторить проверку главной страницы, ассетов и SPA fallback.
+Домен и HTTPS подключены. При будущих изменениях домена нужно обновить DNS, `server_name` в host-level Nginx и перевыпустить сертификат Certbot.

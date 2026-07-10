@@ -26,6 +26,7 @@ const Index = () => {
         </section>
         <ValueSection />
         <ConceptSection />
+        <LocationVideoSection />
         <TransportSection />
         {/* <EnvironmentSection /> */}
         <JourneySection />
@@ -33,7 +34,6 @@ const Index = () => {
         {/* Временно скрыты - можно вернуть, раскомментировав */}
         {/* <DeveloperSection /> */}
         {/* <FoundersSection /> */}
-        <LocationVideoSection />
         {/* <ContactsSection /> */}
       </main>
       <Footer />
