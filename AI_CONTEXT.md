@@ -26,6 +26,11 @@ https://github.com/asruzela-sketch/sk-develop
 - SSH-доступ по ключу настроен через локальный alias `sk-develop` и ключ `~/.ssh/sk_develop_deploy`.
 - На сервер установлены `git`, `curl`, Docker Engine, Buildx и Docker Compose plugin.
 - Docker daemon активен и включён в автозапуск; `docker run --rm hello-world` проходит успешно.
+- На главную страницу между секциями «Ценность актива» и «Концепция» добавлен компонент `ProjectVideoSection`.
+- Для нового блока подготовлены локальные беззвучные версии видео WebM/VP9 и MP4/H.264 720×1280, а также WebP-постер; мастер-файл хранится вне репозитория.
+- Видео подгружается только при приближении блока к viewport, автоматически воспроизводится без звука в зоне просмотра, останавливается вне её и учитывает `prefers-reduced-motion`.
+- Адаптивность видеоблока проверена на ширинах 320, 375, 390, 768, 1024 и 1440 px; горизонтального переполнения нет.
+- Container-level Nginx cache policy дополнена поддержкой расширения `.webm`.
 
 ## Архитектура
 
@@ -34,6 +39,7 @@ https://github.com/asruzela-sketch/sk-develop
 - Страницы: `src/pages/`.
 - Компоненты: `src/components/`.
 - Статические и импортируемые медиа: `public/`, `src/assets/`.
+- Оптимизированные медиа нового видеоблока: `public/video/`.
 - Production-результат: `dist/`.
 - Docker production-схема: multi-stage build в `node:20-alpine`, затем отдача `/app/dist` через `nginx:1.27-alpine`.
 - Nginx-конфиг контейнера: `nginx.conf`, root `/usr/share/nginx/html`, SPA fallback `try_files $uri $uri/ /index.html`.

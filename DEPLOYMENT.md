@@ -27,9 +27,11 @@ dist/
 ```bash
 curl -I http://localhost:8080/
 curl -I http://localhost:8080/test-route
+curl -I http://localhost:8080/video/sk-develop.mp4
+curl -I http://localhost:8080/video/sk-develop.webm
 ```
 
-Ожидаемо оба запроса возвращают HTTP `200 OK`. Для произвольного SPA-маршрута Nginx должен отдавать `index.html`, а не серверный 404.
+Ожидаемо все запросы возвращают HTTP `200 OK`. Для произвольного SPA-маршрута Nginx должен отдавать `index.html`, а не серверный 404. Для видео ожидаются `Content-Type: video/mp4` и `Content-Type: video/webm`, cache headers и поддержка range-запросов.
 
 ## Правило фиксации изменений
 
@@ -234,7 +236,7 @@ server {
         try_files $uri $uri/ /index.html;
     }
 
-    location ~* \.(js|css|png|jpg|jpeg|gif|svg|webp|ico|mp4|mov|woff2?)$ {
+    location ~* \.(js|css|png|jpg|jpeg|gif|svg|webp|ico|mp4|mov|webm|woff2?)$ {
         expires 30d;
         access_log off;
         add_header Cache-Control "public, immutable";
@@ -261,6 +263,7 @@ curl -I http://SERVER_IP
 - главная страница открывается;
 - изображения отображаются;
 - видео загружается;
+- новый видеоблок расположен между секциями «Ценность актива» и «Концепция», запускается без звука и останавливается вне viewport;
 - перезагрузка произвольного SPA-маршрута не даёт 404;
 - DevTools Console без критических ошибок.
 
