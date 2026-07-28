@@ -2,8 +2,8 @@ import { useEffect, useRef, useState } from "react";
 
 const REDUCED_MOTION_QUERY = "(prefers-reduced-motion: reduce)";
 
-export const ProjectVideoSection = () => {
-  const sectionRef = useRef<HTMLElement>(null);
+export const ProjectVideoPlayer = () => {
+  const playerRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
   const [shouldLoad, setShouldLoad] = useState(false);
   const [isNearViewport, setIsNearViewport] = useState(false);
@@ -20,9 +20,9 @@ export const ProjectVideoSection = () => {
   }, []);
 
   useEffect(() => {
-    const section = sectionRef.current;
+    const player = playerRef.current;
 
-    if (!section) return;
+    if (!player) return;
 
     const loadObserver = new IntersectionObserver(
       ([entry]) => {
@@ -34,22 +34,22 @@ export const ProjectVideoSection = () => {
       { rootMargin: "600px 0px" },
     );
 
-    loadObserver.observe(section);
+    loadObserver.observe(player);
 
     return () => loadObserver.disconnect();
   }, []);
 
   useEffect(() => {
-    const section = sectionRef.current;
+    const player = playerRef.current;
 
-    if (!section) return;
+    if (!player) return;
 
     const playbackObserver = new IntersectionObserver(
       ([entry]) => setIsNearViewport(entry.isIntersecting),
       { rootMargin: "150px 0px", threshold: 0.1 },
     );
 
-    playbackObserver.observe(section);
+    playbackObserver.observe(player);
 
     return () => playbackObserver.disconnect();
   }, []);
@@ -79,37 +79,30 @@ export const ProjectVideoSection = () => {
   };
 
   return (
-    <section ref={sectionRef} className="section-dark py-16 sm:py-24 md:py-32 overflow-hidden">
-      <div className="container-wide">
-        <div className="mx-auto max-w-3xl text-center">
-          <h2 className="heading-section text-[hsl(var(--text-light))] mb-10 sm:mb-12">
-            Проект в деталях
-          </h2>
-
-          <div className="mx-auto aspect-[9/16] w-full max-w-[25rem] overflow-hidden rounded-2xl border border-[hsl(40_30%_60%_/_0.3)] bg-black shadow-2xl">
-            <video
-              ref={videoRef}
-              muted
-              loop
-              playsInline
-              controls={prefersReducedMotion}
-              preload="metadata"
-              poster="/video/sk-develop-poster.webp"
-              aria-label="Архитектурная визуализация проекта"
-              onCanPlay={handleCanPlay}
-              className="block h-full w-full object-contain"
-            >
-              {shouldLoad && (
-                <>
-                  <source src="/video/sk-develop.webm" type="video/webm" />
-                  <source src="/video/sk-develop.mp4" type="video/mp4" />
-                </>
-              )}
-              Ваш браузер не поддерживает воспроизведение видео.
-            </video>
-          </div>
-        </div>
-      </div>
-    </section>
+    <div
+      ref={playerRef}
+      className="mx-auto aspect-[9/16] w-full max-w-[23.75rem] overflow-hidden rounded-2xl border border-[hsl(40_30%_60%_/_0.3)] bg-black shadow-2xl lg:mx-0 lg:ml-auto"
+    >
+      <video
+        ref={videoRef}
+        muted
+        loop
+        playsInline
+        controls={prefersReducedMotion}
+        preload="metadata"
+        poster="/video/sk-develop-poster.webp"
+        aria-label="Архитектурная визуализация проекта"
+        onCanPlay={handleCanPlay}
+        className="block h-full w-full object-contain"
+      >
+        {shouldLoad && (
+          <>
+            <source src="/video/sk-develop.webm" type="video/webm" />
+            <source src="/video/sk-develop.mp4" type="video/mp4" />
+          </>
+        )}
+        Ваш браузер не поддерживает воспроизведение видео.
+      </video>
+    </div>
   );
 };

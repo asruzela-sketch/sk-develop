@@ -1,6 +1,6 @@
 import { act, render, screen } from "@testing-library/react";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
-import { ProjectVideoSection } from "./ProjectVideoSection";
+import { ProjectVideoPlayer } from "./ProjectVideoPlayer";
 
 const observerCallbacks: IntersectionObserverCallback[] = [];
 
@@ -25,7 +25,7 @@ const triggerObserver = (index: number, isIntersecting: boolean) => {
   );
 };
 
-describe("ProjectVideoSection", () => {
+describe("ProjectVideoPlayer", () => {
   beforeEach(() => {
     observerCallbacks.length = 0;
     vi.stubGlobal("IntersectionObserver", IntersectionObserverMock);
@@ -40,7 +40,7 @@ describe("ProjectVideoSection", () => {
   });
 
   it("adds sources only near the viewport and starts muted playback", () => {
-    render(<ProjectVideoSection />);
+    render(<ProjectVideoPlayer />);
 
     const video = screen.getByLabelText("Архитектурная визуализация проекта");
     expect(video.querySelectorAll("source")).toHaveLength(0);
@@ -68,7 +68,7 @@ describe("ProjectVideoSection", () => {
       dispatchEvent: vi.fn(),
     });
 
-    render(<ProjectVideoSection />);
+    render(<ProjectVideoPlayer />);
 
     const video = screen.getByLabelText("Архитектурная визуализация проекта");
 

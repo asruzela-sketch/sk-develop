@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Hotel, ShoppingBag, Briefcase, CarFront } from "lucide-react";
+import { ProjectVideoPlayer } from "@/components/ProjectVideoPlayer";
 
 const blocks = [
   { icon: Hotel, label: "Гостиница", key: "hotel" },
@@ -12,38 +13,41 @@ export const ValueSection = () => {
   const [activeKey, setActiveKey] = useState<string | null>(null);
 
   return (
-    <section className="section-dark py-16 sm:py-24 md:py-32">
+    <section className="section-dark overflow-hidden py-16 sm:py-24 md:py-32">
       <div className="container-wide">
-        <div className="max-w-4xl mx-auto text-center">
-          <p className="label-small text-accent mb-4">Ценность актива</p>
-          <h2 className="heading-section text-[hsl(var(--text-light))] mb-8">
-            Девелоперский проект рядом со Сколково
-          </h2>
-          <div className="accent-line mx-auto mb-10" />
-          <p className="body-large text-[hsl(var(--text-light)_/_0.8)] mb-10">
-            Многофункциональный комплекс в архитектурно-градостроительной концепции включает в себя:
-          </p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {blocks.map(({ icon: Icon, label, key }) => (
-              <button
-                key={key}
-                onClick={() => setActiveKey(activeKey === key ? null : key)}
-                className={`rounded-2xl border border-[hsl(40_30%_60%_/_0.3)] bg-accent/5 backdrop-blur-sm px-5 py-6 flex flex-col items-center gap-3 transition-all duration-300 cursor-pointer ${
-                  activeKey === key ? "bg-accent/15 border-[hsl(40_30%_60%_/_0.5)]" : "hover:bg-accent/10"
-                }`}
-              >
-                <div className="w-12 h-12 rounded-xl gold-gradient-bg/20 bg-accent/10 flex items-center justify-center">
-                  <Icon className="w-6 h-6 text-accent" strokeWidth={1.5} />
-                </div>
-                <span className="text-sm font-medium text-[hsl(var(--text-light))]">{label}</span>
-              </button>
-            ))}
-          </div>
-          {activeKey === "office" && (
-            <p className="text-[hsl(var(--text-light)_/_0.6)] mt-8 text-xs sm:text-sm leading-relaxed animate-fade-in">
-              Возможно формирование офисных помещений на 4 и 5 этажах здания в объеме до 3 500 м² на стадии проектирования и получения разрешения на строительство.
+        <div className="mx-auto grid max-w-6xl min-w-0 items-start gap-12 lg:grid-cols-[minmax(0,3fr)_minmax(17.5rem,2fr)] lg:gap-10 xl:gap-16">
+          <div className="min-w-0 text-center lg:text-left">
+            <p className="label-small text-accent mb-4">Ценность актива</p>
+            <h2 className="heading-section text-[hsl(var(--text-light))] mb-8">
+              Девелоперский проект рядом со Сколково
+            </h2>
+            <div className="accent-line mx-auto mb-10 lg:mx-0" />
+            <p className="body-large text-[hsl(var(--text-light)_/_0.8)] mb-10">
+              Многофункциональный комплекс в архитектурно-градостроительной концепции включает в себя:
             </p>
-          )}
+            <div className="grid grid-cols-2 gap-4 sm:grid-cols-4 lg:grid-cols-2 xl:grid-cols-4">
+              {blocks.map(({ icon: Icon, label, key }) => (
+                <button
+                  key={key}
+                  onClick={() => setActiveKey(activeKey === key ? null : key)}
+                  className={`rounded-2xl border border-[hsl(40_30%_60%_/_0.3)] bg-accent/5 backdrop-blur-sm px-5 py-6 flex flex-col items-center gap-3 transition-all duration-300 cursor-pointer ${
+                    activeKey === key ? "bg-accent/15 border-[hsl(40_30%_60%_/_0.5)]" : "hover:bg-accent/10"
+                  }`}
+                >
+                  <div className="w-12 h-12 rounded-xl gold-gradient-bg/20 bg-accent/10 flex items-center justify-center">
+                    <Icon className="w-6 h-6 text-accent" strokeWidth={1.5} />
+                  </div>
+                  <span className="text-sm font-medium text-[hsl(var(--text-light))]">{label}</span>
+                </button>
+              ))}
+            </div>
+            {activeKey === "office" && (
+              <p className="text-[hsl(var(--text-light)_/_0.6)] mt-8 text-xs sm:text-sm leading-relaxed animate-fade-in">
+                Возможно формирование офисных помещений на 4 и 5 этажах здания в объеме до 3 500 м² на стадии проектирования и получения разрешения на строительство.
+              </p>
+            )}
+          </div>
+          <ProjectVideoPlayer />
         </div>
       </div>
     </section>
