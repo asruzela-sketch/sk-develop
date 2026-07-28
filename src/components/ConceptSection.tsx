@@ -77,13 +77,9 @@ export const ConceptSection = () => {
         {/* Header */}
         <div className="text-center mb-8 sm:mb-16 max-w-3xl mx-auto">
           <p className="label-small mb-4 text-secondary-foreground">Концепция</p>
-          <h2 className="heading-section mb-6">
+          <h2 className="heading-section">
             Архитектурно-градостроительная концепция МФК
           </h2>
-          <p className="body-base text-muted-foreground">
-            Сбалансированная структура коммерческих и гостиничных функций 
-            с учётом локации и градостроительных параметров.
-          </p>
         </div>
 
         {/* Three Zone Cards */}
