@@ -56,6 +56,38 @@ describe("ProjectVideoPlayer", () => {
     expect(HTMLMediaElement.prototype.play).toHaveBeenCalled();
   });
 
+  it("loads sources once and does not reset the video on viewport transitions", () => {
+    render(<ProjectVideoPlayer />);
+
+    act(() => {
+      triggerObserver(0, true);
+    });
+
+    expect(HTMLMediaElement.prototype.load).toHaveBeenCalledTimes(1);
+    expect(HTMLMediaElement.prototype.play).not.toHaveBeenCalled();
+
+    act(() => {
+      triggerObserver(1, true);
+    });
+
+    expect(HTMLMediaElement.prototype.load).toHaveBeenCalledTimes(1);
+    expect(HTMLMediaElement.prototype.play).toHaveBeenCalledTimes(1);
+
+    act(() => {
+      triggerObserver(1, false);
+    });
+
+    expect(HTMLMediaElement.prototype.load).toHaveBeenCalledTimes(1);
+    expect(HTMLMediaElement.prototype.pause).toHaveBeenCalled();
+
+    act(() => {
+      triggerObserver(1, true);
+    });
+
+    expect(HTMLMediaElement.prototype.load).toHaveBeenCalledTimes(1);
+    expect(HTMLMediaElement.prototype.play).toHaveBeenCalledTimes(2);
+  });
+
   it("keeps autoplay disabled and exposes controls for reduced motion", () => {
     window.matchMedia = vi.fn().mockReturnValue({
       matches: true,

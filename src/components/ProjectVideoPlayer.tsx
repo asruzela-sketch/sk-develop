@@ -60,6 +60,12 @@ export const ProjectVideoPlayer = () => {
     if (!video || !shouldLoad) return;
 
     video.load();
+  }, [shouldLoad]);
+
+  useEffect(() => {
+    const video = videoRef.current;
+
+    if (!video || !shouldLoad) return;
 
     if (isNearViewport && !prefersReducedMotion) {
       void video.play().catch(() => {
