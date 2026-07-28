@@ -37,6 +37,26 @@ curl -I http://localhost:8080/video/sk-develop.webm
 
 После каждого изменения проекта перед деплоем нужно сделать Git-коммит с понятным сообщением. На production должно переноситься только зафиксированное в Git состояние.
 
+## Последний production-деплой
+
+Выполнен 28 июля 2026 года для коммита `ca5bc01` (`refactor: move concept text to asset value section`).
+
+- чистый Git-архив коммита развёрнут в `/opt/sk-develop-releases/ca5bc01`;
+- собран образ `sk-develop:ca5bc01` с OCI label `org.opencontainers.image.revision=ca5bc01`;
+- production-контейнер `sk-develop` запущен с `--restart unless-stopped` и публикацией `127.0.0.1:8080:80`;
+- предыдущий контейнер сохранён остановленным как `sk-develop-backup-8d806e7`;
+- основной домен, `www`, SPA fallback, MP4/WebM, cache policy и range-запрос MP4 проверены после переключения;
+- перенесённый текст найден в production bundle.
+
+Публичные результаты проверки:
+
+- HTTP основного домена и `www`: `301 Moved Permanently`;
+- HTTPS основного домена и `www`: `200 OK`;
+- `/test-route`: `200 OK`;
+- HTML: `Cache-Control: no-cache, no-store, must-revalidate`;
+- hashed JS: `Cache-Control: public, max-age=31536000, immutable`;
+- range-запрос MP4: `206 Partial Content`.
+
 ## Docker-сборка
 
 В корне проекта находятся:
@@ -263,7 +283,9 @@ curl -I http://SERVER_IP
 - главная страница открывается;
 - изображения отображаются;
 - видео загружается;
-- новый видеоблок расположен между секциями «Ценность актива» и «Концепция», запускается без звука и останавливается вне viewport;
+- видео расположено справа внутри секции «Ценность актива» на desktop и под текстовой колонкой на mobile/tablet;
+- текст «Сбалансированная структура коммерческих и гостиничных функций…» расположен под карточками в левой колонке «Ценности актива» и отсутствует в «Концепции»;
+- видео запускается без звука и останавливается вне viewport;
 - перезагрузка произвольного SPA-маршрута не даёт 404;
 - DevTools Console без критических ошибок.
 
