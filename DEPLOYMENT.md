@@ -39,14 +39,15 @@ curl -I http://localhost:8080/video/sk-develop.webm
 
 ## Последний production-деплой
 
-Выполнен 28 июля 2026 года для коммита `ca5bc01` (`refactor: move concept text to asset value section`).
+Выполнен 28 июля 2026 года для коммита `de9c5b9` (`fix: prevent video reload on viewport transitions`).
 
-- чистый Git-архив коммита развёрнут в `/opt/sk-develop-releases/ca5bc01`;
-- собран образ `sk-develop:ca5bc01` с OCI label `org.opencontainers.image.revision=ca5bc01`;
+- чистый Git-архив коммита развёрнут в `/opt/sk-develop-releases/de9c5b9`;
+- собран образ `sk-develop:de9c5b9` с OCI label `org.opencontainers.image.revision=de9c5b9`;
 - production-контейнер `sk-develop` запущен с `--restart unless-stopped` и публикацией `127.0.0.1:8080:80`;
-- предыдущий контейнер сохранён остановленным как `sk-develop-backup-8d806e7`;
+- предыдущий контейнер сохранён остановленным как `sk-develop-backup-ca5bc01`;
 - основной домен, `www`, SPA fallback, MP4/WebM, cache policy и range-запрос MP4 проверены после переключения;
-- перенесённый текст найден в production bundle.
+- в браузере проверен сценарий первого входа видео в viewport, остановки при уходе и повторного запуска при возврате;
+- в Console браузера нет ошибок.
 
 Публичные результаты проверки:
 
